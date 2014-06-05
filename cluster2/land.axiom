@@ -1,0 +1,43 @@
+Noun
+
+
+land-n2:land, ground, soil (material in the top layer of the surface of the earth in which plants can grow (especially with reference to its quality or use)) "the land had never been plowed"; "good agricultural soil"
+land-n4:land, dry land, earth, ground, solid ground, terra firma (the solid part of the earth's surface) "the plane turned away from the sea and moved back over land"; "the earth shook for several minutes"; "he dropped the logs on the ground"
+	land-n7:estate, land, landed estate, acres, demesne (extensive landed property (especially in the country) retained by the owner for his own use) "the family owned a large estate on Long Island"
+	land-n1:land (the land on which real estate is located) "he built the house on land leased from the city"
+	
+
+land-n3:domain, demesne, land (territory over which rule or control is exercised) "his domain extended into Europe"; "he made it the law of the land"
+	land-n9:state, nation, country, land, commonwealth, res publica, body politic (a politically organized body of people under a single government) "the state has elected a new president"; "African nations"; "students who had come to the nation's capitol"; "the country's largest manufacturer"; "an industrialized land"
+
+	land-n6:kingdom, land, realm (a domain in which something is dominant) "the untroubled kingdom of reason"; "a land of make-believe"; "the rise of the realm of cotton in the south"
+	land-n5:country, state, land (the territory occupied by a nation) "he returned to the land of his birth"; "he visited several European countries"
+
+land-n8'(e0,x): people'(e0,x)& in(x,l) & land-n5(l)
+	nation, land, country (the people who live in a nation or country) "a statement that sums up the nation's mood"; "the news was announced to the nation"; "the whole country worshipped him"
+
+land-n10:Land, Din Land, Edwin Herbert Land (United States inventor who incorporated Polaroid film into lenses and invented the one step photographic process (1909-1991))
+land-n11:farming, land (agriculture considered as an occupation or way of life) "farming is a strenuous life"; "there's no work on the land any more"
+
+Verb
+
+<comment>land has  meaning of destination/rest/descend. the point of landing is a point, either at the end or along the path of x's moving where x stops continuing moving along that path and rests</comment>
+
+land-s0'(e,x,f,p,e0): change'(e0,e1,e2) & at'(e1,x,b,s) & at'(e2,x,f,s) & path(p,e0) & long(e0) & not'(e3) & changeFrom'(e3,e2) & path(p,e3)
+<exp>arrive and rest: x moves(e0) from beginning point b to final point f along path p, (this event is a long one?) and x does not move from f along the same path afterwards.</exp>
+	land-v6:land, set ashore, shore (arrive on shore) "The ship landed in Pearl Harbor"
+		causal:
+		land-v3-4-5'(e,x,y,f): cause'(e,x,e0) & land-s0'(e0,y,f,p,e1)
+			land-v3:bring, land (bring into a different state) "this may land you in jail"
+			land-v4:land (bring ashore) "The drug smugglers landed the heroin on the beach of the island"
+			land-v5:land (deliver (a blow)) "He landed several blows on his opponent's head"
+	
+	vertical move:
+	land-v1'(e,x,f):land-s0'(e,x,f,p,e0) & lts(f,b,s) & fly'(e0)
+	<destination f is lower than begin point b along the scale>
+	land, set down (reach or come to rest) "The bird landed on the highest branch"; "The plane landed in Istanbul"
+		causal:
+		land-v2-7'(e,x,y,f):cause'(e,x,e0) & land-s0'(e0,y,f)
+			land-v2:land, put down, bring down (cause to come to the ground) "the pilot managed to land the airplane safely"
+			land-v7:down, shoot down, land (shoot at and force to come down) "the enemy landed several of our aircraft"
+	

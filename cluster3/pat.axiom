@@ -1,0 +1,27 @@
+Noun
+
+*pat-n1'(e,z): pat-v1-2'(e,x,y) & sound-of(z,e)
+pat, rap, tap (the sound made by a gentle blow)
+
+pat-n2'(e,e0): pat-v1-2'(e0,x,y)
+tap, pat, dab (a light touch or stroke)
+
+Verb
+
+pat-v1-2'(e,x,y): cause'(e,x,e1) & changeTo'(e1,e2)& at'(e2,y,z) & gen(e2,e3) & impact'(e3,y,z) & light(e3)
+	pat-v1:chuck, pat (pat or squeeze fondly or playfully, especially under the chin)
+	pat-v2:dab, pat (hit lightly) "pat him on the shoulder"
+
+Adjective
+<special>
+//refers to the light-ness
+pat-adj:glib, pat, slick (having only superficial plausibility) "glib promises"; "a slick commercial"
+
+pat-adj:pat (exactly suited to the occasion) "a pat reply"
+</special>
+
+Adverb
+
+<special>
+pat-adv:pat (completely or perfectly) "he has the lesson pat"; "had the system down pat"
+</special>

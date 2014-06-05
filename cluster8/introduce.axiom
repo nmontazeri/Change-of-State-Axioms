@@ -1,0 +1,39 @@
+Verb
+
+// x introduces y to z
+*introduce-s1'(e,x,y,z): cause'(e,x,e0) & know'(e0,z,y)
+	introduce-v7:introduce, bring out (bring before the public for the first time, as of an actor, song, etc.)
+	introduce-v8:introduce (put before (a body)) "introduce legislation"
+	introduce-v1:introduce, present, acquaint (cause to come to know personally) "permit me to acquaint you with my son"; "introduce the new neighbors to the community"
+
+//introduction is usually the beginning of a new relation. this sense focuses on "begin"
+//x introduces y: x starts y. 
+	
+	//x introduces y: x is the start of y
+	introduce-v10'(e,z,y): startOf(e0z,y)
+	inaugurate, usher in, introduce (be a precursor of) "The fall of the Berlin Wall ushered in the post-Cold War period"
+
+		//causal: x introduces y with z: x causes z to be start of y
+		introduce-v9'(e,x,y,z):cause'(e,x,e0) & startOf(e0,z,y) & lecture(y)
+		precede, preface, premise, introduce (furnish with a preface or introduction) "She always precedes her lectures with a joke"; "He prefaced his lecture with a critical remark about the institution"
+
+
+* introduce-s0'(e,x,z,y):cause'(e,x,e0) & changeTo'(e0,e1) & in'(e1,z,y)
+
+	//y is physical container
+	introduce-v3:insert, enclose, inclose, stick in, put in, introduce (place, fit, or thrust (something) into another thing) "Insert your ticket here"
+	introduce-v6:insert, infix, enter, introduce (put or introduce into something) "insert a picture into the text"
+
+
+	// y is abstract=environment
+	*introduce-s0-1'(e,x,z,y):introduce-s0'(e,x,z,y) &  environment(y) 
+		
+		//introduce to markt or to people? if people, then it is not a sub-sense of s0-1
+		introduce-v2:introduce, innovate (bring something new to an environment) "A new word processor was introduced"
+		introduce-v5:introduce (bring in or establish in a new place or environment) "introduce a rule"; "introduce exotic fruits"
+		introduce-v4:bring in, introduce (bring in a new person or object into a familiar environment) "He brought in a new judge"; "The new secretary introduced a nasty rumor"
+
+
+
+
+

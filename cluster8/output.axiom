@@ -1,0 +1,22 @@
+Noun
+
+*output-n1-2-3-5(e,y):output-v1'(e,x,y)
+	output-n1:end product, output (final product; the things produced)
+	output-n2:output, yield (production of a certain amount)
+	output-n3:output signal, output (signal that comes out of an electronic system)
+
+	*output-n5'(e,y,x,t):output-v1'(e,x,y) & timeSpanOf(t,e)
+	output, outturn, turnout (what is produced in a given time period)
+
+
+//amount of output	
+*output-n4'(e,a): output-n5'(e,y,x,t) & amountOf(a,y)
+output, yield, production (the quantity of something (as a commodity) that is created (usually within a given period of time)) "production was up in the second quarter"
+
+
+Verb
+
+//the difference between output and creation is that output is somewhat expected.output is the result of a process?
+*output-v1'(e,x,y):cause'(e,x,e0) & changeTo'(e0,e1) & Rexist'(e1,e2)
+output (to create or manufacture a specific amount) "the computer is outputting the data from the job I'm running"
+

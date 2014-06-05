@@ -1,0 +1,41 @@
+Verb
+
+//1)x transitions from state e0 to state e1 2) e0 transtitions to e1 
+//in the "airline" example, "using" is missing, because it is trivial: "The airline transitioned to [using] more fuel-efficient jets"
+//why is it that we say "the blue color transitioned into purple", but we won't say: "the blue color transformed into purple"? because we use "transform" for entity-> entity and we use "transition" for state->state
+//transition is a more specialized sense of "change" where the change happens along a scale without being a sudden jump from one point to another. the scale also entails that the start and end points can nort be arbirary but tehy are values along the same scale.
+
+//derived from v2: state e0 transitions to state e1
+*transition-v2-0'(e,e0,e1): change'(e,e0,e1) & inScale(e0,s) & inScale(e1,s) & gradedMove'(e,e0,e1)
+"The adagio transitioned into an allegro"
+
+	//This sense should be splitted to two senses: 1) a single entity x is involved  2) no single entity is involved: because a state can consist of entities and relations and the change of state may not be due to one entity. maybe the change is due to change in relations among the entities in a state
+	transition-v2'(e,x,e0,e1): transition-v2-0'(e,e0,e1) & at'(x,e0) & at'(x,e1)
+	transition (make or undergo a transition (from one state or system to another)) "The airline transitioned to more fuel-efficient jets"; "The adagio transitioned into an allegro"
+
+
+	//causal:
+	transition-v1'(e,x,y,e0,e1):cause'(e,x,e2) & transition-v2'(e2,y,e0,e1)
+	transition (cause to convert or undergo a transition) "the company had to transition the old practices to modern technology"
+
+
+Noun
+
+transition-n1-3'(e,e2):transition-v2'(e2,x,e0,e1)
+	transition-n1:passage, transition (the act of passing from one state or place to the next)
+	transition-n3:transition (a change from one place or state or subject or stage to another)
+
+
+//?
+transition-n2'(e,e2): event(e2) & cause(e2,e3) & transition-v2'(e3,x,e0,e1)
+conversion, transition, changeover (an event that results in a transformation)
+
+<special>
+//a sequence of <?> in which e0 is strongest in the beginning and e1 is strongest in the end and e0 and e1 gradually decrease and blend in the middle
+transition-n4-5'(e,e0): 
+	transition-n4:transition, modulation (a musical passage moving from one key to another)
+	transition-n5:transition (a passage that connects a topic to one that follows)
+</special>
+	
+	
+

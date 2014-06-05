@@ -1,0 +1,28 @@
+
+// w and z divide: there is a change from w and z being connected
+divide-v4'(e0,w,z): changeFrom'(e,e1) & connect'(e1,w,z) 
+separate, divide, part (come apart) "The two pieces that we had glued separated"
+
+	//causal
+		divide-v6'(e,x,w,z):cause'(e,x,e0) & changeFrom'(e0,e1) & connect'(e1,w,z)
+		separate, disunite, divide, part (force, take, or pull apart) "He separated the fighting children"; "Moses parted the Red Sea"(inconsistent example)
+
+// x separates y into w and z: x is between w and z	
+divide-v3:separate, divide (act as a barrier between; stand between) "The mountain range divides the two countries"
+
+
+	
+//causal and dividing the w 
+divide-v1-5'(e,x,y,w,z):cause'(e,x,e0) & changeFrom'(e0,e1) & connect'(e1,w,z) & componentOf(w,y) & componentOf(w,y)
+		
+	divide-v1:divide, split, split up, separate, dissever, carve up (separate into parts or portions) "divide the cake into three equal parts"; "The British carved up the Ottoman Empire after World War I"
+	divide-v5:separate, divide (make a division or separation)
+		
+	
+
+
+
+
+<special>
+divide-v2:divide, fraction (perform a division) "Can you divide 49 by seven?"
+</special>

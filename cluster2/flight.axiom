@@ -1,0 +1,39 @@
+Noun
+
+*flight-n2'(e,e0):fly'(e0,x)
+flight, flying (an instance of traveling by air) "flying was still an exciting adventure for him"
+
+	flight-n9:flight (a scheduled trip by plane between designated airports) "I took the noon flight to Chicago"
+
+*flight-n8'(e,x):fly'(e,x) & group(x) & bird(x)
+flight (a flock of flying birds)
+
+*flight-n7'(e,p):path'(e,p,e0) & fly'(e0,x)
+trajectory, flight (the path followed by an object moving through space)
+
+//e is the flight/escape of x from p	
+*flight-n4'(e0,e,x,p):changeFrom'(e,e1) & at'(e1,x,p)
+escape, flight (the act of escaping physically) "he made his escape from the mental hospital"; "the canary escaped from its cage"; "his flight was an indication of his guilt"
+
+//e is flight of x
+*flight-n6'(e0,e,x):changeTo'(e,e0) & at'(e0,x,p,s) & gts(p,p0,s) & norm(p0)
+flight (passing above and beyond ordinary bounds) "a flight of fancy"; "flights of rhetoric"; "flights of imagination"
+
+
+
+<special>
+flight-n1:flight (a formation of aircraft in flight)
+flight-n5:flight (an air force unit smaller than a squadron)
+flight-n3:flight, flight of stairs, flight of steps (a stairway (set of steps) between one floor or landing and the next)
+
+</special>
+
+Verb
+
+*flight-v2'(e,x):fly'(e,x) & group(x) & bird(x)
+flight (fly in a flock) "flighting wild geese"
+
+<special>
+flight-v3:fledge, flight (decorate with feathers) "fledge an arrow"
+flight-v1:flight (shoot a bird in flight)
+</special>

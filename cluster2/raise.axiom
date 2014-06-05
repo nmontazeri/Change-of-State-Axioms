@@ -1,0 +1,84 @@
+Noun
+
+//e0 is a raise in y
+*raise-n1'(e,d):raise-v1'(e,x,y,p0,p1) & difference(d,p1,p0)
+raise, rise, wage hike, hike, wage increase, salary increase (the amount a salary is increased) "he got a 3% raise"; "he got a wage hike"
+
+*raise-n3'(e,e0):raise-s0'(e0,x,y,p0,p1)
+raise (increasing the size of a bet (as in poker)) "I'll see your raise and double it"
+
+raise-n4'(e0,e):raise-v8'(e,x,y)
+lift, raise, heave (the act of raising something) "he responded with a lift of his eyebrow"; "fireman learn several different raises for getting ladders up"
+
+<special>
+raise-n2:ascent, acclivity, rise, raise, climb, upgrade (an upward slope or grade (as in a road)) "the car couldn't make it up the rise"
+</special>
+
+Verb
+*raise-s0'(e,x,y,p0,p1):cause'(e,x,e0) & change'(e0,e1,e2) & at'(e1,y,p0,s) & at'(e2,y,p1,s) & gts(p1,p2,s) & verticalScale(s) 
+	raise-v1:raise (raise the level or amount of something) "raise my salary"; "raise the price of bread"
+	raise-v2:raise, lift, elevate, get up, bring up (raise from a lower to a higher position) "Raise your hands"; "Lift a load"
+	raise-v8:lift, raise (move upwards) "lift one's eyes"
+	
+	// y is abstract
+	raise-v25:raise, lift (invigorate or heighten) "lift my spirits"; "lift his ego"
+	raise-v13:enhance, heighten, raise (increase) "This will enhance your enjoyment"; "heighten the tension"
+	
+	//the boundary rises
+	*raise-v15'(e,x,y):cause'(e,x,e1) & rise-v15'(e1,x)
+	raise, leaven, prove (cause to puff up with a leaven) "unleavened bread"
+	
+	// y is the bid price
+	raise-v16:raise (bid (one's partner's suit) at a higher level)
+	raise-v17:raise (bet more than the previous player)
+
+
+	//p0 and p1 are position
+	*raise-v12-14'(e,x,y): cause'(e,x,e1) & rise-v7'(e1,y)
+		raise-v12:lift, raise, elevate (raise in rank or condition) "The new law lifted many people from poverty"
+		raise-v14:promote, upgrade, advance, kick upstairs, raise, elevate (give a promotion to or assign to a higher position) "John was kicked upstairs when a replacement was hired"; "Women tend not to advance in the major law firms"; "I got promoted after many years of hard work"
+
+//related to other's knowing about something
+	//x raises an eventuality e1: x causes a change to e1 which generates y knowing about e1
+	*raise-v3'(e,x,e1): cause'(e,x,e0) & changeTo'(e0,e1) & gen(e1,e2) & know'(e2,y,e1) 
+	raise (cause to be heard or known; express or utter) "raise a shout"; "raise a protest"; "raise a sad cry"
+	
+	// x raises issue z: x causes y to know about z
+	*raise-v19'(e,x,z): cause'(e,x,e0) & changeTo'(e0,e2) & know'(e2,y,z) 
+	raise, bring up (put forward for consideration or discussion) "raise the question of promotions"; "bring up an unpleasant topic"
+
+//grow. because growing is related to increasing in height
+*raise-v5-6'(e,x,y): enable'(e,x,e1) & grow'(e1,y)
+	raise-v5:grow, raise, farm, produce (cultivate by growing, often involving improvements by means of agricultural techniques) "The Bordeaux region produces great red wines"; "They produce good ham in Parma"; "We grow wheat here"; "We raise hogs here"
+	raise-v6:rear, raise, bring up, nurture, parent (bring up) "raise a family"; "bring up children"
+
+*raise-s1'(e,x,e2): cause'(e,x,e1) & changeTo'(e1,e2)
+
+	raise-v10:arouse, elicit, enkindle, kindle, evoke, fire, raise, provoke (call forth (emotions, feelings, and responses)) "arouse pity"; "raise a smile"; "evoke sympathy"
+
+	//? put an end or just cause?
+	raise-v26:lift, raise (put an end to) "lift a ban"; "raise a siege"
+	
+	//activate
+	*raise-v21-27'(e,x,e0):raise-s1'(e,x,e1) & active'(e1,e0)
+		raise-v21:raise (activate or stir up) "raise a mutiny"
+		raise-v27:resurrect, raise, upraise (cause to become alive again) "raise from the dead"; "Slavery is already dead, and cannot be resurrected"; "Upraising ghosts"
+
+	//cause to exist
+	*raise-s1-1'(e,x,y): raise-s1'(e,x,e2) & Rexist'(e2,y)
+		raise-v7:raise, conjure, conjure up, invoke, evoke, stir, call down, arouse, bring up, put forward, call forth (summon into action or bring into existence, often as if by magic) "raise the specter of unemployment"; "he conjured wild birds in the air"; "call down the spirits from the mountain"
+	
+		// construct something (this is more especific that causing something to exist, in that construction is gradual and involves adding things together)
+		*raise-v4-9-18'(e,x,y): raise-s1-1'(e,x,y) & but y is not complete yet??
+		raise-v4:raise (collect funds for a specific purpose) "The President raised several million dollars for his college"
+		raise-v18:recruit, levy, raise (cause to assemble or enlist in the military) "raise an army"; "recruit new soldiers"
+		raise-v9:raise, erect, rear, set up, put up (construct, build, or erect) "Raise a barn"
+
+
+<special>
+raise-v20:raise (pronounce (vowels) by bringing the tongue closer to the roof of the mouth) "raise your `o'"
+raise-v22:raise (establish radio communications with) "They managed to raise Hanoi last night"
+raise-v23:raise (multiply (a number) by itself a specified number of times: 8 is 2 raised to the power 3)
+raise-v24:raise (bring (a surface or a design) into relief and cause to project) "raised edges"
+raise-v11:raise (create a disturbance, especially by making a great noise) "raise hell"; "raise the roof"; "raise Cain"
+</special>

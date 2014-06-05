@@ -1,0 +1,83 @@
+Verb
+
+<note>
+I used capacity for both material and volume.  maybe we should have different ones?
+</note>
+<comment>
+explosion is closely related to capacity and exceed
+elements of explosion:
+1. sudden: all senses except v10
+2. increase of content inside a container, so that the container can not hold it v10, v9,v2 (in the case of bomb, the content is mostly energy)
+4. so the container falls apart: v8, v9,v2
+5. and the content will be suddenly released v3, v4
+</comment>
+
+//increase sharply in a small container
+<ref>Theory of capacity</ref>
+<comment>y,e3 are handles</comment>
+*explode-v10'(e,x,y,e3): change'(e,e1,e2) & at'(e1,x,x1,s) & at'(e2,x,x2,s) & inside'(e3,x,y) &capacityOf(c,y) & gts(x2,c,s) 
+explode, irrupt (increase rapidly and in an uncontrolled manner) "The population of India is exploding"; "The island's rodent population irrupted"
+
+	//sudden release: sudden increase in anger so that it exceeds the capacity and will be released. Usually when someone explodes from anger he has accumulated the anger inside himself and has not released it. the result of the next increase of anger is a sudden explosion 
+	
+		//content (anger) increases and the suddenly releases
+		*explode-v4'(e,x): explode-v10'(e1,x,y,e3) & changeFrom'(e,e3) & sudden(e)
+		explode, burst forth, break loose (be unleashed; emerge with violence or noise) "His anger exploded"
+		
+		//container explodes
+		*explode-v3'(e,y):explode-v10'(e1,x,y,e3) & changeFrom'(e,e3) & sudden(e)
+		explode (show a violent emotional reaction) "The boss exploded when he heard of the resignation of the secretary"
+
+			
+//increase in volume of the content (not in the mass) + destruction of the container + sudden release 
+
+<question>How can I formulate shattering and destruction of the bottle/bomb?</question>
+	*explode-v2'(e,y):change'(e4,e1,e2) & at'(e1,v,v1,s) & at'(e2,v,v2,s) & volumeOf(v,x) & inside'(e3,x,y) &capacityOf(c,y) & gts(v2,c,s) & changeFrom'(e,e3) & sudden(e) & changeFrom'(e,e5) & form(e5,f,y)
+	explode, burst (burst outward, usually with noise) "The champagne bottle exploded"
+	
+	//energy is released as well as material inside+destruction of objects near the bomb
+	<comment>z is a handle</comment>
+
+		*explode-v9'(e,y,z):explode-v2'(e,y) & changeFrom'(e,e1) & intact(e1,z) & near(z,y)
+		detonate,explode, blow up (burst and release energy as through a violent chemical or physical reaction) "the bomb detonated at noon"; "The Molotov cocktail exploded"
+		
+		//causal
+			
+			*explode-v1'(e,x,y,z):cause'(e,x,e1) & explode-v9'(e1,y,z)
+			explode, detonate, blow up, set off (cause to burst with a violent release of energy) "We exploded the nuclear bomb"
+			
+			//x explode objects by exploding bombs near them
+			*explode-v5'(e,x,z):explode-v1'(e,x,y,z)
+			explode (destroy by exploding) "The enemy exploded the bridge"
+
+
+//abstract+destruction+causal
+	*explode-v8'(e,x,t):cause'(e,x,e1) & changeFrom'(e1,e2) & believe'(e2,y,e3) & wellFormed(e3,t)
+	explode (show (a theory or claim) to be baseless, or refute and make obsolete)
+
+
+<special>
+explode-v6:explode (cause to burst as a result of air pressure; of stop consonants like /p/, /t/, and /k/)
+explode-v7:explode (drive from the stage by noisy disapproval)
+</special>
+
+
+Noun
+
+*explode-n1-2'(e,e0):explode-v9'(e0,y,z)
+	explode-n1:explosion, detonation, blowup (a violent release of energy caused by a chemical or nuclear reaction)
+	explode-n2:explosion, burst (the act of exploding or bursting) "the explosion of the firecrackers awoke the children"; "the burst of an atom bomb creates enormous radiation aloft"
+
+*explode-n3'(e,e0):explode-v10'(e0,x,y,e3)
+explosion (a sudden great increase) "the population explosion"; "the information explosion"
+
+*explode-n4'(e,n):explode-v9'(e0,y,z) & noiseOf'(e,n,e0)
+explosion (the noise caused by an explosion) "the explosion was heard a mile away"
+
+*explode-n6'(e,e0):explode-v4'(e0,x)
+explosion (a sudden outburst) "an explosion of laughter"; "an explosion of rage"
+
+<special>
+explode-n5:plosion, explosion (the terminal forced release of pressure built up during the occlusive phase of a stop consonant)
+explode-n7:explosion (a golf shot from a bunker that typically moves sand as well as the golf ball) 
+</special>

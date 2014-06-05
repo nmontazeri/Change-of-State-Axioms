@@ -1,0 +1,34 @@
+Verb
+<comment>we need the concept of copy. copy is different from "similar"<comment>
+<ref>copyOf</ref>
+//x reproduces y: x creates a copy z of y
+reproduce-s0'(e,x,y,z): cause'(e,x,e0) & changeTo'(e0,e1) & Rexist(e1,z) & copyOf(z,y)
+	reproduce-v1:reproduce (make a copy or equivalent of) "reproduce the painting"
+	reproduce-v3:reproduce (recreate a sound, image, idea, mood, atmosphere, etc.) "this DVD player reproduces the sound of the piano very well"; "He reproduced the feeling of sadness in the portrait"
+	reproduce-v4:regurgitate, reproduce (repeat after memorization) "For the exam, you must be able to regurgitate the information"
+
+	// x reproduces itself. 
+	<question>does this sense really care about genetic (or possible facial) similarity between parents and children? or it merely means produce the same type of being (human-> human, animal->animal, etc)</question>	
+	reproduce-v2'(e,x): cause'(e,x,e0) & changeTo'(e0,e1) & Rexist(e1,z) & childOf(z,x)
+	reproduce, procreate, multiply (have offspring or produce more individuals of a given animal or plant) "The Bible tells people to procreate"; "These bacteria reproduce"
+
+
+
+Noun
+
+//give birth
+reproduction-n1-5'(e,e0): reproduce-v2'(e0,x)
+	reproduction-n1:reproduction (the process of generating offspring)
+	reproduction-n5:reproduction, procreation, breeding, facts of life (the sexual activity of conceiving and bearing offspring) 
+
+reproduction-n2'(e,e0):reproduce-v4'(e0,x)
+reproduction, reproductive memory (recall that is hypothesized to work by storing the original stimulus input and reproducing it during recall)
+
+reproduction-n3'(e,z): reproduce-v1'(e,x,y,z)
+replica, replication, reproduction (copy that is not the original; something that has been copied)
+
+reproduction-n4'(e,e0): reproduce-v1'(e0,x,y,z)
+reproduction, replication (the act of making copies) "Gutenberg's reproduction of holy texts was far more efficient"
+
+    
+    

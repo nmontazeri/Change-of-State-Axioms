@@ -1,0 +1,41 @@
+Verb
+
+// . -> . -> . -> .
+//x circulates among group g. Each person that gets to know x, will cause someone else to know and this continues. But there is no need to return to the initial point. The reason we say circulate is that we don't consider a group as a line, but we consider it as a circle and it is possible that x goes back to a previous person
+circulate-v1-6'(e,x,m0,g):eventSequence'(e,e0,e1) & change'(e0,e2,e3) & rel'(e2,x,m0) & rel'(e3,x,m1) & circulate-v1'(e1,x,m1) & member(m0,g) & member(m1,g)	
+	circulate-v6:circulate (move around freely from person to person or from place to place) "She circulates among royalty"
+
+	//rel'(e2,x,p0)=know'(e2,p0,x)
+	//rumor is not an active agent, although properties of rumor determine how well it will spread. Still it is the people who circulate-v2-3 the rumor.
+	circulate-v1:go around, spread, circulate (become widely known and passed on) "the rumor spread"; "the story went around in the office"
+	
+	//p0 circulates x among group g: causing only one of the above changes means causing a circulation. compare this to broadcasting, where causation is central. But here, causation is not central.
+	circulate-v2-3'(e,m0,x,g): eventSequence'(e11,e10,e1) & cause'(e,m0,e0) & change'(e0,e2,e3) & rel'(e2,x,m0) & rel'(e3,x,m1) & circulate-v2-3'(e1,m1,x) & member(m0,g) &  member(m1,g)
+		circulate-v2:circulate, circularize, circularise, distribute, disseminate, propagate, broadcast, spread, diffuse, disperse, pass around (cause to become widely known) "spread information"; "circulate a rumor"; "broadcast the news"
+		circulate-v3:circulate, pass around, pass on, distribute (cause to be distributed) "This letter is being circulated among the faculty"
+
+//return to start point
+circulate-v4'(e,x):eventSequence(e,e0,e1) & move'(e0,x,p0,p1) & move'(e1,x,p1,p0)
+circulate (move through a space, circuit or system, returning to the starting point) "Blood circulates in my veins"; "The air here does not circulate"
+	//causal
+	circulate-v5'(e,x,y): cause'(e,x,e0) & circulate-v4'(e0,y)
+	circulate (cause to move in a circuit or system) "The fan circulates the air in the room"
+
+    
+Noun
+
+//circulation-n2-5'(e,e0): circulate-v4'(e0,x)
+	circulation-n2:circulation (movement through a circuit; especially the movement of blood through the heart and blood vessels)
+	circulation-n5:circulation (free movement or passage (as of cytoplasm within a cell or sap through a plant)) "ocean circulation is an important part of global climate"; "a fan aids air circulation"
+
+//spread
+circulation-n6'(e,e0):circulate-v1-6'(e0,x,m0,g)
+	circulation-n6:circulation (the spread or transmission of something (as news or money) to a wider group or area) 
+	circulation-n1:circulation (the dissemination of copies of periodicals (as newspapers or magazines))
+
+
+<special>
+//number of copies: a group of xs are being circulated
+	circulation-n4:circulation (number of copies of a newspaper or magazine that are sold) "by increasing its circulation the newspaper hoped to increase its advertising"
+	circulation-n3:circulation ((library science) the count of books that are loaned by a library over a specified period)
+</special>

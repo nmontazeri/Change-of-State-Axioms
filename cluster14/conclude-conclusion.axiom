@@ -1,0 +1,57 @@
+
+<comment>
+consclusion has to do with inference from a series of facts. I think that if someone can make an inference instantly by looking at a set of evidence, we wouldn't call it conclusion, rather if he considers these facts sequentially (one by one) and then makes a conclusion, it will be considered a conclusion.
+so conclusion also involves sequentiality.
+</comment>
+
+
+Verb
+
+//x concludes e0: x comes to believe e0 after considering some evidence
+conclude-v1'(e,x,e0): changeTo'(e,e1) & believe'(e1,x,e0) 
+reason, reason out, conclude (decide by reasoning; draw or come to a conclusion) "We reasoned that it was cheaper to rent than to buy a house"
+	
+	//several people are involved: arrive at agreement
+		conclude-v3:conclude, resolve (reach a conclusion after a discussion or deliberation)
+		conclude-v5:conclude (reach agreement on) "They concluded an economic agreement"; "We concluded a cease-fire"
+
+
+//end
+	//e0 concludes: e0 ends
+	*conclude-v4'(e,e0):end-v1'(e,e0)
+	conclude, close (come to a close) "The concert closed with a nocturne by Chopin"
+	
+	//x concludes e1: x does the last eventuality of event sequence e1
+	conclude-v2'(e,x,e1): changeTo'(e,e0) & last(e0,e1) & arg*(x,e0)
+	conclude (bring to a close) "The committee concluded the meeting"
+
+
+Noun
+
+//reasoning
+
+	//what you arrive at
+	conclusion-n1-2-5'(e1,e0):conclude-v1'(e,x,e0)
+		conclusion-n1:decision, determination, conclusion (a position or opinion or judgment reached after consideration) "a decision unfavorable to the opposition"; "his conclusion took the evidence into account"; "satisfied with the panel's determination"
+		conclusion-n2:conclusion (an intuitive assumption) "jump to a conclusion"
+		conclusion-n5:conclusion, ratiocination (the proposition arrived at by logical reasoning (such as the proposition that must follow from the major and minor premises of a syllogism))
+		
+		//agreement
+		conclusion-n7:conclusion (a final settlement) "the conclusion of a business deal"; "the conclusion of the peace treaty"
+
+	//arriving at
+	conclusion-n9'(e1,e):conclude-v1'(e,x,e0)
+	decision, determination, conclusion (the act of making up your mind about something) "the burden of decision was his"; "he drew his conclusions quickly"
+
+//ending	
+	// e0 is the conclusion for e1: e0 is the last in sequence e1
+	conclusion-n'(e,e0): last'(e,e0,e1)
+		conclusion-n3:stopping point, finale, finis, finish, last, conclusion, close (the temporal end; the concluding time) "the stopping point of each round was signaled by a bell"; "the market was up at the finish"; "they were playing better at the close of the season"
+		conclusion-n4:ending, conclusion, finish (event whose occurrence ends something) "his death marked the ending of an era"; "when these final episodes are broadcast it will be the finish of the show"
+		conclusion-n8:conclusion, end, close, closing, ending (the last section of a communication) "in conclusion I want to say..."
+		
+	//e0 is the conclusion of e2: e0 is the change to the last eventuality(e1) of e2
+		conclusion-n6'(e,e0,e2): changeTo'(e0,e1) & last(e1,e2)
+		termination, ending, conclusion (the act of ending something) "the termination of the agreement"
+
+

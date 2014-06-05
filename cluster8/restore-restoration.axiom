@@ -1,0 +1,37 @@
+Verb
+
+//this axiom is correct only if we don't consider time as an essential part of eventualities, otherwise e0 cannot occur 2 times, rather we will have a different condition that is similar to e0
+//another way is to say that there was a change from e0 in the past: changeFrom'(e3,e0) & before(e3,e) 
+*restore-s0'(e,x,y,e0): cause'(e,x,e1) & change'(e1,e2,e0) & arg*(x,e2) &  arg*(x,e0) & bad(e2) & good(e0) & before(e0,e) 
+	restore-v1:restore, reconstruct (return to its original or usable and functioning condition) "restore the forest to its original pristine condition"
+	restore-v2:regenerate, restore, rejuvenate (return to life; get or give new life or energy) "The week at the spa restored me"
+	restore-v5:restore, reinstate, reestablish (bring back into original existence, use, function, or position) "restore law and order"; "reestablish peace in the region"; "restore the emperor to the throne"
+
+	//restore by changeIn
+	restore-v4:repair, mend, fix, bushel, doctor, furbish up, restore, touch on (restore by replacing a part or putting together what is torn or broken) "She repaired her TV set"; "Repair my shoes please"
+
+*restore-v3'(e,x,y,z):cause'(e,x,e0) & changeTo'(e0,e1) & have'(e1,z,y) & before(e0,e) 
+restore, restitute (give or bring back) "Restore the stolen painting to its rightful owner"
+
+
+Noun
+
+restore-n2-4'(e,e1):restore-s0'(e1,x,y,e0)
+	restore-n2:restoration (the act of restoring something or someone to a satisfactory state)
+	restore-n4:renovation, restoration, refurbishment (the state of being restored to its former good condition) "the inn was a renovation of a Colonial house"
+
+
+restore-n3'(e,e1): restore-v3'(e1,x,y,z)
+restitution, return, restoration, regaining (getting something back again) "upon the restitution of the book to its rightful owner the child was given a tongue lashing"
+
+restore-n5'(e0,x):restore-s0'(e1,x,y,e0)
+restoration (some artifact that has been restored or reconstructed) "the restoration looked exactly like the original"
+
+
+<special>
+restore-n1:Restoration (the reign of Charles II in England; 1660-1685)
+restore-n7:Restoration (the re-establishment of the British monarchy in 1660) 
+
+restore-n6:restoration (a model that represents the landscape of a former geological age or that represents and extinct animal etc.)
+
+</special>

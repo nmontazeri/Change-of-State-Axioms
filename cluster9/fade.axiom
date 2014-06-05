@@ -1,0 +1,27 @@
+Noun
+
+fade-n2'(e,e0):fade-v1'(e,x)
+fade, disappearance (gradually ceasing to be visible)
+
+<special>
+fade-n1:slice, fade, slicing (a golf shot that curves to the right for a right-handed golfer) "he took lessons to cure his slicing"
+</special>
+
+Verb
+
+//x fades: a gradual decrease in level of x
+<question>still  intensityOf(i,x)& at'(e1,i,p1,s) & bottom(p1,s) does not imply thatx disappears </question>
+fade-s0'(e,x): changeFrom'(e,e2,e1) & at'(e2,i,p2,s) & at'(e1,i,p1,s) & bottom(p1,s) & intensityOf(i,x) & gradual(e)
+
+	fade-v3:evanesce, fade, blow over, pass off, fleet, pass (disappear gradually) "The pain eventually passed off"
+	
+	//x= visibility of y
+	fade-v1'(e,x): fade-s0'(e,y) & contrastOf(y,x)
+	fade, melt (become less clearly visible or distinguishable; disappear gradually or seemingly) "The scene begins to fade"; "The tree trunks are melting into the forest at dusk"
+	
+
+	//x= vitality of
+	fade-v2-4'(e,x): fade-s0'(e,y) & vitalityOf(y,x)
+		fade-v2:fade, wither (lose freshness, vigor, or vitality) "Her bloom was fading"
+		fade-v4:languish, fade (become feeble) "The prisoner has been languishing for years in the dungeon"
+

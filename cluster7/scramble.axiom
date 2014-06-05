@@ -1,0 +1,30 @@
+Noun
+
+scramble-n2'(e,e0):scramble-v1'(e0,x)
+scamper, scramble, scurry (rushing about hastily in an undignified way)
+
+<special>
+// a struggle consists of a series of ...? and these states are not following the expected(normal) path/ the next state is random
+<ref>change along a path</ref>
+scramble-n1:scramble, scuffle (an unceremonious and disorganized struggle)
+</special>
+
+Verb
+
+*scramble-s0'(e,x): change'(e,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & random(p2)
+	
+	//unformedness of an event 
+	*scramble-v1'(e,x):move'(e,x) &  
+	scramble (to move hurriedly) "The friend scrambled after them"
+		
+		//move=climb
+		scramble-v2:clamber, scramble, shin, shinny, skin, struggle, sputter (climb awkwardly, as if by scrambling)
+
+	//causal, unformedness of an entity
+		//x scrambles y: x changes the relations (form) of composite entity y. 
+		<question>I think it is not necessary to state that s2 is a subset of s1. more important is to say that the new relations are not well-formed</question>
+		*scramble-v3'(e,x,y): cause'(e,x,e0) & change'(e0,e1,e2) & relationsOf'(e1,s1,y) & relationsOf'(e2,s2,y) & subset(s2,s1) & random(e2)
+		scramble, jumble, throw together (bring into random order)
+			scramble-v4:beat, scramble (stir vigorously) "beat the egg whites"; "beat the cream"
+			scramble-v5:scramble (make unintelligible) "scramble the message so that nobody can understand it"
+

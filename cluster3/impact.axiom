@@ -1,0 +1,30 @@
+Noun
+
+//hit
+	*impact-n1'(e,e0,x,y): changeTo'(e0,e1) & at'(e1,x,y) & changeIn'(e3,y) & gen(e1,e3)
+	<ref>hit</ref>
+	impact (the striking of one body against another)
+
+//effect, affect
+	*impact-n3'(e,e0):impact-v2'(e0,x,y,e1)
+	impingement, encroachment, impact (influencing strongly) "they resented the impingement of American values on European culture"
+	
+	*impact-n2'(e,e0):impact-v2'(e1,x,y,e0)
+	impact, wallop (a forceful consequence; a strong effect) "the book had an important impact on my thinking"; "the book packs a wallop"
+
+<special>
+*impact-n4'(e,e0): and'(e0,e1,e2) & impact-v2'(e1,x,y) & impact-v2'(e2,y,x)
+shock, impact (the violent interaction of individuals or groups entering into combat) "the armies met in the shock of battle"
+</special>
+
+Verb
+//it seems we need force domain predicates
+//x impacts y: x has an effect on y. very generally, x causes a change in some propery (can be abstract property) of y.
+
+	*impact-v2'(e,x,y,e1):cause'(e,x,e1) & changeIn'(e1,y)
+	affect, impact, bear upon, bear on, touch on, touch (have an effect upon) "Will the new rules affect me?"
+
+//x impacts x and y: x causes x and y to be in such a contact that both exert force on each other.
+	*impact-v1'(e,x,y,z):cause'(e,x,e1) & contact-v2'(e1,y,z,p) & impact-v2(x,y) & impact-v2(y,x)
+	impact (press or wedge together; pack together)
+

@@ -1,0 +1,107 @@
+Verb
+change of state
+move-s0'(e,x,p0,p1) : changeFrom'(e,e0,e1) & at'(e0,x,p0) & at'(e1,x,p1)
+
+** I think every change is a move. So maybe we don't need the �at�. How general is �at�? Does it have the same meaning as state: at'(e,x,y) = state(y) & arg(x,y) 
+
+in plain:
+
+move-v7'(e,x,p0,p1): move-s0'(e,x,p0,p1) & subject(p0) & subject(p1)
+move (go or proceed from one point to another) "the debate moved from family values to the economy"
+
+move-v1'(e,x,p0,p1): move-v7'(e,x,p0,p1) & location(p1) & location(p2) 
+travel, go, move, locomote (change location; move, travel, or proceed, also metaphorically) "How fast does your new car go?"; "We travelled from Rome to Naples by bus"; "The policemen went from door to door looking for the suspect"; "The soldiers moved towards the city in an attempt to take it before night fell"; "news travelled fast"
+
+move-v4'(e,x,p0,p1):  move-v7'(e,x,p0,p1) & affiliation(p1) & affiliation(p2)
+move (change residence, affiliation, or place of employment) "We moved from Idaho to Nebraska"; "The basketball player moved from one team to another"
+move-v14 :move-v7'(e,x,p0,p1) & environment(p1) & environment(p2)
+move (live one's life in a specified environment) "she moves in certain circles only"
+		
+on a line (scale), increasing:
+move-v5:  move-v7'(e,x,p0,p1) & atScale(p0,s) & atScale(p1,s) & gt(p1,p0)
+go, proceed, move (follow a procedure or take a course) "We should go farther in this matter"; "She went through a lot of trouble"; "go about the world in a certain manner"; "Messages must go through diplomatic channels"
+
+move-v13 
+move, go, run (progress by being changed) "The speech has to go through several more drafts"; "run through your presentation before the meeting"
+causal:
+move-v68'(e,x): act'(e,x) 
+move-v8
+act, move (perform an action, or work out or perform (an action)) "think before you act"; "We must move quickly"; "The governor should act on the new energy bill"; "The nanny acted quickly by grabbing the toddler and covering him with a wet towel"
+move-v6 = v8
+ be active, move (be in a state of action) "she is always moving"
+---------------------------------------------------------------
+special:
+move-v15  : act in a game
+ go (have a turn; make one's move in a game) "Can I go now?"
+
+move-v16'(e,x): act in a debate or meeting  
+move, make a motion (propose formally
+; in a debate or parliamentary meeting) 
+move-v23'(e,x,y,p0,p1) : cause'(e,x,e0) & move-v7'(e0,y,p0,p1) & location(p0) & location(p1)
+ move-v2: displace (cause to move or shift into a new position or place, both in a concrete and in an abstract sense) "Move those boxes into the corner, please"; "I'm moving my money to another bank"; "The director moved more responsibilities onto his new assistant"
+move-v3
+ (move so as to change position, perform a nontranslational motion) "He moved his hand slightly to the right"
+move-v12'(e,x,y): move-v23'(e,x,y,p0,p1) & sell'(e,x,y)
+move (dispose of by selling) "The chairman of the company told the salesmen to move the computers"
+
+move-v911'(e,x,y,e0): cause'(e,x,e0) & mental-event(e0)& arg(y,e0)
+move-v9 
+affect, impress, move, strike (have an emotional or cognitive impact upon) "This child impressed me as unusually mature"; "This behavior struck me as odd"
+move-v11 
+move (arouse sympathy or compassion in) "Her fate moved us all"
+
+move-v10'(e,x,y): move-v911'(e,x,y,e0) & move-v68'(e0,y) 
+ motivate, actuate, propel, move, prompt, incite (give an incentive for action) "This moved me to sacrifice my career"
+
+
+
+Noun
+move-n1'(e0,e,x) : move-v68'(e,x)
+ move (the act of deciding to do something) "he didn't make a move to help"; "his first move was to hire a lawyer"
+move-n2'(e0,e,p0,p1):move-v4'(e,x,p0,p1)
+ relocation (the act of changing your residence or place of business) "they say that three moves equal one fire"
+move-n3'(e,x): move-v1'(e,y,p0,p1) & physicalPartOf(y,x) & agentOf(x,e)
+motion, movement, move, motility (a change of position that does not entail a change of location) "the reflex motion of his eyebrows revealed his surprise"; "movement is a sign of life"; "an impatient move of his hand"; "gastrointestinal motility"
+move-n4'(e,e0,x):move-v1'(e0,x,p0,p1)
+motion, movement, move (the act of changing location from one place to another) "police controlled the motion of the crowd"; "the movement of people from the farms to the cities"; "his move put him directly in my path"
+-------------------------------------------------------
+special:
+move-n5: move-v15
+ ((game) a player's turn to take some action permitted by the rules of the game) 
+
+-------------------------------------
+Movement:
+
+movement-n1 = move-n3
+ motion, movement, move, motility (a change of position that does not entail a change of location) "the reflex motion of his eyebrows revealed his surprise"; "movement is a sign of life"; "an impatient move of his hand"; "gastrointestinal motility" 
+
+movement-n8 bowel movement, movement, bm (a euphemism for defecation) "he had a bowel movement" 
+
+
+ movement-n2 = move-n4
+ motion, movement, move (the act of changing location from one place to another) "police controlled the motion of the crowd"; "the movement of people from the farms to the cities"; "his move put him directly in my path" 
+
+movement-n11 (the act of changing the location of something) "the movement of cargo onto the vessel"
+movement-n7 : x is object in picture
+apparent motion, motion, apparent movement, movement (an optical illusion of motion produced by viewing a rapid succession of still pictures of a moving object) "the cinema relies on apparent motion"; "the succession of flashing lights gave an illusion of movement" 
+
+
+movement-n3�(e,e0,x) =  natural-event(e0) & subEvent (e1,e0) & move-v1�(e1,x,p0,p1)
+ motion (a natural event that involves a change in the position or location of something) 
+
+movement-n9'(e,e0,p0,p1): change'(e,x,e2,e3) & hasOpinion'(e2,x,p0) & hasOpinion'(e3,x,p1)
+drift, trend, movement (a general tendency to change (as of opinion)) "not openly liberal but that is the trend of the book"; "a broad movement of the electorate to the right" 
+
+
+ movement-n6'(e,e0,x): e0 is series of e2  that are move-n1'(e3,e2,x) & people(x)
+campaign, cause, crusade, drive, movement, effort (a series of actions advancing a principle or tending toward a particular end) "he supported populist campaigns"; "they worked in the cause of world peace"; "the team was ready for a drive toward the pennant"; "the movement to end slavery"; "contributed to the war effort" 
+
+movement-n4'(e,x): movement-n6'(e,e0,x) 
+social movement, front (a group of people with a common ideology who try together to achieve certain general goals) "he was a charter member of the movement"; "politicians have to respect a mass movement"; "he led the national liberation front" 
+
+-------------------------------------------------------------------------------------------------------------
+special:
+movement-n5 (a major self-contained part of a symphony or sonata) "the second movement is slow and melodic"
+movement-n10'(e,x):  cause'(e0,x,e1)& move-s0'(e1,y,p0,p1)
+(the driving and regulating parts of a mechanism (as of a watch or clock)) "it was an expensive watch with a diamond movement" 
+

@@ -1,0 +1,27 @@
+Verb
+
+//I think the difference between develop and expand is that in develop, the size doesn't change, but in expand, the size changes. In grow and develop, the focus is more on "quality" being increased
+
+*expand-s0'(e,x): increase'(e,z,s) & sizeOf(z,x)
+	expand-v1:expand, spread out (extend in one or more directions) "The dough expands"
+	expand-v2:expand (become larger in size or volume or quantity) "his business expanded rapidly"
+	expand-v4:boom, thrive, flourish, expand (grow vigorously) "The deer population in this town is thriving"; "business is booming"
+
+
+
+	//causal
+	*expand-s0'(e,x,y): cause'(e,x,e1) & expand-s0'(e1,y)
+		expand-v3:expand (make bigger or wider in size, volume, or quantity) "expand the house by adding another wing"
+		expand-v5:inflate, blow up, expand, amplify (exaggerate or make bigger) "The charges were inflated"
+		
+		//x expands y to z: x causes an increase in the its rule
+		//when the size of something changes, its boundary also changes. there is a close relationship between size and boundary and this sense is related to boundary
+		//what does "increase in boundary" mean? it should be measured from the center point
+		*expand-v7'(e,x,r,p1): cause'(e,x,e1) &  increase'(e1,b,p0,p1) & boundaryOf(b,r)
+		extend, expand (expand the influence of) "The King extended his rule to the Eastern part of the continent"
+
+//this sense is closely related to increase in size in a tree structure, where the child nodes are details about the parent node. 
+//there is a difference between "develop and idea" and "expand an idea", but I am capturing both as "increase in amount of detail". Maybe the difference is that in "develop", the details are being found while in "expand", the details are known and they are just being asserted.
+*expand-v6'(e,x,y): cause'(e,x,e1) & increase'(e1,z,s) & detailOf(z,y)
+elaborate, lucubrate, expatiate, exposit, enlarge, flesh out, expand, expound, dilate (add details, as to an account or idea; clarify the meaning of and discourse in a learned way, usually in writing) "She elaborated on the main ideas in her dissertation"
+

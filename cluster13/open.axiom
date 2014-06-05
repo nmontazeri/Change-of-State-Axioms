@@ -1,0 +1,142 @@
+<comment>
+elements of open: 
+1) there is some entity 
+2) there is some barrier that can be set between the entity and some observer outside
+3) this barrier may be integrated with the entity itself (mouthy, eye), or be separate: door
+4) this barrier can prevent acces to the entity
+
+this kind of "open" is closely related to "pass" , "barrier", "access"
+
+there is another type of "open" which is related to space and means there is a gap in something(x): it is possible to get in the gap/ x can accomodate. Putting it in another way,  there is a space that is not occupied and filled by anything.
+
+</comment>
+
+Adjective
+
+//entity is open to y: entity has no barrier against y: it is possible to change to rel(y,x). e1 is handle
+*open-adj0'(e,x,e1): possible'(e,e0) & changeTo'(e0,e1) & rel'(e1,y,x)
+	
+	//e1=at(y,x)
+	open-adj3-10-8'(e,x): open-adj0'(e,x,e1) & in'(e1,y,x)
+		open-adj3:exposed, open (with no protection or shield) "the exposed northeast frontier"; "open to the weather"; "an open wound"
+		open-adj10:open (having no protecting cover or enclosure) "an open boat"; "an open fire"; "open sports cars"
+		
+	//e1=in(y,x):x is container (also metaphorically)
+		open-adj6:open (not having been filled) "the job is still open"
+		
+		<q>It seems that  "open to attack" should be classified under another sense</q>
+		open-adj8:assailable, undefendable, undefended, open (not defended or capable of being defended) "an open city"; "open to attack"
+			
+	//e1= accept(x,y)
+		open-adj15:receptive, open (ready or willing to receive favorably) "receptive to the proposals"
+			
+		//store can be seen as container too: if the store is open, you can get in
+		open-adj21:open (ready for business) "the stores are open"
+			
+	//e1= solve or think about
+		// e1 is explicit
+		open-adj18:capable, open, subject (possibly accepting or permitting) "a passage capable of misinterpretation"; "open to interpretation"; "an issue open to question"; "the time is fixed by the director and players and therefore subject to much variation"
+			
+		open-adj12:open, undecided, undetermined, unresolved (not brought to a conclusion; subject to further thought) "an open question"; "our position on this bill is still undecided"; "our lawsuit is still undetermined"
+			
+	//there can be  a changeFrom(in) and a changeTo(in). mouth is a container and open mouth is closely related to adj6 and adj8. eye is not a container and open eye is more related to communication of eye
+	//This changeFrom(in) and changeTo(in) can be abstract, as in opening a file on a computer system. Then opening a file does not mean that something can come out of it, rather it means that one can know/see what is inside.
+	*open-adj5-13'(e,x): possible'(e,e0) & and'(e0,e1,e2) & changeTo'(e1,e3) & changeFrom'(e2,e3) & in'(e3,y,x)
+		open-adj5'(e,x,y):open, opened (used of mouth or eyes) "keep your eyes open"; "his mouth slightly opened"
+		open-adj13:open, opened (not sealed or having been unsealed) "the letter was already open"; "the opened package lay on the table"
+		
+			
+	//x is open to y: y is public: x is accessible for public.
+	open-adj4-7-16-17'(e,x):possible'(e,e0) & changeTo'(e0,e1) & rel'(e1,y,x) & public(y)
+		open-adj4:open (open to or in view of all) "an open protest"; "an open letter to the editor"
+		open-adj7:open (accessible to all) "open season"; "an open economy"
+		open-adj16:overt, open (open and observable; not secret or hidden) "an overt lie"; "overt hostility"; "overt intelligence gathering"; "open ballots"
+		open-adj17:open (not requiring union membership) "an open shop employs nonunion workers"
+	
+	//related to passage: in adj1, x is a point along a path and in adj2-9, x is the path itself 
+	open-adj1-2-9'(e,x): possible'(e,e0) & pass-s?'(e0,y,x)
+	
+		// x is a door separating space s1 and s2, rel=in : a is in s1 and b is in s2 and open-ness of the door means that there can be change from a being at s1 to a being at s2 and also there can be a change from b being at s2 to b being at s1
+		open-adj1'(e,x): door(x,s1,s2) & at'(e3,a,s1) & at'(e5,b,s2) & possible'(e,e0) & and'(e0,e1,e2) & change'(e1,e3,e4) & change'(e2,e5,e6)  & at'(e3,b,s1) & at'(e5,a,s2)
+		open, unfastened (affording unobstructed entrance and exit; not shut or closed) "an open door"; "they left the door open"
+	
+		//path is open -> possible change along (usually we mean that some point along the path is open: one would not expect a path to be blocked all the way, so this is closely related to passing a point)
+		open-adj2'(e,p): open-adj2-9'(e,x) & path(p) & at(x,p) 
+			open-adj2:open (affording free passage or access) "open drains"; "the road is open to traffic"; "open ranks"
+			open-adj19:clear, open (affording free passage or view) "a clear view"; "a clear path to victory"; "open waters"; "the open countryside"
+
+		//x is texture
+		open-adj9'(e,x): open-adj2-9'(e,x) & texture(x)
+			open-adj9:loose, open ((of textures) full of small openings or gaps) "an open texture"; "a loose weave"
+	
+
+<special>
+open-adj11:open ((set theory) of an interval that contains neither of its endpoints)
+
+//related to path: nothing is in the path, no barrier in between
+open-adj14:open (without undue constriction as from e.g. tenseness or inhibition) "the clarity and resonance of an open tone"; "her natural and open response"
+open-adj20:candid, open, heart-to-heart (openly straightforward and direct without reserve or secretiveness) "his candid eyes"; "an open and trusting nature"; "a heart-to-heart talk"
+
+</special>
+
+
+Verb
+
+open-v3'(e,y):changeTo'(e,e1) & open-adj1'(e1,y)
+open, open up (become open) "The door opened"
+	//causal
+	open-v1'(e,x,y):cause'(e,x,e0) & changeTo'(e0,e1) & open-adj1'(e1,y)
+open, open up (cause to open or to become open) "Mary opened the car door"
+
+open-v2'(e,x,y):start-v5-6'(e,x,y)
+open, open up (start to operate or function or cause to start operating or functioning) "open a business"
+
+//x opens y with e1
+open-v4'(e,x,y,e1): eventSequence(y,e1,e2) & arg*(x,e1)
+open (begin or set in action, of meetings, speeches, recitals, etc.) "He opened the meeting with a long speech"
+open-v9:open (make the opening move) "Kasparov opened with a standard opening"
+
+
+//adjacent spaces
+	<q>Is it necessary that there be a door between the two spaces?</q>
+	*open-v8'(e,x,y): connect-s?(e,x,y)
+	<comment>
+	alternative axiom: 
+		*open-v8'(e,x,y): at'(e3,a,s1) & at'(e5,b,s2) & possible'(e,e0) & and'(e0,e1,e2) & change'(e1,e3,e4) & change'(e2,e5,e6)  & at'(e3,b,s1) & at'(e5,a,s2)
+	<q>Still we need to say that these two spaces are next to each other</q>
+	</comment>
+	open (have an opening or passage or outlet) "The bedrooms open into the hall"
+	
+	*open-v10'(e,x,s1):door(x,s1,s2)
+	afford, open, give (afford access to) "the door opens to the patio"; "The French doors give onto a terrace"
+
+//unfolding something. shape theory. How to axiomatize?
+	open-v5:unfold, spread, spread out, open (spread out or open from a closed or folded state) "open the map"; "spread your arms"
+	
+	open-v11'(e,x,y): cause'(e,x,e0) & changeTo'(e0,e1) & open-adj5-13'(e,y)
+	open (display the contents of a file or start an application as on a computer)
+
+//rel=have?
+open-v7'(e,x): changeTo'(e,e1) & open-adj0'(e1,x,e2) & have-s?'(e2,y,x)
+open, open up (become available) "an opportunity opened up"
+	//causal
+	open-v6'(e,x,y):cause'(e,x,e0) & open-v7'(e0,y)
+	open, open up (make available) "This opens up new possibilities"
+
+Noun
+
+//related to not being obstructed
+	open-n1'(e,x): 
+	open, clear (a clear or unobstructed space or expanse of land or water) "finally broke out of the forest into the open"
+
+//environment (from which something gets protected): y in open-adj3-10-8
+open-n2:outdoors, out-of-doors, open air, open (where the air is unconfined) "he wanted to get outdoors a little"; "the concert was held in the open air"; "camping in the open"
+
+//related to public access
+	// a game open to public
+	open-n3:open (a tournament in which both professionals and amateurs may play)
+	
+	// Is the gloss correct? I would only say "public"
+	<q>It seems that public and environment(n2) are very similarn</q>
+	open-n4:open, surface (information that has become public) "all the reports were out in the open"; "the facts had been brought to the surface"
+

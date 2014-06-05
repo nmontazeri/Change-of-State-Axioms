@@ -1,0 +1,90 @@
+
+<comment>
+Note that there is a difference between "cause not change from" (e.g., keep the student at school) and "not cause change from" (keep the guests)
+</comment>
+
+<comment>
+not sure about v20,v21
+</comment>
+Verb
+
+//not change from e0
+	//x keeps e0
+	*keep-v2-12'(e,x,e0): not'(e,e1) & changeFrom'(e1,e0) & arg*(x,e0)
+		keep-v2:continue, go on, proceed, go along, keep (continue a certain state, condition, or activity) "Keep on working!"; "We continued to work into the night"; "Keep smiling"; "We went on working until well past midnight"
+		keep-v12:keep, stay fresh (fail to spoil or rot) "These potatoes keep for a long time"
+
+		//causal: cause not change from
+		*keep-v1-22'(e,x,y,e0):cause'(e,x,e1) & keep-v2-12'(e1,y,e0)
+			keep-v1:keep, maintain, hold (cause to continue in a certain state, position, or activity; e.g., `keep clean') "hold in place"; "She always held herself as a lady"; "The students keep me on my toes"
+			
+			//e0=good condition
+				keep-v22:preserve, keep (prevent (food) from rotting) "preserved meats"; "keep potatoes fresh"
+				keep-v7:keep (look after; be the keeper of; have charge of) "He keeps the shop when I am gone"
+				keep-v14:keep, preserve (maintain in safety from injury, harm, or danger) "May God keep you"
+			
+			//e0=at/in place
+			keep-v20:keep (hold and prevent from leaving) "The student was kept after school"
+	
+			//e0=inside (not expressed)
+			keep-v21:restrain, keep, keep back, hold back (prevent the action or expression of) "hold back your anger"; "keep your cool"; "she struggled to restrain her impatience at the delays"
+
+
+	//x keeps y: e0=rel (x,y)
+	*keep-s1'(e,x,y): not'(e,e1) & changeFrom'(e1,e0) &rel'(e0,x,y)
+	
+		//y=holiday/rite: rel=celebrate		
+		keep-v13:observe, celebrate, keep (behave as expected during of holidays or rites) "Keep the commandments"; "celebrate Christmas"; "Observe Yom Kippur"
+		
+		//rel=know
+		keep-v6:observe, keep, maintain (stick to correctly or closely) "The pianist kept time with the metronome"; "keep count"; "I cannot keep track of all my employees"
+	
+		//rel= hold-s?
+		<comment>appointment, promise, contract are all of the type "agreement". The nature of an agreement is connecting two persons: each person "accepts/conforms/holds" to the agreement.</comment>
+		<q> we can also say that this sense means "keep the appointment valid" which means that this sense would be classified under keep-v2-12</q>
+		keep-v5:observe, keep (conform one's action or practice to) "keep appointments"; "she never keeps her promises"; "We kept to the original conditions of the contract"
+	
+		//rel=have-v1?
+			keep-v3:keep, hold on (retain possession of) "Can I keep my old stuffed animals?"; "She kept her maiden name after she married"
+			
+			keep-v18:keep (have as a supply) "I always keep batteries in the freezer"; "keep food for a week in the pantry"; "She keeps a sixpack and a week's worth of supplies in the refrigerator"
+			keep-v19:keep, maintain (maintain for use and service) "I keep a car in the countryside"; "She keeps an apartment in Paris for her shopping trips"
+
+			//causal: x keeps y for z: x causes z to keep y
+			*keep-v16'(e,x,y,z):cause'(e,x,e0) & keep-s1'(e0,z,y)
+			keep open, hold open, keep, save (retain rights to) "keep my job for me while I give birth"; "keep my seat, please"; "keep open the possibility of a merger"
+
+				
+		//not cause change from e0	
+		*keep-s1'(e,x,e0): not'(e,e1) & cause'(e1,x,e2) & changeFrom'(e2,e0) 
+		
+			//x keeps y in/at p (p is a location that is controlled(more general than owned) by x): rel=at(y,p) & have(x,p)
+			*keep-v9-17'(e,x,y,z): keep-s1'(e,x,e0) & at'(e0,y,p) & have(x,p) & place(p)
+				keep-v9:keep (supply with room and board) "He is keeping three women in the guest cottage"; "keep boarders"
+				keep-v17:keep (store or keep customarily) "Where do you keep your gardening tools?"
+
+				//also not change from supplying
+				*keep-v10-11-15'(e,x,y):keep-s1'(e,x,e0) & and'(e0,e1,e2) & at'(e1,y,p) & have(x,p) & place(p) & supply(e2,x,y)
+					keep-v10:retain, continue, keep, keep on (allow to remain in a place or position or maintain a property or feature) "We cannot continue several servants any longer"; "She retains a lawyer"; "The family's fortune waned and they could not keep their household staff"; "Our grant has run out and we cannot keep you on"; "We kept the work going as long as we could"; "She retained her composure"; "this garment retains its shape even after many washings"
+					keep-v11:sustain, keep, maintain (supply with necessities and support) "She alone sustained her family"; "The money will sustain our good cause"; "There's little to earn and many to keep"
+					keep-v15:keep (raise) "She keeps a few chickens in the yard"; "he keeps bees"
+
+		
+//x keeps y: x puts some info in format of y and this means that the info will not be forgotten
+keep-v8'(e,x,form):putIntoForm'(e,info, form) & enable(e,e0) & keep-v6'(e0,x,info)
+keep, maintain (maintain by writing regular records) "keep a diary"; "maintain a record"; "keep notes"
+
+//x keeps y from e3: cause not change to e3
+*keep-v4'(e,x,y,e3): cause'(e,x,e0) & not'(e0,e2) & changeTo'(e2,e3)
+	prevent, keep (stop (someone or something) from doing something or being in a certain state) "We must prevent the cancer from spreading"; "His snoring kept me from falling asleep"; "Keep the child from eating the marbles"
+
+Noun
+
+<special>
+keep-n1'(e,k):keep-v10-11-15'(e0,x,y) & expense-of(k,e0)
+support, keep, livelihood, living, bread and butter, sustenance (the financial means whereby one lives) "each child was expected to pay for their keep"; "he applied to the state for support"; "he could no longer earn his own livelihood"
+
+//something that keeps in place
+keep-n2:keep, donjon, dungeon (the main tower within the walls of a medieval castle or fortress)
+keep-n3:hold, keep (a cell in a jail or prison)
+</special>

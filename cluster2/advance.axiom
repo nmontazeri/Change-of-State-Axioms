@@ -1,0 +1,62 @@
+Noun
+
+advance-n0'(e0,e):advance-s0'(e,x,p0,p1)
+	advance-n1:advance-v1
+	progress, progression, advance (a movement forward) "he listened for the progress of the troops"
+	
+	advance-n4:advance-v1
+	progress, progression, procession, advance, advancement, forward motion, onward motion (the act of moving forward (as toward a goal))
+
+	advance-n2:advance-v7
+	improvement, betterment, advance (a change for the better; progress in development)
+
+	advance-n6:advance, rise (increase in price or value) "the news caused a general advance on the stock market"
+
+
+*advance-n5'(e0,z): advance-v10'(e,x,y,z)
+advance, cash advance (an amount paid before it is earned)
+
+
+<special>
+advance-n3:overture, advance, approach, feeler (a tentative suggestion designed to elicit the reactions of others) "she rejected his advances"
+</special>
+
+Verb
+
+*advance-s0'(e,x,p0,p1): change'(e,e1,e2) & at'(e1,x,p1,s) &  at'(e2,x,p2,s) & gts(p1,p2)
+	
+	//no mention to the amount of advance or start or end poins	
+	advance-v1:advance, progress, pass on, move on, march on, go on (move forward, also in the metaphorical sense) "Time marches on"    
+	advance-v6:gain, advance, win, pull ahead, make headway, get ahead, gain ground (obtain advantages, such as points, etc.) "The home team was gaining ground"; "After defeating the Knicks, the Blazers pulled ahead of the Lakers in the battle for the number-one playoff berth in the Western Conference"; "win points"
+	advance-v7:progress, come on, come along, advance, get on, get along, shape up (develop in a positive way) "He progressed well in school"; "My plants are coming along"; "Plans are shaping up"
+	
+	// x advances d points
+	advance-v12'(e,x,d): advance-s0'(e,x,p0,p1) & difference(d,p1,p2)
+	advance, gain (rise in rate or price) "The stock market gained 24 points today"
+
+*advance-s1'(e,x,y): cause'(e,x,e1) & advance-s0'(e1,y)
+	advance-v2:advance, throw out (bring forward for consideration or acceptance) "advance an argument"
+	advance-v3:boost, advance, supercharge (increase or raise) "boost the voltage in an electrical circuit"
+	advance-v4:promote, advance, boost, further, encourage (contribute to the progress or growth of) "I am promoting the use of computers in the classroom"
+	advance-v5:advance, bring forward (cause to move forward) "Can you move the car seat forward?"
+	advance-v8:advance (develop further) "We are advancing technology every day"
+	advance-v9:promote, upgrade, advance, kick upstairs, raise, elevate (give a promotion to or assign to a higher position) "John was kicked upstairs when a replacement was hired"; "Women tend not to advance in the major law firms"; "I got promoted after many years of hard work"
+	advance-v11:advance, set ahead (move forward) "we have to advance clocks and watches when we travel eastward"
+
+//x advances z to y: x gives z to y in advance. s is a handle
+*advance-v10'(e,x,y,z): give'(e,x,z,y) & advance-adj1(e)
+advance (pay in advance) "Can you advance me some money?"
+
+
+Adjective
+
+
+*advance-adj1'(e,x,e0?x?):atTime(e0,t0) & supposed(e2) & atTime'(e2,e0,t1) & before(t0,t1) & ?arg(x,e0)
+advance, beforehand (being ahead of time or need) "gave advance warning"; "was beforehand with her report"
+<comment>this sense should be splitted to two senses. one for an eventuality that is advance (advance warning) and the other for someone who is advance with something. being advance with a report means that the report has reached its current level before thesupposed time. so for a report to be atTime(t0) means that the current level/status of report is atTime(t0) . </comment>
+
+//there is some eventuality and some other person(s) y whare x experiences the eventuality before y can experience it.
+*advance-adj2'(e,x): atTime(e0,t0) & arg(x,e0) & (subst x e0 y e1) & atTime(e1,t1) & arg(y,e1) & before(t0,t1)
+<comment>someone who is ahead will be in position p earlier (in advance) than someone who is behind</comment>
+advance, advanced, in advance (situated ahead or going before) "an advance party"; "at that time the most advanced outpost was still east of the Rockies"
+

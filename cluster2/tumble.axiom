@@ -1,0 +1,48 @@
+Noun
+
+tumble-n1'(e,e0): tumble-v11'(e0,x)
+tumble (an acrobatic feat of rolling or turning end over end)
+
+tumble-n2'(e,e0): tumble-s0'(e0,x)
+spill, tumble, fall (a sudden drop from an upright position) "he had a nasty spill on the ice"
+
+Verb
+
+//tumble is a specialization of fall, where x falls from above the ground (not fall from this: `| ).tumble is more vertical than fall: when a building falls, it may fall from the side in an arc-like path. In tumble, x is either a 
+
+tumble-s0'(e,x): change'(e,e1,e2) & at'(e1,x,p1,s) & at'(e,x,p2,s) & sudden(e) & verticalScale(s) & lts(p2,p1,s)
+	tumble-v8:tumble (fall suddenly and sharply) "Prices tumbled after the devaluation of the currency"
+	
+	//p1 and p2 is a position or mental state
+	tumble-v10:tumble (suffer a sudden downfall, overthrow, or defeat)
+	
+	//and loose structre, how should I say change in structure?
+	<ref>structure, destroy</ref>
+	tumble-v1-5'(e,x): changeIn'(e,s) & structure(s,x) & gen(e,e0) & tumble-s0'(e0,x) 
+		tumble-v1:tumble, topple (fall down, as if collapsing) "The tower of the World Trade Center tumbled after the plane hit it"
+		tumble-v5:crumble, crumple, tumble, break down, collapse (fall apart) "the building crumbled after the explosion"; "Negotiations broke down"
+	
+		//causal:
+		tumble-v2'(e,x,y): cause'(e,x,e0) & tumble-v1-5'(e0,y)
+		topple, tumble, tip (cause to topple or tumble by pushing)
+	
+//roll
+tumble-v3-11'(e,x): and'(e,e1,e2) & rise-s0'(e1,x)& tumble-s0'(e2,x) & before(e1,e2)
+tumble-v11:tumble (do gymnastics, roll and turn skillfully) 
+	//repetition of tumble-v3
+	tumble-v3:tumble (roll over and over, back and forth)
+	tumble-v4:whirl, tumble, whirl around (fly around) "The clothes tumbled in the dryer"; "rising smoke whirled in the air"
+
+	<special>
+	tumble-v9:tumble (put clothes in a tumbling barrel, where they are whirled about in hot air, usually with the purpose of drying) "Wash in warm water and tumble dry"
+	</special>
+
+
+
+tumble-v7'(e,x):undestand(x)
+catch on, get wise, get onto, tumble, latch on, cotton on, twig, get it (understand, usually after some initial difficulty) "She didn't know what her classmates were plotting but finally caught on"
+
+?tumble-v6:tumble (throw together in a confused mass) "They tumbled the teams with no apparent pattern"
+
+
+

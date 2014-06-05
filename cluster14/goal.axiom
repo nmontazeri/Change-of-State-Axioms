@@ -1,0 +1,20 @@
+Noun
+	
+//goal is some state that is intended to be achieved through a process (e0 is a handle)
+<note>We need to modify the "event" predicate in core theory to have handles to the first and second eventualities</note>
+goal-n1'(e,e2,e0): intend'(e,x,e0) & changeTo'(e0,e2) & eventSequence(e0,e1,e3) & eventSequence(e1) & event'(e3,st1,e2)
+goal, end (the state of affairs that a plan is intended to achieve and that (when achieved) terminates behavior intended to achieve it) "the ends justify the means"
+	
+	//the state e2 is some y's (e.g., ball) being at g. g is the goal
+	goal-n3'(e,g):goal-n1'(e,e2) & at'(e2,y,g)
+	goal (game equipment consisting of the place toward which players of a game try to advance a ball or puck in order to score points)
+	
+	//the state e2 is x's being at g (x is also the one who intends e2). g is the goal
+	goal-n2'(e,g):goal-n1'(e,e2) & at'(e2,x,g)
+	finish, destination, goal (the place designated as the end (as of a race or journey)) "a crowd assembled at the finish"; "he was nearly exhausted as their destination came into view"
+
+	
+//change to at goal
+goal'(e,e0): goal-n1'(e10,e2,e0) & Rexist(e0)
+goal-n4:goal (a successful attempt at scoring) "the winning goal came with less than a minute left to play"
+

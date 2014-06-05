@@ -1,0 +1,57 @@
+<comment>drag is a specialization of move.  </comment>
+
+Noun
+
+//x is a drag on e0: x causes e0 to drag
+drag-n2'(e,x,e0):cause(x,e1) & drag-v5'(e,e0)
+drag (something that slows or delays progress) "taxation is a drag on the economy"; "too many laws are a drag on the use of new land"
+
+// e0 is a drag: x forces himself to eventuality e0 
+drag-n3'(e,e0): drag-v3'(e,x,x,e0) 
+drag (something tedious and boring) "peeling potatoes is a drag"
+
+drag-n6'(e,e0):drag-v1'(e0,x,y)
+drag (the act of dragging (pulling with force)) "the drag up the hill exhausted him"
+
+<special>
+drag-n1:drag, retarding force (the phenomenon of resistance to motion through a fluid)
+drag-n4:drag (clothing that is conventionally worn by the opposite sex (especially women's clothing when worn by a man)) "he went to the party dressed in drag"; "the waitresses looked like missionaries in drag"
+drag-n5'(e1,e0):drag-v6'(e0,x)
+puff, drag, pull (a slow inhalation (as of tobacco smoke)) "he took a puff on his pipe"; "he took a drag on his cigarette and expelled the smoke slowly"
+</special>
+
+
+Verb
+
+drag-s0'(e,x,y): cause'(e,x,e1) & change'(e1,e2,e3) & at'(e2,y,p1) & at'(e3,y,p2) & resist(y,e1) & behind(y,x)
+
+	//cause(move)+resist+behind+no lift	
+	drag-v1'(e0,x,y):drag (pull, as against a resistance) "He dragged the big suitcase behind him"; "These worries were dragging at him"
+
+	drag-v2:haul, hale, cart, drag (draw slowly or heavily) "haul stones"; "haul nets"
+
+	//x drags itself: the body is reluctant, but you cause it to move
+	drag-v4:drag (move slowly and as if with great effort)
+	
+
+	//situation(p1) & situation(p2)
+		drag-v3'(e,x,y,e0) :embroil, tangle, sweep, sweep up, drag, drag in (force into some kind of situation, condition, or course of action) "They were swept up by the events"; "don't drag me into this business"
+		drag-v10:drag (persuade to come away from something attractive or interesting) "He dragged me away from the television set"
+	
+	// y is behind the mouse pointer, ot behind x. Altough we say that "I dragged the icon", but really the mouse pointer drags the icon.
+	drag-v7:drag (use a computer mouse to move icons on the screen and select commands from a menu) "drag this icon to the lower right hand corner of the screen"
+
+// x drags: x walks by dragging his feet
+drag-v8:: walk'(e,x) & drag-s0'(e,x,y) & feet(y,x)
+scuff, drag (walk without lifting the feet)
+
+
+behindness
+drag-v5'(e,x): change'(e1,e2,e3) & at'(e2,y,p1) & at'(e3,y,p2) &  behind(p2,p3) & supposed(e5) & at'(e5,y,p3)  {? & reluctant(x)}
+drag, trail, get behind, hang back, drop behind, drop back (to lag or linger behind) "But in so many other areas we still are dragging"
+
+<special> 	
+drag-v11:drag, drag on, drag out (proceed for an extended period of time) "The speech dragged on for two hours"
+drag-v9:dredge, drag (search (as the bottom of a body of water) for something valuable or lost)
+drag-v6:puff, drag, draw (suck in or take (air)) "draw a deep breath"; "draw on a cigarette"
+</special>

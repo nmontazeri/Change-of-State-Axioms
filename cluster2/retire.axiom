@@ -1,0 +1,41 @@
+<comment>if x retires from activity a, either x doesn't participate in a at all or he participates much less than he used to. So, for activity, retirement is reduction of frequency and intensity. if x retires from a state e, then intensity or frequency don't make sense. we simply say that e no longer holds. (like the enemy's retiring)</comment>
+
+retire-v2'(e,x,e1) :decrease'(e,e2) & levelOf'(e2,e1) & activityOf(e1,x)
+retire, withdraw (withdraw from active participation) "He retired from chess"
+<comment>when x retires from activity e1, the level of e1 decreases</comment>
+
+	retire-v1'(e,x) : retire-v2'(e,x,e1) & work(e1)
+	retire (go into retirement; stop performing one's work or withdraw from one's position) "He retired at age 68"
+	
+		causal:
+		retire-v6'(e0,y,x,e1) : cause'(e0,y,e) & retire-v1'(e,x)
+		retire (make (someone) retire) "The director was retired after the scandal"
+		
+		retire-v7'(e,x,y) :retire-v6'(e0,y,x,e1) & use'(e1,x,y)
+		<exp>x retires y (from being used by her): causal, participation in activity is passive</exp>
+		retire (dispose of (something no longer useful or needed)) "She finally retired that old coat"	
+		
+	retire-v11'(e,x) : retire-v2'(e,x,e1) & daily-activity'(e1)
+	go to bed, turn in, bed, crawl in, kip down, hit the hay, hit the sack, sack out, go to sleep, retire (prepare for sleep) "I usually turn in at midnight"; "He goes to bed at the crack of dawn"
+
+	retire-v5'(e,x) :  retire-v2'(e,x,e1) & intend(x,e2) & temporary'(e2,e) & gathering(e1)	
+		<exp>intend to come back<exp>
+		adjourn, withdraw, retire (break from a meeting or gathering) "We adjourned for lunch"; "The men retired to the library"
+	
+	retire-v8'(e,x,y) : retire-v2'(e,x,e1) & interestedIn(e1,x,y)	
+		<exp>activity is having interest in life </exp>
+		retire, withdraw (lose interest) "he retired from life when his wife died"
+
+retire-v3'(e,x,y): changeFrom'(e,e1) & at'(e1,x,y) & timeSpanOf(t,e1) &  relatively-long??(t)
+<exp>x retires from being at y</exp>
+withdraw, retreat, pull away, draw back, recede, pull back, retire, move back (pull back or move away or backward) "The enemy withdrew"; "The limo pulled away from the curb"
+		
+<spacial domain="baseball">
+retire-v9 : put out, retire (cause to be out on a fielding play)
+retire-v10 : retire, strike out (cause to get out) "The pitcher retired three batters"; "the runner was put out at third base"
+</spacial>
+
+<special somain="business">
+	retire-v4 : retire (withdraw from circulation or from the market, as of bills, shares, and bonds)
+</special>
+

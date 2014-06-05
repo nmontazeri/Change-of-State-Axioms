@@ -1,0 +1,68 @@
+<question>should we think about all possible prepositions? for example, jump "on" something- jump "through"/"over" something,... prices jumped "high" on the list -where "high" refers to the distance between p1 and p2- if not, how do we connect the prepositions to our axioms later?</question>
+
+Noun
+
+jump-n1'(e0,e,x):jump-v4-7'(e,x,p1,p2,p3)
+<exp> e is a jump in x </exp>
+jump, leap (a sudden and decisive increase) "a jump in attendance"
+
+jump-n2'(e0,e,x,p1,p2,p3):jump-v13-14-15'(e,x,p1,p2,p3)
+leap, jump, saltation (an abrupt transition) "a successful leap from college to the major leagues"
+
+	jump-n3:jump ((film) an abrupt transition from one scene to another)
+
+jump-n4'(e0,e,x):jump-v2'(e,x)
+startle, jump, start (a sudden involuntary movement) "he awoke with a start"
+
+jump-n5'(e0,e,x):jump-v8-10'(e,x)
+jump, parachuting (descent with a parachute) "he had done a lot of parachuting in the army"
+
+jump-n6'(e0,e,x,p1,p2,y): jump-v1'(e,x,p1,p2,y)
+jump, jumping (the act of jumping; propelling yourself off the ground) "he advanced in a series of jumps"; "the jumping was unexpected"
+
+Verb
+
+jump-s0'(e,x,p1,p2):change'(e,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & sudden(e) 
+
+	jump-v2'(e,x):jump-s0'(e,y,p1,p2) & partOf(y,x)
+	<this is the sudden and vertical version of move-v3>
+	startle, jump, start (move or jump suddenly, as if in surprise or alarm) "She startled when I walked into the room"
+
+	jump-s1'(e,x,p1,p2): jump-s0'(e,x,p1,p2) & vertical(e) 
+					
+		jump-v1'(e,x,p1,p2,y):jump-s1'(e,y,p1,p2)  & not(e3) & at'(e3,x,y) & at(y,p3) & lts(p1,p3,s) & lts(p3,p2,s)
+		<exp>x jumps from p1 to p2 over/through y (which is located at p3, between p1 and p2), which means x goes from p1 to p1 without being at y</exp>
+		<comment>there are several qualities that can be expressed via prepositions that are added later: hight of jump, distance of start and end points, suddenness,...</comment>
+		jump, leap, bound, spring (move forward by leaps and bounds) "The horse bounded across the meadow"; "The child leapt across the puddle"; "Can you jump over the fence?"
+				
+			//causal: 
+			jump-v11'(e,x,y,p1,p2,z):cause'(e,x,e1)& jump-v1'(e1,x,p1,p2,y)
+			jump, leap (cause to jump or leap) "the trainer jumped the tiger through the hoop"
+		
+		jump-v8-10'(e,x): jump-s1'(e,x,p1,p2) & empty(p2)
+		<there is a sudden and vertical change from p1 to p2 where p2 is empty space. the result is a fall>
+			jump-v8:jump, leap, jump off (jump down from an elevated point) "the parachutist didn't want to jump"; "every year, hundreds of people jump off the Golden Gate bridge"; "the widow leapt into the funeral pyre"
+			jump-v10:chute, parachute, jump (jump from an airplane and descend with a parachute)
+	
+	jump-v4-7'(e,x,p1,p2,p3): jump-s0'(e,x,p1,p2) & distance(p3,p1,p2,s) & high(p3)
+	<exp>change from being at p1 to being at p2 where p1 and p2 are not neighbours on scale s</exp>
+	<question>I don't want to say "high(p3), but rather I need to say that p1 and p2 are not neighbour points"</question>
+	jump-v4:jump (increase suddenly and significantly) "Prices jumped overnight"
+	jump-v7:rise, jump, climb up (rise in rank or status) "Her new novel jumped high on the bestseller list"
+		
+	jump-v3'(e,x,y): jump-s0'(e,x,p1,p2) & at(y,p2)
+	<exp>x jumps over y: the focus is on sudden change to(at)</exp >
+	jump (make a sudden physical attack on) "The muggers jumped the woman in the fur coat"
+
+jump-v13-14-15'(e,x,p1,p2,p3): change'(e,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & not(e3) & at'(e3,x,p3) & lts(p1,p3,s) & lts(p3,p2,s)
+<exp>x jumps from p1 to p2, without being at the middle point p3</exp>
+jump-v13:jump, pass over, skip, skip over (bypass) "He skipped a row in the text and so the sentence was incomprehensible"
+jump-v14:leap, jump (pass abruptly from one state or topic to another) "leap into fame"; "jump to a conclusion"; "jump from one thing to another"
+	jump-v15:alternate, jump (go back and forth; swing back and forth between two states or conditions)
+
+<special>
+jump-v6:jump (enter eagerly into) "He jumped into the game"
+jump-v9:derail, jump (run off or leave the rails) "the train derailed because a cow was standing on the tracks"
+jump-v5:leap out, jump out, jump, stand out, stick out (be highly noticeable)
+jump-v12:jumpstart, jump-start, jump (start (a car engine whose battery is dead) by connecting it to another car's battery)
+</special>

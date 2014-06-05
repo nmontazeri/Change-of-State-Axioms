@@ -1,0 +1,86 @@
+Verb
+
+// x starts e0: there is a change to state e0
+start-v1'(e,x,e0): changeTo'(e,e0) & arg*(x,e0) & eventuality(e0)
+get down, begin, get, start out, start, set about, set out, commence (take the first step or steps in carrying out an action) "We began working at dawn"; "Who will start?"; "Get working as soon as the sun rises!"; "The first tourists began to arrive in Cambodia"; "He began early in the day"; "Let's get down to work now"
+
+	//metonymy: x starts y= x starts e0 and arg*(y,e0) 
+	start-v13'(e,x,y): start-v1'(e,x,e0) & arg*(y,e0)
+	begin, start (begin an event that is implied and limited by the nature or inherent function of the direct object) "begin a cigar"; "She started the soup while it was still hot"; "We started physics in 10th grade"
+
+	//x starts for y: x starts traveling to y
+	start-v3'(e,x,y):start-v1'(e,x,e0) & travel'(e0,x,y)
+	depart, part, start, start out, set forth, set off, set out, take off (leave) "The family took off for Florida"
+	
+	// x starts: x start activity
+	start-v9'(e,x):start-v1'(e,x,e0)
+	start, go, get going (begin or set in motion) "I start at eight in the morning"; "Ready, set, go!"
+
+//causal:x starts state e0: it is not necessary that x is an arg* of e0, x only causes a change to e0
+<q> if x is also involved, then I would group this sense with start-v11</q>	
+start-v2'(e,x,e0): cause'(e,x,e1) & changeTo'(e1,e0)
+	begin, lead off, start, commence (set in motion, cause to start) "The U.S. started a war in the Middle East"; "The Iraqis began hostilities"; "begin a new chapter in your life"
+
+	//x starts y: e0=Rexist(y)
+	start-v5-6'(e,x,y): start-v2'(e,x,e0) & Rexist'(e0,y)
+		start-v5:originate, initiate, start (bring into being) "He initiated a new program"; "Start a foundation"
+		start-v6:start, start up, embark on, commence (get off the ground) "Who started this company?"; "We embarked on an exciting enterprise"; "I start my day with a good breakfast"; "We began the new semester"; "The afternoon session begins at 4 PM"; "The blood shed started when the partisans launched a surprise attack"
+
+	//x starts a machine y
+	start-v8'(e,x,y):cause'(e,x,e0) & changeTo'(e0,e1) & active'(e1,y)
+	start, start up (get going or set in motion) "We simply could not start the engine"; "start up the computer"
+		
+//scale x starts at point y : y is at the smallest point on scale x	
+start-v4'(e0,x,y): start-n1-2'(e0,y,x)
+	begin, start (have a beginning, in a temporal, spatial, or evaluative sense) "The DMZ begins right over the hill"; "The second movement begins after the Allegro"; "Prices for these homes start at $250,000"
+	
+	//sequence x starts with y: y is the first elemet in the sequence
+	start-v12'(e,x,y): first'(e,y,x)
+	begin, start (have a beginning characterized in some specified way) "The novel begins with a murder"; "My property begins with the three maple trees"; "Her day begins with a workout"; "The semester begins with a convocation ceremony"
+
+<special>
+//sudden move: a sudden change of state. but the new state is not a continuous event
+	start-v7:startle, jump, start (move or jump suddenly, as if in surprise or alarm) "She startled when I walked into the room"
+	start-v14:start, protrude, pop, pop out, bulge, bulge out, bug out, come out (bulge outward) "His eyes popped"
+</special>	
+	
+
+//?? x starts-v1 an event in which he is involdved and this "causes the game to start" (start-v7)
+start-v11:start (play in the starting lineup)
+
+
+Noun
+
+//b is the start of scale s
+start-n1-2'(e0,b,s): bottom'(e0,b,s)
+	//e1 is the start of e
+	<question>sinec event sequence has not been related to sequences, we have no definition for before, start, first, ...?</question>
+	start-n1'(e0,e1,e): eventSequence(e,e1,e2) & ??first'(e,e1,e)
+	start (the beginning of anything) "it was off to a good start"
+	
+	//t0 is a start for eventuality e0: t0 is the beginning of e0's interval t
+	start-n2'(e,t0,e0): during(e0,t) & bottom'(e0,t0,t)
+	beginning, commencement, first, outset, get-go, start, kickoff, starting time, showtime, offset (the time at which something is supposed to begin) "they got an early start"; "she knew from the get-go that he was the man for her"
+
+	//start position on a path (scale)
+	start-n6:start, starting line, scratch, scratch line (a line indicating the location of the start of a race or a game)
+
+//a person who starts a game
+start-n3'(e,x):start-v11'(e,x)
+start, starting (a turn to be a starter (in a game at the beginning)) "he got his start because one of the regular pitchers was in the hospital"; "his starting meant that the coach thought he was one of their best linemen"
+
+//sudden move
+start-n4'(e,e0):start-v7'(e0,x)
+startle, jump, start (a sudden involuntary movement) "he awoke with a start"
+
+<comment>maybe I will group v2 and v11 together, then this will belong to the group</comment>
+start-n5'(e,e0): start-v2'(e0,x,e1)
+beginning, start, commencement (the act of starting something) "he was responsible for the beginning of negotiations"
+
+start-n7'(e,x): signal(x) & enable(x,e0) & start-v1'(e0,y,e1)
+starting signal, start (a signal to begin (as in a race)) "the starting signal was a green light"; "the runners awaited the start"
+
+<special>
+start-n8:start, head start (the advantage gained by beginning early (as in a race)) "with an hour's start he will be hard to catch"
+</special>
+

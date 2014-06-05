@@ -1,0 +1,31 @@
+// In repeat, either the argument or the time of an eventuality are changed
+
+//note that in my axiom {changeTo'(e,e0) & changeTo'(e1,e0) & before(e1,e)}, I assumed that e0 can occur in different times, here the  previous argument arises: why do we treat time and argument differently? Especially, "repeat-v4" is a good example that shows we consider event e0 and event e1 -that only differ in their args- to be the same.
+Verb
+
+//e0 repeats : e0 occur again
+	//a previos action e0 occurs again
+	*repeat-v3'(e,e0):changeTo'(e,e0) & changeTo'(e1,e0) & before(e1,e)
+	recur, repeat (happen or occur again) "This is a recurring story"
+	
+	//x repeats e0, his previous action
+	*repeat-v2-5'(e,x,e0): repeat-v3'(e,e0) & agentOf(x,e0)
+		repeat-v2:duplicate, reduplicate, double, repeat, replicate (make or do or perform again) "He could never replicate his brilliant performance of the magic trick"
+		repeat-v5:repeat, take over (do over) "They would like to take it over again"
+		
+		//x repeats y: x states y again
+		*repeat-v1-6'(e,x,y): repeat-v3'(e,e0) & state'(e0,x,y)
+			repeat-v1:repeat, reiterate, ingeminate, iterate, restate, retell (to say, state, or perform again) "She kept reiterating her request"
+			repeat-v6:reprise, reprize, repeat, recapitulate (repeat an earlier theme of a composition) 
+
+	//x imitates action of y (only the agent is difefrent)
+	repeat-v4'(e,x,e0): changeTo'(e,e11) & agentOf(x,e11) & subst(x e11 y e0)
+	repeat, echo (to say again or imitate) "followers echoing the cries of their leaders"
+
+
+Noun
+
+repeat-n1'(e,e0):repeat-v3'(e1,e0)
+repeat, repetition (an event that repeats) "the events today were a repeat of yesterday's"
+
+

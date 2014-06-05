@@ -1,0 +1,68 @@
+Noun
+
+leave-n1: leave, leave of absence (the period of time during which you are absent from work or duty) "a ten day's leave to visit his mother"
+leave-n3: farewell, leave, leave-taking, parting (the act of departing politely) "he disliked long farewells"; "he took his leave"; "parting is such sweet sorrow"
+
+leave-n2: leave (permission to do something) "she was granted leave to speak"
+
+
+Verb
+
+leave-s0'(e,x,y): not'(e,e1) & rel'(e1,x,y) 
+	
+	leave-s1'(e,x,y): changeFrom'(e,e1) &  rel'(e1,x,y) 
+		
+		leave-v2: leave (go and leave behind, either intentionally or by neglect or forgetfulness) "She left a mess when she moved out"; "His good luck finally left him"; "her husband left her after 20 years of marriage"; "she wept thinking she had been left behind"
+		<comment>It seems that the example "She left a mess when she moved out" does not belong to this sense. It is more related to "water leaving a stain"</comment>
+				
+		
+		leave-v5'(e,x,p): changeFrom'(e,e1) & at'(e1,x,p)
+		exit, go out, get out, leave (move out of or depart from) "leave the room"; "the fugitive has left the country"
+			
+			leave-v1'(e,x): leave-v5'(e,x,p)
+			leave, go forth, go away (go away from a place) "At what time does your train leave?"; "She didn't leave until midnight"; "The ship leaves at midnight"
+			
+			leave-v8: leave, depart, pull up stakes (remove oneself from an association with or participation in) "She wants to leave"; "The teenager left home"; "She left her position with the Red Cross"; "He left the Senate after two terms"; "after 20 years with the same company, she pulled up stakes"
+			
+			leave-s2'(e,x,y,p): leave-v5'(e,x,p) &  rel/have'(e3,x,y) & at(y,p)
+			<exp>x leaves y behind: x and y (where x has y)and then x leaves p but y remains at p</exp>
+				
+				leave-v14'(e,x,y,p):  leave-s2'(e,x,y,p) & unIntentional(e)
+				forget, leave (leave behind unintentionally) "I forgot my umbrella in the restaurant"; "I left my keys inside the car and locked the doors"
+			
+				leave-v12'(e,x,y,p): leave-s2'(e,x,y,p) & world(p)
+				leave, leave behind (be survived by after one's death) "He left six children"; "At her death, she left behind her husband and 11 cats"
+
+				leave-v10'(e,x,y,z): leave-s2'(e,x,y,p) & world(p) & cause(e,e1) & have'(e1,z,y) & at(z,p)
+				<exp>x leaves y for z: x leaves-s2 its belongings y at this world and this causes z (who is at this world) to have y </exp>
+				bequeath, will, leave (leave or give by will after one's death) "My aunt bequeathed me all her jewelry"; "My grandfather left me his entire estate"
+
+				
+				leave-v7'(e,x,y,p): and'(e,e1,e2) & leave-v5'(e1,x,p) & cause'(e2,x,e3) & at'(e3,y,p)
+				<exp>x leaves y on p: x causes something to be at p and leaves p</exp>
+				leave, result, lead (have as a result or residue) "The water left a mark on the silk dress"; "Her blood left a stain on the napkin"
+
+				
+	leave-v4'(e,x,y): not'(e,e1) & changeTo'(e1,e2) &  rel'(e2,x,y) 
+	leave, leave alone, leave behind (leave unchanged or undisturbed or refrain from taking) "leave it as is"; "leave the young fawn alone"; "leave the flowers that you see in the park behind"
+
+	leave-v9'(e,x,y,z): and'(e,e1,e2) & not'(e1,e3) & arg(y,e3) & arg(x,e3) & arg(y,e2) & arg(z,e2) & subst(x,e3,z,e2)
+	<exp>x leaves y to be handled by z: x is both (x's not being involved in e3) and (y's being involved in e2) where x and z play the same  role in e3 and e2 respectively</exp>
+	entrust, leave (put into the care or protection of someone) "He left the decision to his deputy"; "leave your child the nurse's care"
+
+leave-s3'(e,x,y): cause'(e,x,e1) & setdiff'(e1,y,s1,s2)
+	leave-v11'(e,x,y): cause'(e,x,e1) & changeFrom'(e1,e2) & subset'(e2,z,s1) & subset(y,s1)
+	<exp>x causes y to be s1-s2: x causes some elements(z) of s1 to leave s1 (to change from being at s1) and some other elements (y) to remain at s1. </exp>
+	leave (have left or have as a remainder) "That left the four of us"; "19 minus 8 leaves 11"
+	
+	leave-v6'(e,x,y): not'(e,e0) & cause'(e0,x,e1) & changeFrom'(e1,e2) & subset'(e2,y,s1) 
+	<exp>x does not cause y to no longer belong to s1. This is similar to leave-v4 where something remains untouched</exp>
+	leave, allow for, allow, provide (make a possibility or provide opportunity for; permit to be attainable or cause to remain) "This leaves no room for improvement"; "The evidence allows only one conclusion"; "allow for mistakes"; "leave lots of time for the trip"; "This procedure provides for lots of leeway"
+
+leave-v3'(e,x,y,e): cause'(e,x,e) & arg(y,e)
+leave (act or be so as to become in a specified state) "The inflation left them penniless"; "The president's remarks left us speechless"
+
+leave-v13'(e,x,y,z): cause'(e,x,e1) & changeTo'(e1,e2) & have'(e2,z,y) & knowledge(y) 
+<exp>x leaves y to z: x transmits y to z. the difference with transmit may be that this sense is more focusing on the long-time remaining of y at z. Also, x will be gone after transmission(this is the case for the first examples, but not sure about "impart a new skill to the students" ) </exp>
+impart, leave, give, pass on (transmit (knowledge or skills)) "give a secret to the Russians"; "leave your name and address here"; "impart a new skill to the students"
+

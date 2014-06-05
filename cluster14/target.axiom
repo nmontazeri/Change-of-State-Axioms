@@ -1,0 +1,17 @@
+Noun
+
+target-n1-2-3-4'(e,t): intend'(e,x,e0) & cause'(e0,x,e1) & changeTo'(e1,e2) & at'(e2,y,t) 
+	target-n1:target, mark (a reference point to shoot at) "his arrow hit the mark"
+	target-n2:prey, quarry, target, fair game (a person who is the aim of an attack (especially a victim of ridicule or exploitation) by some hostile person or influence) "he fell prey to muggers"; "everyone was fair game"; "the target of a manhunt"
+	target-n3:target, target area (the location of the target that is to be hit)
+	target-n4:target, butt (sports equipment consisting of an object set up for a marksman or archer to aim at)
+
+// t is the target of eventuality e2 (see children=t, trip=e2)
+target-n5'(e,t,e2):   intend(x,e3) &  changeTo'(e3,t) & agentOf*(x,e2) & gen(e2,e3)
+aim, object, objective, target (the goal intended to be attained (and which is believed to be attainable)) "the sole object of her trip was to see her children"
+
+Verb
+//x targets y towards t
+target-v1'(e,x,y,t): intend'(e,x,e0) & cause'(e0,x,e1) & changeTo'(e1,e2) & at'(e2,y,t)
+target, aim, place, direct, point (intend (something) to move towards a certain goal) "He aimed his fists towards his opponent's face"; "criticism directed at her superior"; "direct your anger towards others, not towards yourself"
+

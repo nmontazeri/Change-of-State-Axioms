@@ -1,0 +1,30 @@
+Noun
+
+polish-n2'(e,e1): perfect'(e1,x)
+polish, refinement, culture, cultivation, finish (a highly developed state of perfection; having a flawless or impeccable quality) "they performed with great polish"; "I admired the exquisite refinement of his prose"; "almost an inspiration which gives to all work that finish which is almost art"--Joseph Conrad
+
+<special>
+//shine
+polish-n1:polish, gloss, glossiness, burnish (the property of being smooth and shiny)
+	//tool use in polish-v1	
+	polish-n3:polish (a preparation used in polishing)
+
+//language
+polish-n4:Polish (the Slavic language of Poland)
+</special>
+
+Verb
+
+polish-v2-3'(e,x,y): cause'(e,x,e0) & changeTo'(e0,e1) & perfect'(e1,x) & changeIn'(e0,x) 
+	polish-v2:polish, refine, fine-tune, down (improve or perfect by pruning or polishing) "refine one's style of writing"
+	polish-v3:polish, round, round off, polish up, brush up (bring to a highly developed, finished, or refined state) "polish your social manners"
+
+	<special>
+	//perfection is shine, when the surface is scrubbed with finer and finer tools to eliminate un-even surfaces in all sizes.
+	polish-v1:polish, smooth, smoothen, shine (make (a surface) shine) "shine the silver, please"; "polish my shoes"
+	</special>
+	
+Adjective
+<special>
+polish-adj1:Polish (of or relating to Poland or its people or culture) "Polish sausage"
+</special>

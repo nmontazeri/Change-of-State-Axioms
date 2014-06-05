@@ -1,0 +1,19 @@
+//path is a scale
+//but there is a difference between path and line: a path is always associated with some event sequence. Like a line, a path has a start and end and some intermediate points, but these points are not necessarily physical. They can be states. 
+//a path may be physical (like a road) or virtual (like path of life)
+//the ordering of elements of a path are along the time
+Noun
+// x travels along r from p0 to p1
+route-n1-2'(e,r):move'(e0,x,p0,p1) & beforeInSeq(p0,p1,r)
+	route-n1: path, route, itinerary (an established line of travel or access)
+	route-n2: road, route (an open way (generally public) for travel or transportation)
+
+Verb
+//cause to travel on a specific route 
+route-v1-2-3'(e,x,y): cause'(e,x,e0) & travel'(e0,x,r,p0,p1)
+	route-v1:route (send documents or materials to appropriate destinations)
+
+	<question>but for v2 and v3 this definition is too general. we want to say that causation is only related to the path, not start and end of travel </question>
+	route-v2: route (send via a specific route)	
+	route-v3: route (divert in a specified direction) "divert the low voltage to the engine cylinders"
+

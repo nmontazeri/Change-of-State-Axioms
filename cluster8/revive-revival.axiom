@@ -1,0 +1,28 @@
+Verb
+
+//e2 is a handle
+*revive-s0'(e,x,e2): changeTo'(e,e1,e2) & active'(e2,x) & changeFrom'(e3,e2) & before(e3,e)
+	revive-v3:revive (be brought back to life, consciousness, or strength) "Interest in ESP revived"
+	revive-v2: animate, recreate, reanimate, revive, renovate, repair, quicken, vivify, revivify (give new life or energy to) "A hot soup will revive me"; "This will renovate my spirits"; "This treatment repaired my health"
+
+	//causal
+	revive-v4'(e,x,y): cause'(e,x,e1) & revive-s0'(e1,y)
+	revive, resurrect (restore from a depressed, inactive, or unused state) "He revived this style of opera"; "He resurrected the tango in this remote part of Argentina"
+
+		*revive-v5'(e,x): revive-s0'(e,x,e2) & conscious'(e2,x)
+		come to, revive, resuscitate (return to consciousness) "The patient came to quickly"; "She revived after the doctor gave her an injection"
+		
+			//causal
+				revive-v1'(e,x,y): cause'(e,x,e1) & revive-v5'(e1,y)
+				resuscitate, revive (cause to regain consciousness) "The doctors revived the comatose man"
+
+
+
+Noun
+
+revival-n1'(e,e0): revive-s0'(e0,x,e2)
+revival, resurgence, revitalization, revitalisation, revivification (bringing again into activity and prominence) "the revival of trade"; "a revival of a neglected play by Moliere"; "the Gothic revival in architecture"
+
+<special>
+revival-n2: revival, revival meeting (an evangelistic meeting intended to reawaken interest in religion) 
+</special>

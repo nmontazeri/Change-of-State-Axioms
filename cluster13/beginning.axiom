@@ -1,0 +1,71 @@
+
+<question>
+what is the difference between v6 and v1? why do we talk about a change in v1, but don't mention it in v6?
+</question>
+
+Verb
+
+//x begins e0
+begin-s0'(e,x,e0): changeTo'(e,e1) & arg*(x,e0) & eventSequence(e0,e1,e2)
+	begin-v1:get down, begin, get, start out, start, set about, set out, commence (take the first step or steps in carrying out an action) "We began working at dawn"; "Who will start?"; "Get working as soon as the sun rises!"; "The first tourists began to arrive in Cambodia"; "He began early in the day"; "Let's get down to work now"
+	begin-v9:begin (achieve or accomplish in the least degree, usually used in the negative) "This economic measure doesn't even begin to deal with the problem of inflation"; "You cannot even begin to understand the problem we had to deal with during the war"
+
+	//metonymy:
+	begin-s1'(e,x,y): begin-s0'(e,x,e0) & arg*(y,e0)
+		begin-v8:begin, start (begin an event that is implied and limited by the nature or inherent function of the direct object) "begin a cigar"; "She started the soup while it was still hot"; "We started physics in 10th grade"
+		begin-v10:begin (begin to speak, understand, read, and write a language) "She began Russian at an early age"; "We started French in fourth grade"
+
+	//x begins: x starts to speak (e0=speak)
+		<q>but I think this means he started talking and the first thing he said was "Now listen, friends"</q>
+		begin-v4'(e,x): begin-s0'(e,x,e0) & speak'(e0,x)
+		begin (begin to speak or say) "`Now listen, friends', he began"
+
+	//causal:x causes  e0 to start
+		begin-v3'(e,x,e0):cause'(e,x,e1) & changeTo'(e1,e0)
+		begin, lead off, start, commence (set in motion, cause to start) "The U.S. started a war in the Middle East"; "The Iraqis began hostilities"; "begin a new chapter in your life"
+
+//scale s starts with b: b is the bottom point of s
+begin-s2'(e,s,b): bottom'(e,b,s)
+	begin-v2:begin, start (have a beginning, in a temporal, spatial, or evaluative sense) "The DMZ begins right over the hill"; "The second movement begins after the Allegro"; "Prices for these homes start at $250,000"
+	begin-v7:begin, start (have a beginning characterized in some specified way) "The novel begins with a murder"; "My property begins with the three maple trees"; "Her day begins with a workout"; "The semester begins with a convocation ceremony"
+	begin-v5:begin (be the first item or point, constitute the beginning or start, come first in a series) "The number `one' begins the sequence"; "A terrible murder begins the novel"; "The convocation ceremony officially begins the semester"
+	
+	//event begins in t0: duration of event begins in t0
+	<question>but during(e0,t) does not entail occurence of e0, while the examples imply occurence of events</question>
+	begin-v6'(e,e0,t0): during(e0,t) & bottom'(e,t0,t)
+	begin (have a beginning, of a temporal event) "WW II began in 1939 when Hitler marched into Poland"; "The company's Asia tour begins next month"
+
+
+
+
+Noun
+
+//bottom point on a scale
+beginning-n1-2-3-4'(e,b,s): bottom'(e,b,s)
+	//e1 is the beginning of e
+	beginning-n1'(e0,e1,e):  eventSequence(e,e1,e2) & ??first'(e,e1,e)
+	beginning (the event consisting of the start of something) "the beginning of the war"
+	
+	//t0 is the beginning of eventuality e0
+	beginning-n2'(e,t0,e0):  during(e0,t) & bottom'(e,t0,t)
+	beginning, commencement, first, outset, get-go, start, kickoff, starting time, showtime, offset (the time at which something is supposed to begin) "they got an early start"; "she knew from the get-go that he was the man for her"
+	
+	//first in a sequence
+	beginning-n3'(e,b,x):first'(e,b,x)
+	beginning (the first part or section of something) "`It was a dark and stormy night' is a hackneyed beginning for a story"
+
+	// the location at which the bottom point of the scale lies
+	beginning-n4'(e,l,y): hasScale??(y,s) & beginning-n1-2-3-4'(e0,b,s) & at'(e,b,l) & location(l)
+	beginning, origin, root, rootage, source (the place where something begins, where it springs into being) "the Italian beginning of the Renaissance"; "Jupiter was the origin of the radiation"; "Pittsburgh is the source of the Ohio River"; "communism's Russian root"
+
+
+
+beginning-n5'(e,e0):begin-v3'(e0,x,e1)
+beginning, start, commencement (the act of starting something) "he was responsible for the beginning of negotiations"
+
+
+Adjective
+//
+beginning-adj1'(e0,b,x):first'(e0,b,x)
+beginning, first (serving to begin) "the beginning canto of the poem"; "the first verse"
+

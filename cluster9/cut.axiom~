@@ -1,0 +1,205 @@
+Verb
+
+<ref>separate: separate'(e1,y,s)</ref>
+<rel>cut is similar  to break. In cut, the differences are in :1)material (softer and able to make apart gradually), but not always: cut a tree 2.the method (gradual separation with a tool moving on the surface)</rel>
+<comment>
+cut has these elements:
+1. separation
+2. shortening/removal as a result of separation
+	2.1. shortening of a physical entity
+	2.2. shortening of an abstract entity (e.g., event sequence like conversation, operation, ...)
+</comment>
+
+//separation-elimination
+	//allow cutting
+	*cut-v25'(e,y):possible'(e,e0) & cut-v1'(e0,x,y)
+	cut (allow incision or separation) "This bread cuts easily"
+	
+	//make separate into two pieces
+	*cut-v1-4-24'(e,x,y):cause'(e,x,e10) & changeFrom'(e10,e0) & connect'(e0,w,z) & partOf(w,y) & partOf(z,y) & compositeEntity(y) 
+		cut-v1:cut (separate with or as if with an instrument) "Cut the rope"
+		cut-v4:cut (make an incision or separation) "cut along the dotted line"
+		cut-v24:cut (function as a cutting instrument) "This knife cuts well"
+			//noun:
+				cut-n17:cut, cutting (the act of cutting something into parts) "his cuts were skillful"; "his cutting of the cake made a terrible mess"
+				cut-n16:cut, cutting (the act of penetrating or opening open with a sharp edge) "his cut in the lining revealed the hidden jewels"
+	
+				//a piece after separation
+				cut-n6:cut, cut of meat (a piece of meat that has been cut from an animal carcass)
+			//adj
+			cut-adj1:cut (separated into parts or laid open or penetrated with a sharp edge or instrument) "the cut surface was mottled"; "cut tobacco"; "blood from his cut forehead"; "bandages on her cut wrists"
+			
+
+		
+		//separate into constituent parts (not only two pieces)
+		cut-v34:cut (dissolve by breaking down the fat of) "soap cuts grease"
+		
+		//separate in surface, not deep enough to separate
+		cut-v30'(e,x,y):cut-v1-4-24'(e,x,s) & surfaceOf(s,y)
+		cut (penetrate injuriously) "The glass from the shattered windshield cut into her forehead"
+
+	//detach physically
+	*cut-v41-29-32'(e,x,y): cause'(e,x,e0) & changeFrom'(e0,e1) & connect'(e1,y,z)
+		cut-v41:geld, cut (cut off the testicles (of male animals such as horses)) "the vet gelded the young horse"
+			//adj:
+			cut-adj7:cut, emasculated, gelded ((of a male animal) having the testicles removed) "a cut horse"
+
+		cut-v29:cut (fell by sawing; hew) "The Vietnamese cut a lot of timber while they occupied Cambodia"
+		cut-v32:cut (shorten as if by severing the edges or ends of) "cut my hair"
+			//noun:
+			cut-n18:cut, cutting, cutting off (the act of shortening something by chopping off the ends) "the barber gave him a good cut"
+			
+			//adj:
+			cut-adj4:trimmed, cut (made neat and tidy by trimming) "his neatly trimmed hair"
+			cut-adj5:mown, cut ((used of grass or vegetation) cut down with a hand implement or machine) "the smell of newly mown hay"
+			cut-adj6:cut ((of pages of a book) having the folds of the leaves trimmed or slit) "the cut pages of the book"
+
+
+
+	// x cuts y from z : detach abstractly
+	cut-v5-37'(e,x,y,z): cause'(e,x,e0) & changeFrom'(e0,e1) & partOf'(e1,y,z)
+		
+		cut-v5:cut (discharge from a group) "The coach cut two players from the team"
+
+		//x cuts z
+		cut-v37'(e,x,z):cut-v5-37'(e,x,y,z)
+		abridge, foreshorten, abbreviate, shorten, cut, contract, reduce (reduce in scope while retaining essential elements) "The manuscript must be shortened"
+			//noun:
+			cut-n9:deletion, excision, cut (the omission that is made when an editorial change shortens a written passage) "an editor's deletions frequently upset young authors"; "both parties agreed on the excision of the proposed clause"
+
+			//adj:
+			cut-adj3:cut, shortened (with parts removed) "the drastically cut film"
+
+			
+		cut-v33:cut, prune, rationalize, rationalise (weed out unwanted or unnecessary things) "We had to lose weight, so we cut the sugar from our diet"
+	
+//reduce: eliminate partially. (reducing is a kind of eliminating)
+<question> I think we should change this and also the axioms of reduce. It is more natural to define reduction in terms of elimination rather that going down on a scale</question>
+cut-v2-35-38'(e,x,y): cause'(e,x,e10) & change'(e10,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & lts(p2,p1)
+	cut-v2:reduce, cut down, cut back, trim, trim down, trim back, cut, bring down (cut down on; make a reduction in) "reduce your daily fat intake"; "The employer wants to cut back health benefits"
+	cut-v35:cut (have a reducing effect) "This cuts into my earnings"
+	cut-v38:dilute, thin, thin out, reduce, cut (lessen the strength or flavor of a solution or mixture) "cut bourbon"
+		//adj:
+		cut-adj9:cut, thinned, weakened (mixed with water) "sold cut whiskey"; "a cup of thinned soup"
+
+	
+	//noun:
+	cut-n19:cut (the act of reducing the amount or number) "the mayor proposed extensive cuts in the city budget"
+	
+	//adj:
+	cut-adj8:cut, slashed ((used of rates or prices) reduced usually sharply) "the slashed prices attracted buyers"
+
+
+
+
+//stop an event sequence: cause a separation in an event sequence
+<comment>However, noise is not an event sequence</comment>
+cut-v36'(e,x,e0): changeFrom'(e,e0) & eventSequence(e0,e1,e2) & agentOf??(x,e0)
+cut, cut off (cease, stop) "cut the noise"; "We had to cut short the conversation"
+	cut-v27'(e,x,y):cause'(e,x,e10) & changeFrom'(e10,e0) & eventSequence(e0,e1,e2) & agentOf??(y,e0)
+	switch off, cut, turn off, turn out (cause to stop operating by disengaging a switch) "Turn off the stereo, please"; "cut the engine"; "turn out the lights"
+
+
+
+//sharp turn
+cut-v3:swerve, sheer, curve, trend, veer, slue, slew, cut (turn sharply; change direction abruptly) "The car cut to the left at the intersection"; "The motorbike veered to the right"
+cut-v8:cut (hit (a ball) with a spin so that it turns in the opposite direction) "cut a Ping-Pong ball"
+cut-v14:cut (move (one's fist)) "his opponent cut upward toward his chin"
+
+//dig
+cut-v6:cut (form by probing, penetrating, or digging) "cut a hole"; "cut trenches"; "The sweat cut little rivulets into her face"
+	//noun
+	cut-n3:cut, gash (a trench resembling a furrow that was made by erosion or excavation)
+	cut-n11:cut (a canal made by erosion or excavation)
+
+
+//shape, create, form
+cut-v7:cut, tailor (style and tailor in a certain fashion) "cut a dress"
+cut-v13:cut (give the appearance or impression of) "cut a nice figure"
+cut-v22:cut (form or shape by cutting or incising) "cut paper dolls"
+
+
+//detaching is the physical action and part of a larger concept
+cut-v9:write out, issue, make out, cut (make out and issue) "write out a check"; "cut a ticket"; "Please make the check out to me"
+
+//pass through
+cut-v15:cut (pass directly and often in haste) "We cut through the neighbor's yard to get home sooner"
+cut-v16:cut (pass through or across) "The boat cut the water"
+
+
+cut-v23:cut (perform or carry out) "cut a caper"
+
+//growing by cutting the gum, emerging from the gum
+cut-v39:cut (have grow through the gums) "The baby cut a tooth"
+cut-v40:cut (grow through the gums) "The new tooth is cutting"
+
+
+
+//??
+cut-v12:hack, cut (be able to manage or manage successfully) "I can't hack it anymore"; "she could not cut the long days in the office"
+
+<special>
+cut-v10:edit, cut, edit out (cut and assemble the components of) "edit film"; "cut recording tape"
+
+cut-v26:cut (divide a deck of cards at random into two parts to make selection difficult) "Wayne cut"; "She cut the deck for a long time"
+	//noun:
+	cut-n15:cut, cutting (the division of a deck of cards before dealing) "he insisted that we give him the last cut before every deal"; "the cutting of the cards soon became a ritual"
+
+cut-v28:cut (reap or harvest) "cut grain"
+
+//not change to rel
+cut-v31:ignore, disregard, snub, cut (refuse to acknowledge) "She cut him dead at the meeting"
+	//noun:
+	cut-n12:snub, cut, cold shoulder (a refusal to recognize someone you know) "the snub was clearly intentional"
+
+	
+cut-v11:cut, skip (intentionally fail to attend) "cut class"
+	//noun:
+	cut-n20:cut (an unexcused absence from class) "he was punished for taking too many cuts in his math class"
+
+
+cut-v17:cut (make an abrupt change of image or sound) "cut from one scene to another"
+cut-v18:cut (stop filming) "cut a movie scene"
+
+
+cut-v19:cut (make a recording of) "cut the songs"; "She cut all of her major titles again"
+cut-v20:cut (record a performance on (a medium)) "cut a record"
+cut-v21:cut, burn (create by duplicating data) "cut a disk"; "burn a CD"
+
+</special>
+
+Noun
+
+//I placed relevant nouns under verbs, so many of them don't appear in this section
+
+//a part 
+	//on a scale
+	cut-n4:cut (a step on some scale) "he is a cut above the rest"
+	
+	//amount
+	cut-n1:cut (a share of the profits) "everyone got a cut of the earnings"
+
+	//abstract division
+	cut-n8:cut, track (a distinct selection of music from a recording or a compact disc) "he played the first cut on the cd"; "the title track of the album"
+
+
+<special>
+//mental
+cut-n7:stinger, cut (a remark capable of wounding mentally) "the unkindest cut of all"
+
+//film
+cut-n2:cut ((film) an immediate transition from one shot to the next) "the cut from the accident scene to the hospital seemed too abrupt"
+
+//dress
+cut-n10:cut (the style in which a garment is cut) "a dress of traditional cut"
+
+//sharp turn:
+cut-n13:baseball swing, swing, cut (in baseball; a batter's attempt to hit a pitched ball) "he took a vicious cut at the ball"
+cut-n14:cut, undercut ((sports) a stroke that puts reverse spin on the ball) "cuts do not bother a good tennis player"
+
+</special>
+
+Adjective
+
+//dress making
+cut-adj2:cut (fashioned or shaped by cutting) "a well-cut suit"; "cut diamonds"; "cut velvet"

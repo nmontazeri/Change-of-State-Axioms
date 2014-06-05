@@ -1,0 +1,136 @@
+
+Verb
+
+//I can revise the axioms and consider some senses as "pass(x,p2)=change(at(x,p1),at(x,p3))& before(p1,p2)&before(p2,p3)
+
+//event e3 passes: e3 comes and goes: there is a changeTo e3 and then a changeFrom e3
+*pass-s0'(e,e3): and'(e,e1,e2) & changeTo'(e1,e3) & changeFrom'(e2,e3) & before(e1,e2) & eventSequence(e3)
+	
+	pass-v8:happen, hap, go on, pass off, occur, pass, fall out, come about, take place (come to pass) "What is happening?"; "The meeting took place off without an incidence"; "Nothing occurred that seemed important"
+
+	//e3 is some relation to y
+	*pass-s5'(e,x,y,s): pass-s0'(e,e3) & rel'(e3,x,y,s)
+		
+		//e3 is being at a point p where y is also at the same point 
+		*pass-s1'(e,x,y): pass-s0'(e,e3) & at'(e3,x,p) & at(y,p) & move(e,x)
+			pass-v1:pass, go through, go across (go across or through) "We passed the point where the police car had parked"; "A terrible thought went through his mind"
+			pass-v11:guide, run, draw, pass (pass over, across, or through) "He ran his eyes over her body"; "She ran her fingers along the carved figurine"; "He drew her hair through his fingers"
+			pass-v2:travel by, pass by, surpass, go past, go by, pass (move past) "A black limousine passed by when she looked out the window"; "He passed his professor in the hall"; "One line of soldiers surpassed the other"
+			pass-v7:pass, overtake, overhaul (travel past) "The sports car passed all the trucks"
+		
+		//s is the time scale and p0 is a point in time scale
+		*pass-v4'(e,t):pass-s0'(e,e3) & at'(e3,t,t0,s) & time(s)
+		elapse, lapse, pass, slip by, glide by, slip away, go by, slide by, go along (pass by) "three years elapsed"
+			
+			//causal: x causes itself to feel that the time is passing?? or maybe this is similar to passing in football, meaning not(use)
+			*pass-v10'(e,x,t): cause'(e,x,e1) & feel'(e1,x,e2) & pass-v4'(e2,t)
+			spend, pass (pass time in a specific way) "how are you spending your summer vacation?"
+		
+		//x passes some y without connecting to y. In this sense the emphasis is on "not remaining at y" or "not having a more permanent relation to y".	
+		*pass-v17:pass (allow to go without comment or censure) "the insult passed as if unnoticed"
+			
+
+
+//emphasis is on changeFrom a state (where you remained for a while?) 
+pass-s4'(e,x,p): changeFrom'(e,e1) & at'(e1,x,p) & changeTo'(e0,e1) & before(e0,e)
+	
+	pass-v24: die, decease, perish, go, exit, pass away, expire, pass, kick the bucket, cash in one's chips, buy the farm, conk, give-up the ghost, drop dead, pop off, choke, croak, snuff it (pass from physical life and lose all bodily attributes and functions necessary to sustain life) "She died from cancer"; "The children perished in the fire"; "The patient went peacefully"; "The old guy kicked the bucket at the age of 102"
+	pass-v15:exceed, transcend, overstep, pass, go past, top (be superior or better than some standard) "She exceeded our expectations"; "She topped her performance of last year"
+		
+		//causal:
+		pass-v25'(e,x,y): cause'(e,x,e0) & pass-s4'(e0,y,p)
+		excrete, egest, eliminate, pass (eliminate from the body) "Pass a kidney stone"	
+		
+		//x successfully passes t stage e0 by getting approved in judgement j for entering eventuality e0
+		*pass-v14-9'(e1,x,j,e0): ???
+			pass-v14:pass, make it (go successfully through a test or a selection process) "She passed the new Jersey Bar Exam and can practice law now"
+			pass-v9:pass, clear (go unchallenged; be approved) "The bill cleared the House"
+			
+			//causal
+			*pass-s2'(e,x,y):cause'(e,x,e1) & pass-s4'(e,y,p)
+				pass-v16:pass (accept or judge as acceptable) "The teacher passed the student although he was weak"
+				pass-v23:authorize, authorise, pass, clear (grant authorization or clearance for) "Clear the manuscript for publication"; "The rock star never authorized this slanderous biography"
+				pass-v3:legislate, pass (make laws, bills, etc. or bring into effect by legislation) "They passed the amendment"; "We cannot legislate how people spend their free time"
+					
+
+// x passes y to z: specialization of pass-s0
+* pass-s3'(e,x,y,z): cause'(e,x,e1) & and'(e,e1,e2)  & before(e1,e2) & changeTo'(e1,e3) & have'(e3,x,y) & change'(e2,e3,e4) & have'(e4,z,y) & not'(e5,e6) & use'(e6,x,y)
+
+	pass-v12:communicate, pass on, pass, pass along, put across (transmit information ) "Please communicate this message to all employees"; "pass along the good news"
+	pass-v5:pass, hand, reach, pass on, turn over, give (place into the hands or custody of) "hand me the spoon, please"; "Turn the files over to me, please"; "He turned over the prisoner to his lawyers"
+	pass-v22:pass, make pass (cause to pass) "She passed around the plates"
+	
+	
+	
+// y passed to z
+*pass-v18-21'(e,y,z): change'(e,e3,e4) & have'(e3,x,y) & changeTo'(e0,e1) & have'(e4,z,y) & not'(e5,e6) & use'(e6,x,y)
+
+	pass-v18:pass (transfer to another; of rights or property) "Our house passed under his official control"
+	pass-v21:fall, return, pass, devolve (be inherited by) "The estate fell to my sister"; "The land returned to the family"; "The estate devolved to an heir that everybody had assumed to be dead"
+		
+		// causal: x passes y to z: specialization of pass-s4
+		*pass-s6'(e,x,y,z): cause'(e,x,e1) & change'(e1,e3,e4) & have'(e3,x,y) & changeTo'(e0,e1) & have'(e4,z,y) & not'(e5,e6) & use'(e6,x,y)
+			pass-v20(e,x,z) :  pass-s6'(e,x,y,z) & ball(y) & player(x) & player(z)
+			pass (throw (a ball) to another player) "Smith passed"
+		
+// x passes/extends to p0	
+*pass-v6'(e,x,p0): at'(e,x,p0,s)
+run, go, pass, lead, extend (stretch out over a distance, space, time, or scope; run or extend between two points or beyond a certain point) "Service runs all the way to Cranbury"; "His knowledge doesn't go very far"; "My memory extends back to my fourth year of life"; "The facts extend beyond a consideration of her personal assets"
+	
+	*pass-v19'(e,x,p0): changeTo'(e,e1) & at'(e1,x,p0,s)
+	<comment>To be more accurate, x passes the boundary between not-nirvana and nirvana</comment>
+	sink, pass, lapse (pass into a specified state or condition) "He sank into nirvana"
+
+	
+Adjective
+
+//
+*pass-adj1'(e,x):pass-v20'(e0,x) & arg(x,p)
+passing, pass (of advancing the ball by throwing it) "a team with a good passing attack"; "a pass play"
+
+
+Noun
+
+pass-n3'(e,e0):pass-v20(e,x,z)
+	pass, passing play, passing game, passing ((American football) a play that involves one player throwing the ball to a teammate) "the coach sent in a passing play on third and long"
+	pass-n15:pass, toss, flip ((sports) the act of throwing the ball to another member of your team) "the pass was fumbled"
+
+//p is a pass for eventuality e0: pass=permission is closely related to v14-9 and v3-16-23  
+pass-n5-6'(e,p,e0):enable'(p,e0) 
+	pass-n5:pass, passport (any authorization to pass or go somewhere) "the pass to visit had a strict time limit"
+	pass-n6:pass, laissez passer (a document indicating permission to do something without restrictions) "the media representatives had special passes"
+	pass-n12:pass, liberty chit (a permit to enter or leave a military installation) "he had to show his pass in order to get out"
+	pass-n13:pass (a complimentary ticket) "the star got passes for his family"
+
+pass-n7'(e0,e):  pass-s1'(e,x,y,s)
+pass (a flight or run by an aircraft over a target) "the plane turned to make a second pass"
+
+
+//emphasis is on x not remaining at p
+pass-n14'(e,e0): pass-s0'(e,e0)
+crack, fling, go, pass, whirl, offer (a usually brief attempt) "he took a crack at it"; "I gave it a whirl"
+
+pass-n16'(e,e1,x,t):pass-v14-9'(e1,x,t,e0)
+passing, pass, qualifying (success in satisfying a test or requirement) "his future depended on his passing that test"; "he got a pass in introductory chemistry"
+
+//skip point p
+pass-n11'(e,e0): change'(e0,e1,e2) & at'(e1,x,p1) & at'(e2,x,p3) & not(e3) & at'(e3,x,p2) & before(p1,p2) & before(p2,p3)
+bye, pass (you advance to the next round in a tournament without playing an opponent) "he had a bye in the first round"
+
+//no specific middle point p, this is like passing of time, there is no single point over which x passes. but x passes over a serie of points?
+pass-n10'(e,e0):?
+pass (one complete cycle of operations (as by a computer)) "it was not possible to complete the computation in a single pass"
+
+
+
+//emphasis is on difficulty, similar to v25, v14-9 and v3-16-23 
+pass-n8-9'(e,e0): condition(e0) & difficult(e0)
+	pass-n8:pass, strait, straits (a bad or difficult situation or state of affairs)
+	pass-n9:pass, head, straits (a difficult juncture) "a pretty pass"; "matters came to a head yesterday"
+
+<special>
+pass-n1:base on balls, walk, pass ((baseball) an advance to first base by a batter who receives four balls) "he worked the pitcher for a base on balls"
+pass-n2:pass ((military) a written leave of absence) "he had a pass for three days"
+pass-n4:pass, mountain pass, notch (the location in a range of mountains of a geological formation that is lower than the surrounding peaks) "we got through the pass before it started to snow"
+</special>
+

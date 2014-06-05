@@ -1,0 +1,13 @@
+Verb
+
+participate-v1'(e,x,e0): arg*'(e,x,e0)
+participate, take part (share in something)
+
+participate-v2'(e,x,e0):changeTo'(e,e1) & arg*(x,e1)
+enter, participate (become a participant; be involved in) "enter a race"; "enter an agreement"; "enter a drug treatment program"; "enter negotiations"
+
+Noun
+
+participant-n1-n2'(e,x,e1):arg*'(e,x,e1)
+	participant-n1:participant, player (someone who takes part in an activity) "he was a major player in setting up the corporation"
+	participant-n2:player, participant (a person who participates in or is skilled at some game) 

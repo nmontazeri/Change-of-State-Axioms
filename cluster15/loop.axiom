@@ -1,0 +1,45 @@
+
+Verb
+//move in a circle trajectory 
+<comment>I think only one such movement is also considered a loop</comment>
+	//x loops
+	loop-v1'(e,x):eventSequence'(e,e0,e1) & move-v1'(e0,x,p0,p1) & move-v1'(e1,x,p1,p0) 
+	"The bicycle looped around the tree"
+	
+	//x loops y
+	loop-v3'(e,x,y):cause'(e,x,e0) & loop-v1'(e0,y)  
+	loop (fly loops, perform a loop) "the stunt pilot looped his plane"
+
+<special :shape theory>
+//shape into a circle
+loop-v2:loop, intertwine (make a loop in) "loop a rope"
+loop-v4:coil, loop, curl (wind around something in coils or loops)
+loop-v5:loop (fasten or join with a loop) "He looped the watch through his belt"
+</special>
+
+
+Noun
+
+loop-n10'(e0,e):loop-v1'(e,x)
+loop, loop-the-loop (a flight maneuver; aircraft flies a complete circle in the vertical plane)
+
+<special>
+//group theory
+loop-n4:loop (an inner circle of advisors (especially under President Reagan)) "he's no longer in the loop"
+
+//shape theory
+loop-n2:loop (anything with a round or oval shape (formed by a curve that is closed and does not intersect itself))
+loop-n1:cringle, eyelet, loop, grommet, grummet (fastener consisting of a metal ring for lining a small hole to permit the attachment of cords or lines)
+loop-n5:loop (the basic pattern of the human fingerprint)
+loop-n7:loop topology, loop (the topology of a network whose components are serially connected in such a way that the last component is connected to the first component)
+loop-n8:loop (an intrauterine device in the shape of a loop)
+loop-n9:closed circuit, loop (a complete electrical circuit around which current flows or a signal circulates)
+
+//computer
+<question>How can I keep e0?</question>
+loop-n3'(e0,e1):iteration(e,e1)
+iteration, loop ((computer science) a single execution of a set of instructions that are to be repeated) "the solution took hundreds of iterations"
+
+loop-n6:loop (a computer program that performs a series of instructions repeatedly until some specified condition is satisfied)
+
+</special>

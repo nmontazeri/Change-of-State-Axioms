@@ -1,0 +1,66 @@
+
+Verb
+
+stop-v9'(e,x,p0):end-v1'(e,x,p0)
+end, stop, finish, terminate, cease (have an end, in a temporal, spatial, or quantitative sense; either spatial or metaphorical) "the bronchioles terminate in a capillary bed"; "Your rights stop where you infringe upon the rights of other"; "My property ends by the bushes"; "The symphony ends in a pianissimo"
+
+stop-v2'(e,x,e0): changeFrom'(e,e0) & agentOf(x,e0) & eventSequence(e0)
+discontinue, stop, cease, give up, quit, lay off (put an end to a state or an activity) "Quit teasing your little brother"
+	//activity=move
+	//x stops at p0
+	stop-v1'(e,x,p0):changeFrom'(e,e0) & move-s0'(e0,x,p0,p1) & eventSequence(e0)
+	stop, halt (come to a halt, stop moving) "the car stopped"; "She stopped in front of a store window"
+	
+		//x stops temporarily at y
+		stop-v4'(e,x,p0): stop-v1'(e,x,p0) & temporary(e)
+		stop, stop over (interrupt a trip) "we stopped at Aunt Mary's house"; "they stopped for three days in Florence"	
+		
+		//causal:
+		stop-v5-8-10'(e,x,y): cause'(e,x,e0) & stop-v1'(e0,y)
+			stop-v5:stop (cause to stop) "stop a car"; "stop the thief"
+			stop-v8:intercept, stop (seize on its way) "The fighter plane was ordered to intercept an aircraft that had entered the country's airspace"
+			stop-v10:barricade, block, blockade, stop, block off, block up, bar (render unsuitable for passage) "block the way"; "barricade the streets"; "stop the busy road"
+
+	//temporary
+	stop-v11'(e,x): stop-v2'(e,x,e0) & temporary(e)
+	hold on, stop (stop and wait, as if awaiting further instructions or developments) "Hold on a moment!"
+	
+	//causal:
+	stop-v3-6-7'(e,x,e0): cause'(e,x,e1) & not'(e1,e2) & complete'(e2,e0) &  eventSequence(e0)
+		stop-v3:stop, halt, block, kibosh (stop from happening or developing) "Block his election"; "Halt the process"
+		stop-v6:break, break off, discontinue, stop (prevent completion) "stop the project"; "break off the negotiations"
+		stop-v7:check, turn back, arrest, stop, contain, hold back (hold back, as of a danger or an enemy; check the expansion or influence of) "Arrest the downward trend"; "Check the growth of communism in South East Asia"; "Contain the rebel movement"; "Turn back the tide of communism"
+
+Noun
+
+stop-n1'(e,e0):stop-v9'(e0,x,p0)
+stop, halt (the event of something ending) "it came to a stop at the bottom of the hill"
+
+stop-n2'(e,e0):stop-v2'(e0,x,e1)
+stop, stoppage (the act of stopping something) "the third baseman made some remarkable stops"; "his stoppage of the flow resulted in a flood"
+
+stop-n3'(e,e0):stop-v4'(e0,x,p0)
+stop, stopover, layover (a brief stay in the course of a journey) "they made a stopover to visit their friends"
+
+//the next state in stop-v2'(e,x,e0)
+* stop-n4'(e,e2):  change'(e0,e1,e2) & agentOf(x,e1) & not'(e2,e1) &  eventSequence(e1)
+arrest, check, halt, hitch, stay, stop, stoppage (the state of inactivity following an interruption) "the negotiations were in arrest"; "held them in check"; "during the halt he got some lunch"; "the momentary stay enabled him to escape the blow"; "he spent the entire stop in his seat"
+
+stop-n5'(e0,p0):stop-v4'(e,x,p0)
+stop (a spot where something halts or pauses) "his next stop is Atlanta"
+
+stop-n10-11'(e,x):stop-v5-8-10'(e,x,y)
+	stop-n10:catch, stop (a restraint that checks the motion of something) "he used a book as a stop to hold the door open"
+	stop-n11:blockage, block, closure, occlusion, stop, stoppage (an obstruction in a pipe or tube) "we had to call a plumber to clear out the blockage in the drainpipe"
+
+<special>
+//music
+stop-n8:stop ((music) a knob on an organ that is pulled to change the sound quality from the organ pipes) "the organist pulled out all the stops"
+
+//photography
+stop-n9:diaphragm, stop (a mechanical device in a camera that controls size of aperture of the lens) "the new cameras adjust the diaphragm automatically"
+
+//stop of speech
+	stop-n6:stop consonant, stop, occlusive, plosive consonant, plosive speech sound, plosive (a consonant produced by stopping the flow of air at some point and suddenly releasing it) "his stop consonants are too aspirated"
+	stop-n7:period, point, full stop, stop, full point (a punctuation mark (.) placed at the end of a declarative sentence to indicate a full stop or after abbreviations) "in England they call a period a stop"
+</special>

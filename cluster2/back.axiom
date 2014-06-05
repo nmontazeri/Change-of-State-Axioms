@@ -1,0 +1,105 @@
+Noun
+
+//objects may have a special side for viewing them. The side opposite to that side is the back.
+
+//x is the back side of y
+<question>Do we consider the sides of something as parts of it (parts of a composite entity)?</question>
+*back-n3'(e,x,y): partOf(x,y) & at(x,p0) & opposite(p0,p1) & viewSide(p1) 
+back, rear (the part of something that is furthest from the normal viewer) "he stood at the back of the stage"; "it was hidden in the rear of the store"
+	
+	back-n1:back, dorsum (the posterior part of a human (or animal) body from the neck to the end of the spine) "his back was nicely tanned"
+	
+	back-n2:rear, back (the side that goes last or is not normally seen) "he wrote the date on the back of the photograph"
+	
+	*back-n5'(e,x,y):back-n3'(e,x,y) & support(x,y)
+	spinal column, vertebral column, spine, backbone, back, rachis (the series of vertebrae forming the axis of the skeleton and protecting the spinal cord) "the fall broke his back"
+		
+		<special>
+		//sense n6 is not related to front/back, it is just similar in function to human's backbone
+		back-n6:binding, book binding, cover, back (the protective covering on the front, back, and spine of a book) "the book had a leather binding"
+		</special>
+	
+//something for the back of a person
+	//sense n7 and n8 can be viewd both as "back of a shirt/seat" or "the part of the shirt/seat that covers/supports one's back" 
+	//example: "poshti" sonati iran
+	back-n7'(e,y): partOf(y,x) & shirt(x) & cover(y,z) & back-n1(z,h)
+	back (the part of a garment that covers the back of your body) "they pinned a `kick me' sign on his back"
+	
+	back-n8'(e,y): partOf(y,x) & seat(x) & support(y,z) & back-n1(z,h)
+	back, backrest (a support that you can lean against while sitting) "the back of the dental chair was adjustable"
+
+
+
+<special>
+back-n4:back ((football) a person who plays in the backfield)
+back-n9:back ((American football) the position of a player on a football team who is stationed behind the line of scrimmage)
+</special>
+
+Verb
+
+//?? add something to back of something else for support? or just providing money,etc for support?
+back-v10:back (strengthen by providing with a back or backing)
+
+//support: these senses seem to be metaphorically related to back-n5 and back-v10
+*back-v1-2-5-7-9'(e,x,y): support'(e,x,y)
+	back-v1:back, endorse, indorse, plump for, plunk for, support (be behind; approve of) "He plumped for the Labor Party"; "I backed Kennedy in 1960"
+	back-v3:second, back, endorse, indorse (give support or one's approval to) "I'll second that motion"; "I can't back this plan"; "endorse a new project"
+	back-v5:back (support financial backing for) "back this enterprise"
+	back-v7:bet on, back, gage, stake, game, punt (place a bet on) "Which horse are you backing?"; "I'm betting on the new horse"
+	back-v9:back, back up (establish as valid or genuine) "Can you back up your claims?"
+
+//move backward:  x moved ahead in the opossite direction it is facing: its back moves ahead of its front. we cannot say x moves in the opposite direction of the norm.
+<comment>It seems that the meaning of front and end for moving objects should be defined by their direction of movement. "front" is the part/side that "typically" moves ahead of other parts</comment>
+<comment>face(x,d0) means d0 is the direction that x is facing</comment>
+*back-v2'(e,x): move'(e,x) & directionOf(d,e) & face(x,d0) & opposite(d0,d)
+back (travel backward) "back into the driveway"; "The car backed up and hit the tree"
+	
+// a change of direction (??it seems this sense applies to objects that have no front and back, for all other objects, the object should not turn: it should move in such a way that the back moves ahead of the front?)
+*back-v8'(e,x): change'(e,e1,e2) & move'(e1,x) & directionOf(d1,e1) & move'(e2,x) & directionOf(d2,e2) & opposite(d1,d2)
+back (shift to a counterclockwise direction) "the wind backed"
+
+	//causal
+	*back-v4'(e,x,y):cause'(e,x,e0) & back-v8'(e0,y)
+	back (cause to travel backward) "back the car into the parking spot"
+
+// x backs y: x is in back of y
+back-v6'(e,x,y): back-n3'(e,x,y)
+back (be in back of) "My garage backs their yard"
+
+
+Adjective
+
+*back-adj1-2'(e,x): back-n3'(e,x,y)
+	back-adj1:back (related to or located at the back) "the back yard"; "the back entrance"
+	back-adj2:back, hind, hinder (located at or near the back of an animal) "back (or hind) legs"; "the hinder part of a carcass"
+
+</special>
+//metaphor: past is behind, future is in front
+//I am using "y" here because in the case of magazine, if the publish date is before current date, it would not be considered a back issue, rather we compare the publish date of x with publish date of y
+*back-adj3'(e,x):arg*(x,e0) & arg*(y,e1) & before(e0,e1) 
+back (of an earlier date) "back issues of the magazine"
+</special>
+
+Adverb
+
+//e1 is back to e0: back in time (previous state/location)
+back-adv3'(e,e1,e0): changeFrom'(e3,e0) & changeTo'(e1,e0) & before'(e3,e1) 
+back (in or to or toward an original condition) "he went back to sleep"
+
+	//e1 is back to p0: move to prevous location
+	*back-adv1'(e,e1,p0): back-adv3'(e,e1,e0) &  at'(e0,x,p0) 
+	back (in or to or toward a former location) "she went back to her parents' house"
+
+//related to direction (v2)
+//move'(e0,x) & back'(e,e0) -> How can I rewrite this axiom so that "e" also bounds to some proposition in right hand side?
+*back-adv2'(e,e0): back-v2'(e0,x)
+back, backward, backwards, rearward, rearwards (at or to or toward the back or rear) "he moved back"; "tripped when he stepped backward"; "she looked rearward out the window of the car"
+
+//??
+*back-adv4'(e,e0):
+back, backward (in or to or toward a past time) "set the clocks back an hour"; "never look back"; "lovers of the past looking fondly backward"
+
+*back-adv5-6'(e,e2): subst2(x y e2 y x e1) & before(e1,e2)
+	back-adv5:back (in reply) "he wrote back three days later"
+	back-adv6:back (in repayment or retaliation) "we paid back everything we had borrowed"; "he hit me and I hit him back"; "I was kept in after school for talking back to the teacher"
+

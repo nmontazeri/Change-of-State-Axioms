@@ -1,0 +1,18 @@
+<comment>
+initiative is closely related to scale and potentiality
+</comment>
+
+Noun
+
+//?? possibility or having power to do something?
+enterprise, enterprisingness, initiative, go-ahead (readiness to embark on bold new ventures)
+
+initiative-n2'(e,x): first'(e,x)
+first step, initiative, opening move, opening (the first of a series of actions)
+
+Adjective
+
+//the first item in a sequence which causes a change to existence of other elements of sequence.
+initiative-adj1'(e,x): first'(e,x) & before(x,y) & possible?(e0) & cause'(e0,x,e1) & changeTo'(e1,e2) & Rexist'(e2,y)
+inaugural, initiative, initiatory, first, maiden (serving to set in motion) "the magazine's inaugural issue"; "the initiative phase in the negotiations"; "an initiatory step toward a treaty"; "his first (or maiden) speech in Congress"; "the liner's maiden voyage"
+

@@ -1,0 +1,50 @@
+Verb
+<comment>
+	Consumtion has several parts that are elaborated in each sense
+	1) x's causing a part of y to not be available/usable/consumable anymore (this is the core and is present in all senses) or x's gradual causing of x to be unusable
+	2) x's need for that part of y (this is violated in v3(waste))
+	3) specification of how y becomes unusable. in eating, we are not much concerned abot what happens to the food after eating (transformation of the food), it is only important that (parts of) the food no longer exists. But in fire's consumption of a building, we are concerned about the transformation of the building, not the reduction of its parts. The building stays where it was, but it looses its original form. neverthless, both food and building become unusable.  
+</comment>
+<comment>It seems that the typical sense of consume is using up something you need. consume-v3 which means waste is when you use up something that you don't need</comment>
+
+//x consumes y: x causes part of y (i.e., z) to not exist (better said, causes part of y not to be usable)
+*consume-s0'(e,x,y,z): cause'(e,x,e0) & changeFrom'(e0,e1) & Rexist'(e1,z) & partOf(z,y)
+	
+	//need
+		*consume-v5-6'(e,x,y,z): consume-s0'(e,x,y) & need (x,z)
+		<comment>changeFrom'(e0,e1) & Rexist'(e1,y)  is only relatively true. More accurate is to say changeFrom(possible(consume(x,y)) or changeFrom(possible(use(x,y)) .  </comment>
+		<question>decrease in amount of something is equivalent to changeFrom(exist(y))&partOf(y,x) and then we may want to infer that after enough consumption, x will be finished. so we need to know that changeFrom'(exist(partOf(y))) can lead to changeFrom(Rexist(x)). we need to know that existance of something is equal to existance of its parts.</question>
+		
+			consume-v5:consume, eat up, use up, eat, deplete, exhaust, run through, wipe out (use up (resources or materials)) "this car consumes a lot of gas"; "We exhausted our savings"; "They run through 20 bottles of wine a week"
+			consume-v6:consume (engage fully) "The effort to pass the exam consumed all his energy"
+		
+			//eat
+			<exp>x's eating y doesn't really cause y to not exist. It causes y to not exist outside of x, or not be usable/consumable anymore</exp>
+			consume-v1:devour, demolish, down, consume, go through (eat up completely, as with great appetite) "Some people can down a pound of meat in the course of one meal"; "The teenagers demolished four pizzas among them"
+			consume-v2:consume, ingest, take in, take, have (serve oneself to, or consume regularly) "Have another bowl of chicken soup!"; "I don't take sugar in my coffee"
+
+	//no need=waste
+	consume-v3'(e,x,y): consume-s0'(e,x,y,z) & not(e3) & need' (e3,x,z)
+	consume, squander, waste, ware (spend extravagantly) "waste not, want not"
+
+//destroy
+<comment>In a way, fire needs material and really consumes the building. But we are not interested in this interpretation</comment>
+<comment>we can place this sense and consume-s0, under another super sense which states that there is a changeFrom(usable(x))</comment>
+consume-v4'(e,x,y): destroy-s1'(e,x,y)
+consume (destroy completely) "The fire consumed the building"
+
+
+Noun
+
+//use up
+consumption-n3-4:consume-s0
+	consumption-n3:consumption, economic consumption, usance, use, use of goods and services ((economics) the utilization of economic goods to satisfy needs or in manufacturing) "the consumption of energy has increased steadily"
+	consumption-n4:consumption, using up, expenditure (the act of consuming something)
+
+	//eat
+	consumption-n1:consume-v2
+	consumption, ingestion, intake, uptake (the process of taking food into the body through the mouth (as by eating))
+
+<special>
+consumption-n2:pulmonary tuberculosis, consumption, phthisis, wasting disease, white plague (involving the lungs with progressive wasting of the body)
+</special>

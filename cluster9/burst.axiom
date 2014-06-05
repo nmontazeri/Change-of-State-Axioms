@@ -1,0 +1,46 @@
+Noun
+
+burst-n1'(e,e0): burst-s0'(e0,x)
+explosion, burst (the act of exploding or bursting) "the explosion of the firecrackers awoke the children"; "the burst of an atom bomb creates enormous radiation aloft"
+
+//e10 is a burst of e1
+burst-n3-4'(e,e10,e1):burst-s1'(e10,x,e0,e1)
+	burst-n3:burst, fit (a sudden flurry of activity (often for no obvious reason)) "a burst of applause"; "a fit of housecleaning"
+	burst-n4:outburst, burst, flare-up (a sudden intense happening) "an outburst of heavy rain"; "a burst of lightning"
+                                      
+<special>
+burst-n2:fusillade, salvo, volley, burst (rapid simultaneous discharge of firearms) "our fusillade from the left flank caught them by surprise"
+</special>
+
+
+Verb
+
+<comment>The difference between burst and explode seems to be in 1) their radius: explode has big radius of scattering and affecting, burst has a small radius. and 2) effect: explosion affects the surrounding but  burst doesn't</comment>
+<ref>explode<ref>
+//this is also a kind of explosion due do inside pressure
+burst-s0'(e,x): explode-v2'(e,x)
+	burst-v1:burst, split, break open (come open suddenly and violently, as if from internal pressure) "The bubble burst"
+	burst-v3:explode, burst (burst outward, usually with noise) "The champagne bottle exploded"
+	
+	//x is not a container, but can be seen as a container from outside (a container that has one side only)
+		burst-v8:burst, bust (break open or apart suddenly and forcefully) "The dam burst"
+		
+	//causal:
+		burst-v7:collapse, burst (cause to burst) "The ice broke the pipe"
+		
+//CONTAINER METAPHOR
+burst-s1'(e,x,e0,e1): change'(e,e0,e1)  & arg*(x,e) & sudden(e)
+	// x breaks into e1: 
+	burst-v2:break, burst, erupt (force out or release suddenly and often violently something pent up) "break into tears"; "erupt in anger"
+	burst-v6:burst (emerge suddenly) "The sun burst into view"
+	
+	//x breaks out of e0
+	burst-v4:burst (move suddenly, energetically, or violently) "He burst out of the house into the cool night"
+	
+
+<question>is and'(e,e0,e1) correct? </question>
+burst-v5'(e,x,y):and'(e,e0,e1) & active'(e0,y) & in'(e1,y,x)
+abound, burst, bristle (be in a state of movement or action) "The room abounded with screaming children"; "The garden bristled with toddlers"
+
+
+

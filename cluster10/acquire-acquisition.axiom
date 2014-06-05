@@ -1,0 +1,27 @@
+Verb
+
+acquire-s0'(e,x,y): changeTo'(e,e0) & rel'(e0,x,y)
+	//e0=have
+	acquire-v1:get, acquire (come into the possession of something concrete or abstract) "She got a lot of paintings from her uncle"; "They acquired a new pet"; "Get your results the next day"; "Get permission to take a few days off from work"
+	
+	//e0=have quality
+	acquire-v2:assume, acquire, adopt, take on, take (take on a certain form, attribute, or aspect) "His voice took on a sad tone"; "The story took a new turn"; "he adopted an air of superiority"; "She assumed strange manners"; "The gods assume human or animal form in these fables"
+	
+	//e0=have part
+	acquire-v3:grow, develop, produce, get, acquire (come to have or undergo a change of (physical features and attributes)) "He grew a beard"; "The patient developed abdominal pains"; "I got funny spots all over my body"; "Well-developed breasts"
+	
+	//e0=know
+	acquire-v4:acquire (locate (a moving entity) by means of a tracking system such as radar)
+	acquire-v5:acquire, win, gain (win something through one's efforts) "I acquired a passing knowledge of Chinese"; "Gain an understanding of international finance"; "win someone's confidence and friendship"
+	acquire-v6:learn, larn, acquire (gain knowledge or skills) "She learned dancing from her sister"; "I learned Sanskrit"; "Children acquire language at an amazing rate"
+	acquire-v7:develop, acquire, evolve (gain through experience) "I acquired a strong aversion to television"; "Children must develop a sense of right and wrong"; "Dave developed leadership qualities in his new position"; "develop a passion for painting"
+
+Noun
+
+acquisition-n1'(e,e0): acquire-s0'(e0,x,y)
+	acquisition (the act of contracting or assuming or acquiring possession of something) "the acquisition of wealth"; "the acquisition of one company by another"
+	acquisition-n3:learning, acquisition (the cognitive process of acquiring skill or knowledge) "the child's acquisition of language"
+
+acquisition-n2'(e,y):acquire-s0'(e0,x,y)
+	acquisition (something acquired) "a recent acquisition by the museum"
+	acquisition-n4:skill, accomplishment, acquirement, acquisition, attainment (an ability that has been acquired by training) 

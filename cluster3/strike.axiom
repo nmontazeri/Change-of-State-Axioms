@@ -1,0 +1,96 @@
+Noun
+
+strike-n2'(e0,e):strike-v4'(e,x,y)
+strike (an attack that is intended to seize or inflict damage on or destroy an objective) "the strike was scheduled to begin at dawn"
+
+*strike-n3'(e,x,y):strike-s2'(e,x,y,e2) & low(e2)
+rap, strike, tap (a gentle blow)
+
+//x hits his goal (y)
+*strike-n6'(e,e0):strike-s1'(e0,x,y) & goal(y,x)
+hit, smash, smasher, strike, bang (a conspicuous success) "that song was his first hit and marked the beginning of his career"; "that new Broadway show is a real smasher"; "the party went with a bang"
+
+<special>
+strike-n1:strike-v7
+strike, work stoppage (a group's refusal to work in protest against low pay or bad work conditions) "the strike lasted more than a month before it was settled"
+
+strike-n4:strike, ten-strike (a score in tenpins: knocking down all ten with the first ball) "he finished with three strikes in the tenth frame"
+
+strike-n5:strike ((baseball) a pitch that the batter swings at and misses, or that the batter hits into foul territory, or that the batter does not swing at but the umpire judges to be in the area over home plate and between the batter's knees and shoulders) "this pitcher throws more strikes than balls"
+
+</special>
+
+Verb
+
+//affect
+*strike-s0'(e,x,y):changeTo'(e,e1) & impact-v2'(e1,x,y,e2)
+	// impress. x: comment, behaviour, etc, y=person
+	strike-v2:affect, impress, move, strike (have an emotional or cognitive impact upon) "This child impressed me as unusually mature"; "This behavior struck me as odd"; "he was dumb-struck by the news"; "her comments struck a sour note"
+
+	//affect suddenly.x=cancer, earthquake,wheather, panic,etc
+	*strike-v6-15'(e,x,y):strike-s0'(e,x,y) & sudden(e)
+		strike-v6:hit, strike (affect or afflict suddenly, usually adversely) "We were hit by really bad weather"; "He was stricken with cancer when he was still a teenager"; "The earthquake struck at midnight"
+		strike-v15:hit, strike, come to (cause to experience suddenly) "Panic struck me"; "An interesting idea hit her"; "A thought came to me"; "The thought struck terror in our minds"; "They were struck with fear"
+
+		//attack
+		strike-v4: strike, hit (make a strategic, offensive, assault against an enemy, opponent, or a target) "The Germans struck Poland on Sept. 1, 1939"; "We must strike the enemy's oil fields"; "in the fifth inning, the Giants struck, sending three runners home to win the game 5 to 2"
+
+//x strikes y: there is a change to x being at y
+strike-s1'(e,x,y): changeTo'(e,e1) & at'(e1,x,y) 
+
+	//arrive at
+		strike-v22:strike (arrive at after reckoning, deliberating, and weighing) "strike a balance"; "strike a bargain"
+		strike-v9:come to, strike (attain) "The horse finally struck a pace"
+	
+	//sudden and impact
+		strike-s2'(e,x,y,e2): strike-s1'(e,x,y) & sudden(e) & impact-v2'(e2,x,y,e3)
+		
+			//x comes into contact with y, x is traveling fast. x does not stop after striking. x=wave:x strikes y
+			strike-v8:fall, shine, strike (touch or seem as if touching visually or audibly) "Light fell on her face"; "The sun shone on the fields"; "The light struck the golden necklace"; "A strange sound struck my ears"
+			
+			//x strikes y: x hits y and continues going through y
+			strike-v21:strike (pierce with force) "The bullet struck her thigh"; "The icy wind struck through our coats"
+		
+				//and y also impacts x. x=physical object, y=physical object
+				*strike-v3'(e,x,y):strike-s2'(e,x,y,e3) & impact-v2'(e4,y,x,e5)
+				hit, strike, impinge on, run into, collide with (hit against; come into sudden contact with) "The car hit a tree"; "He struck the table with his elbow"
+					
+					//causal
+					*strike-v16'(e,x,y,z): cause'(e,x,e1) & strike-v3'(e1,y,z)
+					hit, strike (drive something violently into a location) "he hit his fist on the table"; "she struck her head on the low ceiling"
+				
+			//causal+no mention to y
+			*strike-v1-10-19'(e,x,y,z): cause'(e,x,e1) & strike-s2'(e1,y,z,e3)
+				strike-v19'(e,x,z):mint, coin, strike (form by stamping, punching, or printing) "strike coins"; "strike a medal"
+				strike-v10:strike, hit (produce by manipulating keys or strings of musical instruments) "The pianist strikes a middle C"; "strike `z' on the keyboard"
+				strike-v1:strike (deliver a sharp blow, as with the hand, fist, or weapon) "The teacher struck the child"; "the opponent refused to strike"; "The boxer struck the attacker dead"
+			
+
+//y is findable
+strike-v12'(e,x,y): changeTo'(e,e1) & rel'(e1,x,y) & unexpected(e)
+<question>what is the difference between "finding by chance" and "searching for something and then finding it"? the latter is not considered sudden but the former is not. what is the definition of sudden in this sense?what makes "finding an expected thing" "and finding an unexpected thing" different?</question>
+fall upon, strike, come upon, light upon, chance upon, come across, chance on, happen upon, attain, discover (find unexpectedly) "the archeologists chanced upon an old tomb"; "she struck a goldmine"; "The hikers finally struck the main path to the lake"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<special>
+//y=electrical * : x causes y
+	strike-v11:strike (cause to form (an electric arc) between electrodes of an arc lamp) "strike an arc"
+	strike-v13:strike (produce by ignition or a blow) "strike fire from the flintstone"; "strike a match"
+	
+//related to strike-v4, without sudden-ness
+	strike-v18:strike (disassemble a temporary structure, such as a tent or a theatrical set) "after the show, we'll have to strike the set and pack up"
+
+//social
+strike-v7:strike, walk out (stop work in order to press demands) "The auto workers are striking for higher wages"; "The employees walked out when their demand for better benefits was not met"
+
+//?
+strike-v5:strike (indicate (a certain time) by striking) "The clock struck midnight"; "Just when I entered, the clock struck"
+
+//sudden movement?
+strike-v14:strike, scratch, expunge, excise (remove by erasing or crossing out or as if by drawing a line) "Please strike this remark from the record"; "scratch that remark"
+strike-v20:strickle, strike (smooth with a strickle) "strickle the grain in the measure"
+
+//????
+strike-v17:assume, take, strike, take up (occupy or take on) "He assumes the lotus position"; "She took her seat on the stage"; "We took our seats in the orchestra"; "She took up her position behind the tree"; "strike a pose"
+</special>
+

@@ -1,0 +1,71 @@
+Verb
+
+*reduce-s0'(e,x): change'(e,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & lts(p2,p1)
+	
+	//causal
+	reduce-v1-8-11'(e,x,y): cause'(e,x,e0) & reduce-s0'(e0,y)
+		reduce-v1:reduce, cut down, cut back, trim, trim down, trim back, cut, bring down (cut down on; make a reduction in) "reduce your daily fat intake"; "The employer wants to cut back health benefits"
+		reduce-v8:reduce (lessen and make more modest) "reduce one's standard of living"
+		reduce-v11:reduce, tighten (narrow or limit) "reduce the influx of foreigners"
+
+	//reduction in some property p of x
+	*reduce-s0-1'(e,x,p): propertyOf(p,x) & reduce-s0'(e,p)
+		
+		//reduction in complexity of
+		*reduce-v6'(e,x):reduce-s0'(e,x,p) & complexityOf(p,x) 
+		reduce, come down, boil down (be the essential element) "The proposal boils down to a compromise"
+			
+			//causal
+			*reduce-v2-4-16'(e,x,y): cause'(e,x,e0) & reduce-v6'(e0,x)
+				reduce-v2:reduce (make less complex) "reduce a problem to a single question"
+				reduce-v4:reduce (simplify the form of a mathematical equation of expression by substituting one term for another)
+				reduce-v16:abridge, foreshorten, abbreviate, shorten, cut, contract, reduce (reduce in scope while retaining essential elements) "The manuscript must be shortened"
+		
+		
+		//causal: reduce position of
+		*reduce-v3-5'(e,x): cause'(e,x,e0) & reduce-s0-1'(e,y,p) & positionOf(p,y)
+			reduce-v3:reduce (bring to humbler or weaker state or condition) "He reduced the population to slavery"
+			reduce-v5:reduce (lower in grade or rank or force somebody into an undignified situation) "She reduced her niece to a servant"
+		
+		//reduce in size 
+		*reduce-v17'(e,x):reduce-s0-1'(e,x,p) & sizeOf(p,x)
+		boil down, reduce, decoct, concentrate (be cooked until very little liquid is left) "The sauce should reduce to one cup"
+			
+			//causal:
+			reduce-v7-9'(e,x,y): cause'(e,x,e1) & reduce-v17'(e1,y)
+				reduce-v7:shrink, reduce (reduce in size; reduce physically) "Hot water will shrink the sweater"; "Can you shrink this image?"
+				reduce-v9:reduce, scale down (make smaller) "reduce an image"
+		
+		//causal: reduce material of
+		reduce-v-118-20'(e,x,y): cause'(e,x,e1) & reduce-s0-1'(e1,y,p) & materialOf(p,y)
+			reduce-v18:reduce, boil down, concentrate (cook until very little liquid is left) "The cook reduced the sauce by boiling it for a long time"
+			reduce-v20:reduce, melt off, slim, slenderize, thin, slim down (take off weight) 
+		
+			//remove a part from by chemical reaction
+			reduce-v10:deoxidize, deoxidise, reduce (to remove oxygen from a compound, or cause to react with hydrogen or form a hydride, or to undergo an increase in the number of electrons)
+			
+			//into two pieces
+			reduce-v13:reduce (undergo meiosis) "The cells reduce"
+		
+		
+		//causal: reduce strength/activity of
+		reduce-v12-15-19'(e,x,y): cause'(e,x,e1) & reduce-s0-1'(e1,y,p) & strengthOf(p,y)
+			reduce-v12:repress, quash, keep down, subdue, subjugate, reduce (put down by force or intimidation) "The government quashes any attempt of an uprising"; "China keeps down her dissidents very efficiently"; "The rich landowners subjugated the peasants working the land"
+			reduce-v15:reduce (destress and thus weaken a sound when pronouncing it)
+			reduce-v19:dilute, thin, thin out, reduce, cut (lessen the strength or flavor of a solution or mixture) "cut bourbon"
+
+<special>
+reduce-v14:reduce (reposition (a broken bone after surgery) back to its normal site)
+</special>
+
+Noun
+
+reduction-n1'(e,e0): reduce-v1-8-11'(e0,x,y)
+decrease, diminution, reduction, step-down (the act of decreasing or reducing something)
+
+reduction-n3'(e,e0):reduce-v2-4-16'(e0,x,y)
+reduction, simplification (the act of reducing complexity) 
+
+<special>
+reduction-n2:reduction, reducing (any process in which electrons are added to an atom or ion (as by removing oxygen or adding hydrogen); always occurs accompanied by oxidation of the reducing agent)
+</special>

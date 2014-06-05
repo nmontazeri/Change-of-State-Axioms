@@ -1,0 +1,36 @@
+Verb
+
+*create-s0'(e,x,y): cause'(e,x,e0) & changeTo'(e0,e1) & Rexist'(e1,y)
+	create-v1:make, create (make or cause to be or to become) "make a mess in one's office"; "create a furor"
+	create-v2:create (bring into existence) "The company was created 25 years ago"; "He created a new movement in painting"
+	create-v5:create, make (create by artistic means) "create a poem"; "Schoenberg created twelve-tone music"; "Picasso created Cubism"; "Auden made verses"
+	create-v6:produce, make, create (create or manufacture a man-made product) "We produce more cars than we can sell"; "The company has been making toys for two centuries"
+
+//??
+create-v4:create (invest with a new title, office, or rank) "Create one a peer"
+
+//??
+create-v3:create (pursue a creative activity; be engaged in a creative activity) "Don't disturb him--he is creating"
+
+
+Noun
+
+*creation-n1-3-4'(e,e0):create-s0'(e0,x,y)
+	creation-n1:creation, creative activity (the human act of creating)
+	
+	//creation time? I think there is no need for another sense.
+	creation-n3:creation, conception (the event that occurred at the beginning of something) "from its creation the plan was doomed to failure"
+	
+	creation-n4:initiation, founding, foundation, institution, origination, creation, innovation, introduction, instauration (the act of starting something for the first time; introducing something new) "she looked forward to her initiation as an adult"; "the foundation of a new scientific society"
+
+	<special>
+	//x=God, y=universe
+	creation-n5:Creation ((theology) God's act of bringing the universe into existence)
+	</special>
+
+*creation-n2-6'(e,y):create-s0'(e0,x,y)
+	creation-n2:creation (an artifact that has been brought into existence by someone)
+	
+	//y=universe
+	creation-n6:universe, existence, creation, world, cosmos, macrocosm (everything that exists anywhere) "they study the evolution of the universe"; "the biggest tree in existence"
+

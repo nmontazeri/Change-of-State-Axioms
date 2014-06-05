@@ -1,0 +1,19 @@
+Verb
+
+//an eventuality becomes
+become-v3'(e,e0): changTo'(e,e0)
+become (come into existence) "What becomes has duration"
+
+// he became happy -> become'(e,x,e0) & happy'(e0,x)
+*become-v1'(e,x,e0):changeTo'(e,e0) & changeIn'(e,x)
+//we need the start and end state of changeIn
+become, go, get (enter or assume a certain state or condition) "He became annoyed when he heard the bad news"; "It must be getting more serious"; "her face went red with anger"; "She went into ecstasy"; "Get going!"
+
+// water became ice -> become'(e,x,y) & ice'(e0,y): there is an entity z which undergoes a change from being x to being y
+become-v2'(e,x,y): changeIn'(e,z) & change'(e,e0,e1) & be'(e0,z,x) & be'(e1,z,y)
+become, turn (undergo a change or development) "The water turned into ice"; "Her former friend became her worst enemy"; "He turned traitor"
+
+
+<special>
+become-v4:become, suit (enhance the appearance of) "Mourning becomes Electra"; "This behavior doesn't suit you!"
+</special>

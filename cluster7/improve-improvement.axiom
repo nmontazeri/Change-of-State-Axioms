@@ -1,0 +1,23 @@
+Verb
+
+improve-s0'(e,e1,e2):change'(e,e1,e2) & better(e2,e1)
+	*improve-v2'(e,x,e1,e2): improve-s0'(e,e1,e2) & changeIn'(e,x)
+	<question>Is there any other way for capturing the start and end states of a changeIn?</question>
+	<answer>yes. we can change the prop for changeIn</answer>
+	better, improve, ameliorate, meliorate (get better) "The weather improved toward evening"
+	
+		//causal
+		improve-v1'(e,x,y): cause'(e,x,e0) &  improve-v2'(e0,y)
+		better, improve, amend, ameliorate, meliorate (to make better) "The editor improved the manuscript with his changes"
+
+Noun
+
+improvement-n1'(e0,e):improve-s0'(e,e1,e2)
+improvement, betterment, advance (a change for the better; progress in development)
+
+improvement-n2'(e,e0):improve-v1'(e0,x,y)
+improvement (the act of improving something) "their improvements increased the value of the property"
+
+improvement-n3'(e,e2):improve-s0'(e,e1,e2)
+improvement, melioration (a condition superior to an earlier condition) "the new school represents a great improvement"
+

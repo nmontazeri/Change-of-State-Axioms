@@ -1,0 +1,55 @@
+deviate:
+
+Verb
+
+deviate-s0'(e,x,y,s): or'(e,e3,e4) & deviate-v2'(e3,x,y,s) & deviate-s1'(e4,x,p,s)
+<exp> when we say "x deviates from y", either 1)x deviates from being similar to y, which means x and y are different; i.e., are at different points (are not both on the same point p0) on a scale,or 2) x deviates from being at y on the scale. In other words, y can be either an entity or a position for being at. </exp>
+
+	deviate-s1'(e,x,p,s): not'(e,e1) & at'(e1,x,y,s)
+	<exp>x deviates from being at p on the scale.</exp>
+
+	deviate-v2'(e,x,y,s): not'(e,e1) & at'(e1,x,p0,s) & at'(y,p0,s)
+	<exp>x deviates from being similar to y, which means x and y are at different points (are not both on the same point p0) on a scale</exp>
+	<comment>The reason I differentiate between this sense and deviate-s1 is that I am not sure as to whether we can have similar(x,y)= at(x,y). Do we use deviate for deviating from a value or also deviating from a sample entity? I mean, is NORM a value on a scale or an entity that is at a scale?</comment>
+	deviate, vary, diverge, depart (be at variance with; be out of line with)
+
+deviate-v1'(e,x,y):changeTo'(e,e1) & deviate-s0'(e,x,y,s)
+deviate, divert (turn aside; turn away from)
+
+	deviate-v3'(e,z,x,y): cause'(e,z,e1) & deviate-s1'(e1,x,p,s) & path(p)
+	deviate (cause to turn away from a previous or expected course) "The river was deviated to prevent flooding"
+
+
+Adjective
+
+deviate-adj1'(e,x,s): deviate-v2'(e,x,y,s) & norm(y) 
+aberrant, deviant, deviate (markedly different from an accepted norm) "aberrant behavior"; "deviant ideas"
+
+Noun
+
+deviate-n'(e0,x): deviate-adj'(e,x,y,s)& sexualBehavior(s) & person(x)
+pervert, deviant, deviate, degenerate (a person whose behavior deviates from what is acceptable especially in sexual behavior)
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+deviation:
+
+deviation-n1'(e,e0): deviate-v2'(e0,x,y,s)
+<question>1)does y need to be a norm? 2) Is this sense referring to the eventuality of differing or to the amount of difference?</question>
+deviation, divergence, departure, difference (a variation that deviates from the standard or norm) "the deviation from the mean"
+
+	<special >
+	deviation-n2'(e,x,s): deviate-adj1'(e,x,s)
+	deviation (the difference between an observed value and the expected value of a variable or function)
+
+	deviation-n3'(e,x,s): deviate-adj1'(e,x,s)
+	deviation (the error of a compass due to local magnetic disturbances)
+	</special>
+	
+deviation-n4'(e,x):deviate-adj1'(e,x,s):& behavior(x) ?
+deviation, deviance (deviate behavior)
+
+deviation-n5'(e,e0,x,p0,p1): change'(e,e1,e2) & at'(e1,x,p0,s) & at'(e2,x,p1,s)
+<exp>e0 is the deviation of x from p0 to p1. This is a more detailed version of deviate-v1 where "not being at p0" is "being at p1" </exp>
+diversion, deviation, digression, deflection, deflexion, divagation (a turning aside (of your course or attention or concern)) "a diversion from the main highway"; "a digression into irrelevant details"; "a deflection from his goal"

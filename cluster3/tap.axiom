@@ -1,0 +1,56 @@
+Noun
+
+*tap-n2-8'(e,e0,x,y): tap-v7'(e0,x,y)
+	tap-n2:rap, strike, tap (a gentle blow)
+	tap-n8:tap, pat, dab (a light touch or stroke)
+
+*tap-n1'(e,s):tap-v3-7'(e0,x,y) & soundOf(s,e0)
+pat, rap, tap (the sound made by a gentle blow)
+
+
+<special>
+tap-n4:tap (a small metal plate that attaches to the toe or heel of a shoe (as in tap dancing))
+
+tap-n3:water faucet, water tap, tap, hydrant (a faucet for drawing water from a pipe or cask)
+tap-n6:tap, spigot (a plug for a bunghole in a cask)
+
+tap-n5:tap (a tool for cutting female (internal) screw threads)
+
+tap-n7:wiretap, tap (the act of tapping a telephone or telegraph line to get information)
+
+</special>
+
+Verb
+//x taps y on z
+*tap-v7'(e,x,y,z): cause'(e,x,e1) & changeTo'(e1,e2)& at'(e2,y,z) & gen(e2,e3) & impact'(e3,y,z) 
+tap, rap, knock, pink (make light, repeated taps on a surface) "he was tapping his fingers on the table impatiently"
+	
+	//x taps his hand on z
+	*tap-v3'(e,x,z):tap-v7'(e,x,y,z) & hand(y,x)
+	tap, tip (strike lightly) "He tapped me on the shoulder"
+
+//refers to real extraction
+tap-s0'(e,x,y): cause'(e,x,e1) & changeFrom'(e1,e2) & in'(e2,z,y) & liquid(z)
+	tap-v10:tap (draw (liquor) from a tap) "tap beer in a bar"
+	tap-v11:tap (pierce in order to draw a liquid from) "tap a maple tree for its syrup"; "tap a keg of beer"
+	tap-v5:wiretap, tap, intercept, bug (tap a telephone or telegraph wire to get information) "The FBI was tapping the phone line of the suspected spy"; "Is this hotel room bugged?"
+	
+	tap-v6'(e,x,y):cause(e,x,e1) & possible'(e1,e2) & tap-s0'(e2,z,y) & have'(e3,y,t) & tap-n3-6(t) & gen(e3,e1)
+	tap (furnish with a tap or spout, so as to be able to draw liquid from it) "tap a cask of wine"
+
+	
+	//refers to abstract extraction 
+	tap-v4:exploit, tap (draw from; make good use of) "we must exploit the resources we are given wisely"
+	?tap-v2:tap (draw from or dip into to get something) "tap one's memory"; "tap a source of money"
+	tap-v12:solicit, beg, tap (make a solicitation or entreaty for something; request urgently or persistently) "Henry IV solicited the Pope for a divorce"; "My neighbor keeps soliciting money for different charities"
+
+<special>
+//use a tap
+tap-v1:tap (cut a female screw thread with a tap)
+
+//sound like tap-v3-7
+tap-v8:tap (walk with a tapping sound)
+tap-v9:tapdance, tap (dance and make rhythmic clicking sounds by means of metal plates nailed to the sole of the dance shoes) "Glover tapdances better than anybody"
+
+</special>
+

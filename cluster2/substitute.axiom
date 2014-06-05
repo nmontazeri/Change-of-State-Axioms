@@ -1,0 +1,27 @@
+Noun
+
+substitute-n1-2'(e,x):possible'(e,e0) & substitute-v2-3'(e,x,y)
+	substitute-n1:substitute, replacement (a person or thing that takes or can take the place of another)
+	substitute-n2:substitute, reserve, second-stringer (an athlete who plays only when a starter on the team is replaced)
+	substitute-n3:stand-in, substitute, relief, reliever, backup, backup man, fill-in (someone who takes the place of another (as when things get dangerous or difficult)) "the star had a stand-in for dangerous scenes"; "we need extra employees for summer fill-ins"
+
+Verb
+
+// x substitutes y: x is in a place where y is supposed to be
+substitute-v2-3'(e,x,y): at'(e,x,p) & at(e1,y,p) & supposed(e1)
+	substitute-v2:substitute, sub, stand in, fill in (be a substitute) "The young teacher had to substitute for the sick colleague"; "The skim milk substitutes for cream--we are on a strict diet"
+	substitute-v3:substitute, deputize, deputise, step in (act as a substitute) "She stood in for the soprano who suffered from a cold"
+
+//causal:
+substitute-v1'(e,x,y,z):cause'(e,x,e1) & change'(e1,e2,e3) & at'(e2,y,p) & at(e3,z,p)
+substitute, replace, interchange, exchange (put in the place of another; switch seemingly equivalent items) "the con artist replaced the original with a fake Rembrandt"; "substitute regular milk with fat-free milk"; "synonyms can be interchanged without a changing the context's meaning"
+
+Adjective
+
+substitute-adj1-2'(e,x):possible'(e,e0) & substitute-v2-3'(e0,x,y)
+	substitute-adj1:utility, substitute (capable of substituting in any of several positions on a team) "a utility infielder"
+	substitute-adj2:alternate, alternative, substitute (serving or used in place of another) "an alternative plan"
+
+substitute-adj3'(e,x):substitute-v2-3'(e,x,y)
+ersatz, substitute (artificial and inferior) "ersatz coffee"; "substitute coffee"
+

@@ -1,0 +1,162 @@
+<relation> back</relation>
+<relation> deliver</relation>
+-------------------------------------------------------------------------------------------------------------------
+<def>
+<noun>
+    
+    return-n25'(e0,e1,x,y) : return-v1'(e1,x,y)
+    	return-n2: return, homecoming (a coming to or returning home) "on his return from Australia we gave him a welcoming party"
+    	return-n5: return (the act of going back to a prior location) "they set out on their return to the base camp"
+    
+    return-n3'(e,e0,z): change'(e0,e1,e2) & move'(e1,z,x,y) & move'(e2,z,y,x)
+    <exp> a change from z moving from x to y, to z moving from y to x </exp>
+    return, coming back (the occurrence of a change in direction back in the opposite direction)
+        
+    <question>(!!! is it right to have e2 in two different times? otherwise we should attach time to eventuality, just like arg) </question>
+    //z returns from x to y: there has been a a "change from y having z to x having z" and now there is a "change from x having z to y having z" 
+    return-n4'(e,e0,z,x,y):change'(e10,e2,e1) & change'(e0,e1,e2) & have'(e1,x,z) & have'(e2,y,z) & before(e10,e0) 
+    restitution, return, restoration, regaining (getting something back again) "upon the restitution of the book to its rightful owner the child was given a tongue lashing"
+    
+    
+    return-n8'(e,e0,x,e2):return-v8'(e0,x,e1,e2)
+    <exp> e0 is a return of action e1 from agent x, in response to action e2 </exp>
+    rejoinder, retort, return, riposte, replication, comeback, counter (a quick reply to a question or remark (especially a witty or critical one)) "it brought a sharp rejoinder from the teacher"
+    
+    return-n10'(e,e0,e2): return-v8'(e0,x,e1,e2)
+    <exp> e0 is a reciprocal action for e2. When we say "in return(e0), we gave(e1)...", we mean that our giving(e1) was a reciprocal action(e0) for the initial e2 action.</exp>
+    return, paying back, getting even (a reciprocal group action) "in return we gave them as good as we got"
+    
+    return-n7'(e1,e,e0): return-v9'(e,e0,x)
+    <exp> e is the reocurrence of eventuality e0 </exp>
+    recurrence, return (happening again (especially at regular intervals)) "the return of spring"
+    
+    return-n13'(e1,e,x,e0): return-v9'(e,e0,x)
+    reappearance, return (the act of someone appearing again) "his reappearance as Hamlet has been long awaited"
+	</todo>
+	<????> How to capture the difference between return-n7 and return-n13 ("eventuality returns to x" and "x returns to eventuality") </????>
+
+<special>
+    return-n1 tax return, income tax return, return (document giving the tax collector information about the taxpayer's tax liability) "his gross income was enough that he had to file a tax return"
+    return-n9 return key, return (the key on electric typewriters or computer keyboards that causes a carriage return and a line feed)    
+    return-n11 return (a tennis stroke that sends the ball back to the other player) "he won the point on a cross-court return"
+    return-n12 return ((American football) the act of running back the ball after a kickoff or punt or interception or fumble)
+    return-n6 return, issue, take, takings, proceeds, yield, payoff (the income or profit arising from such transactions as the sale of land or other property) "the average return was about 5%"
+</special>    
+</noun>
+
+<verb>
+
+	causal:
+		??how can I say e=e0?
+		return-v8'(e,x,e0,e1): agentOf(x,e0) & before(e0,e1) & cause(e1,e0)??? we need definition of action and reaction, or definition of response 
+		<exp> x returns eventuality e0 (to y): y has performed an action e1 on x, as a response, x performs e0 on y. e0 and e1 are highly coupled (somehow have the same type) </exp>
+		retort, come back, repay, return, riposte, rejoin (answer back)
+			
+			return-v67:  e0 and e1 are of the same type (kickback and kickback, love and love)
+				return-v7 return (make a return) "return a kickback"
+				return-v6 return (return in kind) "return a compliment"; "return her love"
+			
+				
+			return-v121516: give something in response to getting something else: z is only arg* of e1: x gives w to y which results in y giving z to x	
+				<special>
+				return-v12: electors return an individual: The authority who holds the election gives election right to people and people return their representative to the authority  
+					reelect, return (elect again)
+				<note> it doesn't have to be re-election. election is also a return according to other dictionaries.  </note>
+				</special>
+				
+				return-v15'(e0,x,z): ? we defined this as "cause to exist", but now we see thet this generating was in response to some getting!
+				render, yield, return, give, generate (give or supply) "The cow brings in 5 liters of milk"; "This year's crop yielded 1,000 bushels of corn"; "The estate renders some revenue for the family"
+			
+				<special>
+				return-v16 return (submit (a report, etc.) to someone in authority) "submit a bill to a legislative body"
+				</special>
+			
+				<special domain=law>
+				return-v11 render, deliver, return (pass down) "render a verdict"; "deliver a judgment"
+				</special>
+			
+		return-v5'(e0,x,y,p) : cause'(e0,x,e1) & return-v1'(e1,y,p)
+		return, take back, bring back (bring back to the point of departure)
+		
+		return-v2-10'(e,x,z,y):cause'(e,x,e1) & changeTo'(e1,e2) & have'(e2,y,z) & changeFrom'(e3,e2) & before(e3,e)
+		x returns z (an arg* of both e0 and e1) to y, z is not an eventuality 
+			
+			return-v10: return all the money
+			refund, return, repay, give back (pay back) "Please refund me my money"
+				return-v2: ? give part of money 
+				render, return (give back) "render money"
+		
+		
+	non-causal:
+	return-v3'(e,x,e0) : changeTo'(e2,e0) & changeFrom'(e1,e0) & arg*(x,e0) & before(e1,e) 
+	<exp> x returns to eventuality e0 </exp>
+	revert, return, retrovert, regress, turn back (go back to a previous state) "We reverted to the old rules"
+		
+		return-v1'(e,x,y): return-v3'(e,x,e0) & at'(e0,x,y)
+		<exp> eventuality e0 is x's being at a place/position/activity </exp>
+		return (go or come back to place, condition, or activity where one has been before) "return to your native land"; "the professor returned to his teaching position after serving as Dean"
+		
+		return-v9'(e,e0,x):return-v3'(e,x,e0)
+		<exp> eventuality e0 returns (to x): eventuality e0 happens again to x </exp>
+		come back, return (be restored) "Her old vigor returned"	
+		
+	<????> How to capture the difference between return-v9 and return-v3 ("eventuality returns to x" and "x returns to eventuality") </????>		
+		
+	return-v4'(e,x,y): mention'(e,x,y) & lts(y,x,s)
+	<exp>x "mentions" y in a sequence where x is after y.</exp>
+	hark back, return, come back, recall (go back to something earlier) "This harks back to a previous remark of his"
+
+	<special domain=law>
+	return-v13: x returns to y: the law delivers x to y 
+	fall, return, pass, devolve (be inherited by) "The estate fell to my sister"; "The land returned to the family"; "The estate devolved to an heir that everybody had assumed to be dead"
+	</special>
+	
+	<special domain=math>
+	return-v14 return (return to a previous position; in mathematics) "The point returned to the interior of the figure"
+	</special>
+</verb>
+</def>  
+-------------------------------------------------------------------------------------------------------------------
+<other source=cambridge>
+cambridge:
+ [I] to come or go back to a previous place
+	Odysseus returned home/returned to his home after many years of travelling.
+	She left South Africa at the age of 15 and has never returned.
+	[+ to infinitive] David returned (from work) to find his house had burned down.
+	return to sth
+	� If people or things return to a previous condition, they go back to that condition
+	Within a week, the situation had returned to normal.
+	� If you return to an activity or subject, you start doing it or talking about it again
+	Gandhi urged Indians to return to spinning their own yarn.
+	Every five minutes, he returned to the same subject.
+	
+return(decide) a verdict/sentence
+	legal to decide and say whether you think someone is guilty or not guilty, or what punishment the person will be given in a law court
+	The jury returned a verdict of not guilty.
+	[T] UK to elect someone to be a member of parliament, or to another political job
+	
+to happen again
+	You must go to the doctor if the pain returns.
+
+[T] to send, take, give, put, etc. something back to where it came from
+	The new TV broke so they returned it to the shop.
+	He returned two books he had borrowed from me in 1963.
+	She carefully returned the book to its place on the shelf.
+	� [T] in sports such as tennis, to hit the ball back to your opponent
+	returnable adjective
+	
+	
+[T] to give, do or get something in exchange
+	to return an invitation/greeting
+	I returned his stare.
+	I gave her a ride when her car broke down and now she is returning the favour (= doing something to help me in exchange).
+	The terrorists started shooting and the police returned fire (= started shooting back).
+	�	to give a particular amount of profit in exchange for an investment
+	My investments return a high rate of interest.
+</other>	    
+    
+    
+    
+    
+    
+

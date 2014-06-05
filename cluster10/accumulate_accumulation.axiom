@@ -1,0 +1,29 @@
+Verb
+<comment>acumulate has these elements: discrete items of the same type/ a core/ gradual adding of items to the core . there should be many parts already there before we say something is acumulating, so the core can not be very small</comment>
+//t accumulates: there is an item j of type t at place p and item i of the same type t has also come to the same place p
+
+//t is accumulating: elements (x) of type t is being added to set s1, froming set s. This is repeated several times: next time, x is added to s (after each iteration, we should set s1<- s)
+<question>I want to say that in the next iteration, s1<- s </question>
+accumulate-v2'(e,t):iteration(e10,e)  & addElt'(e,s,s1,x) & typeOf(t,x)
+accumulate, cumulate, conglomerate, pile up, gather, amass (collect or gather) "Journals are accumulating in my office"; "The work keeps piling up"
+
+//causal:
+	accumulate-v1'(e,x,t): cause'(e,x,e0) & accumulate-v2'(e0,t)
+	roll up, collect, accumulate, pile up, amass, compile, hoard (get or gather together) "I am accumulating evidence for the man's unfaithfulness to his wife"; "She is amassing a lot of data for her thesis"; "She rolled up a small fortune"
+
+Noun
+
+accumulation-n1'(e,e0):accumulate-v2'(e0,t)
+accretion, accumulation (an increase by natural growth or addition)
+
+//a set of items from similar type that are at the same place(near each other)
+<question>how to say all elements are near each other?</question>
+accumulation-n2'(e,s):set(s)
+collection, aggregation, accumulation, assemblage (several things grouped together or considered as a whole)
+
+accumulation-n3'(e,e0): accumulate-v1'(e0,x,t)
+accumulation, accrual, accruement (the act of accumulating)
+
+<special>
+accumulation-n4:accumulation ((finance) profits that are not paid out as dividends but are added to the capital base of the corporation) 
+</special>

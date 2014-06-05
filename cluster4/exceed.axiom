@@ -1,0 +1,14 @@
+Verb
+
+exceed-s0'(e,p1,p0):  gts(p1,p0,s)
+exceed-v1:exceed, transcend, surpass (be greater in scope or size than some standard) "Their loyalty exceeds their national bonds"
+
+//someone/something exceeds a value p0
+exceed-s0'(e,x,p0): qualityOf(q,x) & exceed-s0'(e,q,p0)
+	exceed-v2:exceed, transcend, overstep, pass, go past, top (be superior or better than some standard) "She exceeded our expectations"; "She topped her performance of last year"
+
+//	
+//I think the first example does not belong to this sense. It rather belongs to sense 1
+exceed-v3'(e,x,y): qualityOf(q1,x) & qualityOf(q0,y) & exceed-s0'(e,q1,q0)
+surpass, outstrip, outmatch, outgo, exceed, outdo, surmount, outperform (be or do something to a greater degree) "her performance surpasses that of any other student I know"; "She outdoes all other athletes"; "This exceeds all my expectations"; "This car outperforms all others in its class"
+

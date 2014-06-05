@@ -1,0 +1,65 @@
+// swing is closely related to change of direction. Swing is a continuous change and differs from switch which is descrete.
+//swing is used for un-weighted things, things that are metaphorically dangling, i.e., there is no need to overcome the "lakhti" of a mass. So we don't say "move their votes", rather we say swing the votes
+
+Verb
+
+//move in a curve trajectory
+swing-v2-3-5-7'(e,x,d1): changeIn'(e,d,d0,d1) & directionOf(d,m) & move'(m,x)
+	swing-v2:swing, sway (move or walk in a swinging or swaying manner) "He swung back"
+	swing-v3:swing (change direction with a swinging motion; turn) "swing back"; "swing forward"
+	swing-v5:swing, sweep, swing out (make a big sweeping gesture or movement)
+	
+	//x swings y at z: 
+		swing-v1'(e,x,y):cause'(e,x,e0) & swing-v2-3-5-7'(e0,y,d1)
+		swing (move in a curve or arc, usually with the intent of hitting) "He swung his left fist"; "swing a bat"
+		
+		swing-v7'(e,x,y,z):hit-s2'(e,x,y,z) & armOf(y,x)
+		swing (hit or aim at with a sweeping arm movement) "The soccer player began to swing at the referee"
+		
+//change value easily		
+	//cause to change direction
+	*swing-v4'(e,x,y,p0): cause'(e,x,e0) & changeTo'(e11,e1) & at'(e1,y,p0)
+	swing, swing over (influence decisively) "This action swung many votes over to his side"
+		
+	//repetitive change
+	*swing-v11-13'(e,x): eventSequence(e,e10,e11) & change'(e10,e1,e0) & change'(e11,e0,e1) & at'(e0,h,s) & at'(e1,l,s)
+		swing-v11:swing, get around (be a social swinger; socialize a lot)
+		swing-v13:swing (engage freely in promiscuous sex, often with the husband or wife of one's friends) "There were many swinging couples in the 1960's"
+
+		*swing-v8-10'(e,x): eventSequence(e,e10,e11) & change'(e10,e1,e0) & change'(e11,e0,e1) & at'(e0,h,s) & at'(e1,l,s) & Hi(h,s) & Lo(l,s)
+			swing-v8:swing (alternate dramatically between high and low values) "his mood swings"; "the market is swinging up and down"
+			swing-v10:swing (have a certain musical rhythm) "The music has to swing"
+				//play such a music
+				*swing-v12'(e,x):play-music'(e,x,m) & swing-v8-10'(e,m)
+				swing (play with a subtle and intuitively felt sense of rhythm)
+
+		//being free to change direction
+		*swing-s0'(e,x):  free-A1'(e,x,c,e0) & change'(e0,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2)
+			swing-v6:dangle, swing, drop (hang freely) "the ornaments dangled from the tree"; "The light dropped from the ceiling"
+			//metaphorically similar to hanging from the top: then  you can freely move to any side easily
+			swing-v9:swing (live in a lively, modern, and relaxed style) "The Woodstock generation attempted to swing freely"
+
+Noun
+
+swing-n1'(e,e0):swing-v11-13'(e0,x)
+swing (a state of steady vigorous action that is characteristic of an activity) "the party went with a swing"; "it took time to get into the swing of things"
+
+swing-n3'(e0,e):swing-v7'(e,x,y,z)
+swing (a sweeping blow or stroke) "he took a wild swing at my head"
+
+<suggestion>add corresponding sense to verb senses</suggestion>
+swing-n4'(e0,e):swing-v11-13'(e,x)
+swing, swinging, vacillation (changing location by moving back and forth)
+
+swing-n7-8'(e0,e):swing-v1'(e,x,y)
+	swing-n7:golf stroke, golf shot, swing (the act of swinging a golf club at a golf ball and (usually) hitting it)
+	swing-n8:baseball swing, swing, cut (in baseball; a batter's attempt to hit a pitched ball) "he took a vicious cut at the ball"
+
+<special>
+//domain: music
+	swing-n5:swing, swing music, jive (a style of jazz played by big bands popular in the 1930s; flowing rhythms but less complex than later styles of jazz)
+	swing-n6:lilt, swing (a jaunty rhythm in music)
+
+swing-n2:swing (mechanical device used as a plaything to support someone swinging back and forth)
+swing-n9:swing (a square dance figure; a pair of dancers join hands and dance around a point between them)
+</special>

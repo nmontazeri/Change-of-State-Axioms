@@ -1,0 +1,44 @@
+<comment>
+elements of die: 
+1) stop functioning
+2) extreme pain
+3) no sparkling and beauty
+</comment>
+Verb
+
+//a system dies: change from function
+die-v1-4'(e,x):changeFrom'(e,e0) & function'(e0,x)
+	die-v1:die, decease, perish, go, exit, pass away, expire, pass, kick the bucket, cash in one's chips, buy the farm, conk, give-up the ghost, drop dead, pop off, choke, croak, snuff it (pass from physical life and lose all bodily attributes and functions necessary to sustain life) "She died from cancer"; "The children perished in the fire"; "The patient went peacefully"; "The old guy kicked the bucket at the age of 102"
+	die-v4:fail, go bad, give way, die, give out, conk out, go, break, break down (stop operating or functioning) "The engine finally went"; "The car died on the road"; "The bus we travelled in broke down on the way to town"; "The coffee maker broke"; "The engine failed on the way to town"; "her eyesight went after the accident"
+
+//die-v2-3'(e,x): suffer'(e,x)
+die-v2:die (suffer or face the pain of death) "Martyrs may die every day for their faith"
+die-v3:die (be brought to or as if to the point of death by an intense emotion such as embarrassment, amusement, or shame) "I was dying with embarrassment when my little lie was discovered"; "We almost died laughing during the show"
+
+//x dies to y: x does not want y
+die-v5'(e,x,y): changeFrom'(e,e0) & want'(e0,x,y)
+die (feel indifferent towards) "She died to worldly things and eventually entered a monastery"
+
+//x dies for y: x extremely wants y
+die-v6'(e,x,y):want'(e,x,y) & extreme(e)
+die (languish as with love or desire) "She dying for a cigarette"; "I was dying to leave"
+
+//change from Rexist
+die-v10'(e,x):changeFrom'(e,e0) & Rexist'(e0,x)
+die (disappear or come to an end) "Their anger died"; "My secret will die with me!"
+
+
+<special>
+die-v8:die (to be on base at the end of an inning, of a player)
+//use a die
+die-v7:die, die out (cut or shape with a die) "Die out leather for belts"
+die-v9:die, pall, become flat (lose sparkle or bouquet) "wine and beer can pall"
+die-v11:die (suffer spiritual death; be damned (in the religious sense)) "Whosoever..believes in me shall never die"
+</special>
+
+Noun
+
+die-n1:die, dice (a small cube with 1 to 6 spots on the six faces; used in gambling to generate random numbers)
+die-n2:die (a device used for shaping metal)
+die-n3:die (a cutting tool that is fitted into a diestock and used for cutting male (external) screw threads on screws or bolts or pipes or rods)
+

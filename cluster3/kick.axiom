@@ -1,0 +1,50 @@
+Noun
+
+kick-n1'(e0,e):kick-s1'(e,x,y)
+kick, boot, kicking (the act of delivering a blow with the foot) "he gave the ball a powerful kick"; "the team's kicking was excellent"
+	
+	//kick the water, propel the water, but the water does not change location
+	kick-n6:kick, kicking (a rhythmic thrusting movement of the legs as in swimming or calisthenics) "the kick must be synchronized with the arm movements"; "the swimmer's kicking left a wake behind him"
+
+
+kick-n3'(e0,e):kick-v5'(e,x)
+recoil, kick (the backward jerk of a gun when it is fired)
+
+//affect suddenly
+kick-n5'(e,e0):affect'(e0,x,y) & sudden(e0)
+kick (the sudden stimulation provided by strong drink (or certain drugs)) "a sidecar is a smooth drink but it has a powerful kick"
+
+<special>
+//related to v5, but more general (not backward)
+kick-n2'(e,e0):bang, boot, charge, rush, flush, thrill, kick (the swift release of a store of affective force) "they got a great bang out of it"; "what a boot!"; "he got a quick rush from injecting heroin"; "he does it for kicks"
+
+//related to kick-v8
+kick-n4:gripe, kick, beef, bitch, squawk (informal terms for objecting) "I have a gripe about the service here"
+
+</special>
+
+Verb
+
+*kick-s0'(e,x,y): cause'(e,x,e1) & changeFrom'(e1,e2) & rel'(e2,y,x) 
+
+	kick-v1'(e,x,y):kick-s0'(e,x,y) & hit-s11'(e1,z,y) & foot(z,x) & gen(e,e1)
+	*kick (drive or propel with the foot)
+	
+	kick-v6:kick, give up (stop consuming) "kick a habit"; "give up alcohol"
+
+*kick-s1'(e,x,y): cause'(e,x,e1) & hit-s11'(e1,z,y) & foot(z,x)
+	kick-v2:kick (thrash about or strike out with the feet)
+	kick-v3:kick (strike with the foot) "The boy kicked the dog"; "Kick the door down"
+
+//this is a special case of hit(x,y), where x does not move to hit y, rather it only apples force. But not every force is a kick, I think here it is called kick because it comes from the back of the gun (backward), as a kick by animals 
+*kick-v5'(e,x):? force theory: x applies a sudden force backward
+kick back, recoil, kick (spring back, as from a forceful thrust) "The gun kicked back into my shoulder"
+
+
+<special>
+kick-v4:kick (kick a leg up)
+
+kick-v7:kick (make a goal) "He kicked the extra point after touchdown"
+
+kick-v8:complain, kick, plain, sound off, quetch, kvetch (express complaints, discontent, displeasure, or unhappiness) "My mother complains all day"; "She has a lot to kick about"
+</special>

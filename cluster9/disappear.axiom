@@ -1,0 +1,18 @@
+Verb
+
+//objective
+	disappear-v3'(e,x): changeFrom'(e,e0) & Rexist'(e0,x)
+	vanish, disappear (cease to exist) "An entire civilization vanished"
+
+//subjective: x no longer exists in y's area of perception. This is closely related to find: knowing where something is
+	<rel>find</rel>
+	disappear-v1'(e,x,y):changeFrom'(e,e0) & know'(e0,y,l) &locationOf(l,x)
+		disappear-v1:disappear, vanish, go away (get lost, as without warning or explanation) "He disappeared without a trace"
+	
+	disappear-v2'(e,x,y):changeFrom'(e,e0) & see'(e0,x,y)
+	vanish, disappear, go away (become invisible or unnoticeable) "The effect vanished when day broke"
+		
+		//gradual
+		disappear-v4:melt, disappear, evaporate (become less intense and fade away gradually) "her resistance melted under his charm"; "her hopes evaporated after years of waiting for her fiance"
+	
+

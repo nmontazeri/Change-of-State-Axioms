@@ -1,0 +1,66 @@
+<comment>Crash involves:
+1)hitting
+2) destruction resulting from hitting
+3) loud sound
+</comment>
+
+
+Verb
+
+//x crashes on/in/through y: x hits y and falls apart
+crash-s0'(e,x,y): hit-v2'(e,x,y) & break'(e,x)
+	crash-v1:crash (fall or come down violently) "The branch crashed down on my car"; "The plane crashed in the sea"
+	crash-v2:crash (move with, or as if with, a crashing noise) "The car crashed through the glass door"
+	crash-v3:crash, ram (undergo damage or destruction on impact) "the plane crashed into the ocean"; "The car crashed into the lamp post"
+	crash-v4:crash (move violently as through a barrier) "The terrorists crashed the gate"
+		
+	causal:
+	crash-s0-1'(e,x,y,z): hit-v12'(e,x,y) & break'(e,x)
+		crash-v10:crash, dash (hurl or thrust violently) "He dashed the plate against the wall"; "Waves were dashing against the rock"
+		crash-v9:crash (cause to crash) "The terrorists crashed the plane into the palace"; "Mother crashed the motorbike into the lamppost"
+
+
+crash-v5'(e,x):break'(e,x) & emitSound'(e,x)
+crash, break up, break apart (break violently or noisily; smash)
+
+//still it involves hitting the shore, as in s0
+crash-v7'(e,x):emitSound'(e,x)
+crash (make a sudden loud sound) "the waves crashed on the shore and kept us awake all night"
+
+//metaphorical decline: like plane crashes
+crash-v11'(e,x): change'(e,e1,e0) & sudden(e) & good(e1) & bad(e0)
+crash (undergo a sudden and severe downturn) "the economy crashed"; "will the stock market crash again?"
+
+//stop operating
+crash-v12'(e,x):break'(e,x)
+crash, go down (stop operating) "My computer crashed last night"; "The system goes down at least once a week"
+
+
+<special>
+//farsi: roo saresh kharab shim, khoonashoon kharab shim.
+crash-v6:crash (occupy, usually uninvited) "My son's friends crashed our house last weekend"
+crash-v8:barge in, crash, gate-crash (enter uninvited; informal) "let's crash the party!"
+crash-v13:doss, doss down, crash (sleep in a convenient place) "You can crash here, though it's not very comfortable"
+</special>
+
+
+Noun
+
+//sound
+crash-n1'(e,x):sound(x)
+clang, clangor, clangour, clangoring, clank, clash, crash (a loud resonant repeating noise) "he could hear the clang of distant bells"
+
+//hit and break
+crash-n2-4'(e,e0):crash-s0'(e0,x,y)
+	crash-n2:crash, wreck (a serious accident (usually involving one or more vehicles)) "they are still investigating the crash of the TWA plane"
+	crash-n4:crash, smash (the act of colliding with something) "his crash through the window"; "the fullback's smash into the defensive line"
+
+//business crash
+crash-n3'(e,e0):crash-v11'(e0,x)
+crash, collapse (a sudden large decline of business or the prices of stocks (especially one that causes additional failures))
+
+//system breaks
+crash-n5'(e,e0):crash-v12'(e0,x)
+crash ((computer science) an event that causes a computer system to become inoperative) "the crash occurred during a thunderstorm and the system has been down ever since"
+
+

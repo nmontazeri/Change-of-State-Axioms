@@ -1,0 +1,25 @@
+Verb
+
+*decrease-v1'(e,x,p1,p2):change'(e,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & lts(p2,p1)
+decrease, diminish, lessen, fall (decrease in size, extent, or range) "The amount of homework decreased towards the end of the semester"; "The cabin pressure fell dramatically"; "her weight fell to under a hundred pounds"; "his voice fell to a whisper"
+
+	//causal
+	*decrease-v2'(e,x,y):cause'(e,x,e1) &  decrease-v1'(e1,y,p1,p2)
+	<question>but decreasing the staff means decreasing the "number" of staff. there should be another sense for that.</question>
+	decrease, lessen, minify (make smaller) "He decreased his staff"
+
+
+Noun
+
+*decrease-n1'(e,e0):decrease-v1'(e0,x,p1,p2)
+decrease, lessening, drop-off (a change downward) "there was a decrease in his temperature as the fever subsided"; "there was a sharp drop-off in sales"
+	
+*decrease-n2'(e,e0):decrease-v1'(e0,y,p1,p2) & propertyOf(y,x)
+decrease, decrement (a process of becoming smaller or shorter)
+
+*decrease-n3'(e,d): decrease-v1'(e0,y,p1,p2) & difference(d,p1,p2)
+decrease, decrement (the amount by which something decreases)
+
+*decrease-n4'(e0,e):decrease-v2'(e,x,y)
+decrease, diminution, reduction, step-down (the act of decreasing or reducing something)
+

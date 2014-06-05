@@ -1,0 +1,95 @@
+Verb
+
+//come to existence 
+*develop-s0'(e,x): changeTo'(e,e1) & Rexist'(e1,x)
+	develop-v5:originate, arise, rise, develop, uprise, spring up, grow (come into existence; take on form or shape) "A new religious movement originated in that country"; "a love that sprang up from friendship"; "the idea for the book grew out of a short story"; "An interesting phenomenon uprose"
+	develop-v10:develop (grow, progress, unfold, or evolve through a process of evolution, natural growth, differentiation, or a conducive environment) "A flower developed on the branch"; "The country developed into a mighty superpower"; "The embryo develops into a fetus"; "This situation has developed over a long time"
+	develop-v20:break, recrudesce, develop (happen) "Report the news as it develops"; "These political movements recrudesce from time to time"
+	
+		//causal
+		*develop-s0-1'(e,x,y): cause'(e,x,e1) & develop-s0'(e1,y)
+			develop-v1:develop (make something new, such as a product or a mental or artistic creation) "Her company developed a new kind of building material that withstands all kinds of weather"; "They developed a new technique"
+			develop-v2:evolve, germinate, develop (work out) "We have developed a new theory of evolution"
+			develop-v13:develop (generate gradually) "We must develop more potential customers"; "develop a market for the new mobile phone"
+
+	// and to have (change to have something on yourself) 
+	develop-s2'(e,x,y): develop-s0'(e,y) & propertyOf(y,x)
+	<question>is beard a propertyOf a person?</question>
+		develop-v3:develop, acquire, evolve (gain through experience) "I acquired a strong aversion to television"; "Children must develop a sense of right and wrong"; "Dave developed leadership qualities in his new position"; "develop a passion for painting"
+		develop-v4:grow, develop, produce, get, acquire (come to have or undergo a change of (physical features and attributes)) "He grew a beard"; "The patient developed abdominal pains"; "I got funny spots all over my body"; "Well-developed breasts"
+
+
+//x develops: a set of features of x increase(I mean improve, but is improve the same as increase? if a lower level of something is considered better, then we say it improved; but do we also say it developed?)
+*develop-s1'(e,x): increase'(e,y,s) & propertiesOf(y,x)
+	develop-v11:modernize, modernise, develop (become technologically advanced) "Many countries in Asia are now developing at a very fast pace"; "Viet Nam is modernizing rapidly"
+	develop-v14:develop, grow (grow emotionally or mature) "The child developed beautifully in her new kindergarten"; "When he spent a summer at camp, the boy grew noticeably and no longer showed some of his old adolescent behavior"
+	
+		//causal
+		*develop-s1-1'(e,x,y): cause'(e,x,e1) & develop-s1'(e1,y)
+			develop-v19:develop (elaborate by the unfolding of a musical idea and by the working out of the rhythmic and harmonic changes in the theme) "develop the melody and change the key"
+			develop-v12:develop, make grow (cause to grow and differentiate in ways conforming to its natural development) "The perfect climate here develops the grain"; "He developed a new kind of apple"
+			develop-v7:explicate, formulate, develop (elaborate, as of theories and hypotheses) "Could you develop the ideas in your thesis"
+			
+			//increase the position (move to better position)
+			develop-v18'(e,x,y):develop-s1-1'(e,x,y) & positionOf(y,x)
+			develop (move into a strategically more advantageous position) "develop the rook"
+				
+				//no mention to y
+				develop-v17:develop (move one's pieces into strategically more advantageous positions) "Spassky developed quickly"
+			
+			//increase usability
+			develop-v6'(e,x,y):develop-s1-1'(e,x,y) & usabilityOf(y,x)
+			build up, develop (change the use of and make available or usable) "develop land"; "The country developed its natural resources"; "The remote areas of the country were gradually built up"
+	
+		//x develops z: x causes develop-s1-1'(e,x,y)  which ends in y being z ---develop'(e,x,z) & violinist'(e0,z)
+		*develop-v8'(e,x,z):cause'(e,x,e1) & increase'(e1,p,s) & propertiesOf'(p,y) & gen(e1,e2) & changeTo(e2,e3) & (e3=?y being z?)
+		<comment>another way of saying this is: x causes a change in y. But then we need to specify the final state of changeIn.</comment>
+		train, develop, prepare, educate (create by training and teaching) "The old master is training world-class violinists"; "we develop the leaders for the future"
+
+	//expand to details
+	*develop-v9'(e,x):  increase'(e,y,s) & detailsOf'(y,x)
+	develop (be gradually disclosed or unfolded; become manifest) "The plot developed slowly"
+		//causal
+		develop-v21'(e,x,y):cause'(e,x,e1) & develop-v9'(e1,y)
+		develop (expand in the form of a series) "Develop the function in the following form"
+
+
+
+<special>
+develop-v15:develop (make visible by means of chemical solutions) "Please develop this roll of film for me"
+develop-v16:develop (superimpose a three-dimensional surface on a plane without stretching, in geometry)
+
+
+</special>
+Noun
+
+*development-n1'(e0,e):develop-s1-1'(e,x,y)
+development (act of improving by expanding or enlarging or refining) "he congratulated them on their development of a plan to meet the emergency"; "they funded research and development"
+	
+
+	development-n5'(e0,e): develop-v6'(e,x,y)
+	exploitation, development (the act of making some area of land or water more profitable or productive or useful) "the development of Alaskan resources"; "the exploitation of copper deposits"
+		
+		*development-n6'(e0,y):develop-v6'(e,x,y)
+		development (a district that has been developed to serve some purpose) "such land is practical for small park developments"
+
+*development-n2'(e0,e):develop-s1'(e,x)
+development, evolution (a process in which something passes by degrees to a different stage (especially a more advanced or mature stage)) "the development of his ideas took many years"; "the evolution of Greek civilization"; "the slow development of her skill as a writer"
+
+	development-n3:growth, growing, maturation, development, ontogeny, ontogenesis ((biology) the process of an individual organism growing organically; a purely biological unfolding of events involved in an organism changing gradually from a simple to a more complex level) "he proposed an indicator of osseous development in children"
+
+	
+*development-n4'(e0,e):event'(e0,e)
+development (a recent event that has some relevance for the present situation) "recent developments in Iraq"; "what a revolting development!"
+
+
+development-n7'(e,e2): change'(e0,e1,e2) & at'(e1,x,p0,s) & at'(e2,x,p1,s) & gts(p1,p0)
+development (a state in which things are improving; the result of developing (as in the early part of a game of chess)) "after he saw the latest development he changed his mind and became a supporter"; "in chess your should take care of your development before moving your queen"
+
+<special>
+development-n8:develop-v15
+development, developing (processing a photosensitive material in order to make an image visible) "the development and printing of his pictures took only two hours"
+
+development-n9:develop-v19
+development ((music) the section of a composition or movement (especially in sonata form) where the major musical themes are developed and elaborated)
+</special>

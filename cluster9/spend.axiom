@@ -1,0 +1,10 @@
+Verb
+
+spend-s0'(e,x,y): cause'(e,x,e0) & changeFrom'(e0,e1) & have'(e1,x,y) & valuable(y)
+	
+	spend-v1'(e,x,t):spend-s0'(e,x,y) & t
+	spend, pass (use up a period of time in a specific way) "how are you spending your summer vacation?"
+	
+	spend-v2:spend, expend, drop (pay out) "spend money"
+		spend-v3:spend (spend completely) "I spend my pocket money in two days"
+

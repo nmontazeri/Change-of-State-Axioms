@@ -1,0 +1,98 @@
+Noun
+
+in twist we have 4 ingredients:
+1) a line
+2) start point
+3)axis
+4)end point
+
+// abstract rotation
+
+	//development or change?
+	twist-n1:turn, turn of events, twist (an unforeseen development) "events suddenly took an awkward turn"
+	
+	//normal interpretation or mis-interpretation?
+	twist-n2:construction, twist (an interpretation of a text or action) "they put an unsympathetic construction on his conduct"
+
+	//something that causes a changeIn others mind
+	twist-n3:device, gimmick, twist (any clever maneuver) "he would stoop to any device to win a point"; "it was a great sales gimmick"; "a cheap promotions gimmick for greedy businessmen"
+
+//rotation around axis
+	//the act or state? ("give twist" = cause the state of twisting)
+	twist-n4'(e,e0):twist-v1'(e0,x)
+	spin, twirl, twist, twisting, whirl (the act of rotating rapidly) "he gave the crank a spin"; "it broke off after much twisting"
+	
+		<special>
+		//dance that involves rotating
+		twist-n11:twist (social dancing in which couples vigorously twist their hips and arms in time to the music; was popular in the 1960s) "they liked to dance the twist"
+		</special>
+		
+//shouldn't there also be a non causal verb for wrench, twist?
+*twist-n5'(e,e0): twist-v10'(e0,x,y)
+wrench, twist, pull (a sharp strain on muscles or ligaments) "the wrench to his knee occurred as he fell"; "he was sidelined with a hamstring pull"
+
+
+//need shape theory? and this is more like bend, not twist
+	twist-n7'(e0,x):bend, crook, twist, turn (a circular segment of a curve) "a bend in the road"; "a crook in the path"
+	twist-n6:kink, twist, twirl (a sharp bend in a line produced when a line having a loop is pulled tight)
+
+
+*twist-n13-12'(e,e0):twist-v3'(e0,x,y)
+	
+	twist-n13:twist, turn (turning or twisting around (in place)) "with a quick twist of his head he surveyed the room"
+	
+	//explanation:the hand is twisting and the key is the end point of the hand 
+	twist-n12:wind, winding, twist (the act of winding or twisting) "he put the key in the old clock and gave it a good wind"
+
+
+//??
+twist-n9:twist, wrench (a jerky pulling movement)
+
+<special>
+//hair style in which hair is twisted
+twist-n10:braid, plait, tress, twist (a hairdo formed by braiding or twisting the hair)
+
+//rotating water
+twist-n8:eddy, twist (a miniature whirlpool or whirlwind resulting when the current of a fluid doubles back on itself)
+<special>
+	
+Verb
+
+//have a curve
+twist-v6'(e,x):  twist-n7(y) & partOf(y,x)
+wind, twist, curve (extend in curves and turns) "The road winds around the lake"; "the path twisted through the forest"
+
+	//causal
+		twist-v2:flex,bend, deform, twist, turn (cause (a plastic object) to assume a crooked or angular form) "bend the rod"; "twist the dough into a braid"; "the strong man could turn an iron bar"
+
+//change to have curve (but the curve is not of the type of curve above)  
+*twist-v1'(e,x): changeTo'(e,e0) & twist-n0'(e0,y,p0,a,p1) & partOf(y,x)
+writhe, wrestle, wriggle, worm, squirm, twist (to move in a twisting or contorted motion, (especially when struggling)) "The prisoner writhed in discomfort"; "The child tried to wriggle free from his aunt's embrace"
+
+	//causal 
+		// x twists y, y is a line: x causes y to have a curve along (we are referring to the wole line, but only some places along it have a curve)
+		*twist-v4-5'(e,x,y): cause'(e,x,e1) & twist-v1'(e1,y)
+			twist-v4:twist, twine, distort (form into a spiral shape) "The cord is all twisted"
+			twist-v5:twist (form into twists) "Twist the strips of dough"
+			
+			//twisting some x that is attached to some y may generate detachment of x and y
+			twist-v8:wrench, twist (twist or pull violently or suddenly, especially so as to remove (something) from that to which it is attached or from where it originates) "wrench a window off its hinges"; "wrench oneself free from somebody's grip"; "a deep sigh was wrenched from his chest"
+
+		
+		//x twists y, y is a point: x causes a twist on some whole (z) where y is the axis of twist
+		*twist-v10'(e,x,y):cause'(e,x,e0) & twist-n0(e0,z,p0,a,p1) & at(y,a)
+		twist, sprain, wrench, turn, wrick, rick (twist suddenly so as to sprain) "wrench one's ankle"; "The wrestler twisted his shoulder"; "the hikers sprained their ankles when they fell"; "I turned my ankle and couldn't walk for several days"
+
+		//x twists y: x causes some z (for example neck) to twist. we are refering to one end of the twist (e.g., the head)
+			twist-v3'(e,x,y):cause'(e,x,e0) & twist-n0(e0,z,p0,a,p1) & at(y,p1)
+			twist (turn in the opposite direction) "twist one's head"
+
+		
+//metaphorical: twist the meaning
+twist-v9'(e,x,y): cause'(e,x,e0) & changeIn'(e0,y) & meaning(y)
+twist, twist around, pervert, convolute, sophisticate (practice sophistry; change the meaning of or be vague about in order to mislead or deceive) "Don't twist my words"
+
+//???
+twist-v7:twist (do the twist)
+
+

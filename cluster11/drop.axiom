@@ -1,0 +1,92 @@
+
+Verb
+
+//x drops from p0 to p1
+*drop-s0'(e,x,p0,p1): change'(e,e3,e4) & at'(e3,x,p0) & at'(e4,x,p1) & lts(p1,p0,s) & vertical(s)
+	
+	//abstract scale, releasing is not necessary
+	drop-v3:drop (go down in value) "Stock prices dropped"
+	drop-v22:devolve, deteriorate, drop, degenerate (grow worse) "Her condition deteriorated"; "Conditions in the slums degenerated"; "The discussion devolved into a shouting match"
+	drop-v20:drop (change from one level to another) "She dropped into army jargon"
+	drop-v21:drop (fall or sink into a state of exhaustion or death) "shop til you drop"
+		
+		//causal:
+		*drop-s0-2'(e,x,y): cause'(e,x,e0) & drop-s0'(e,y,p0,p1)
+			drop-v12:flatten, drop (lower the pitch of (musical notes))
+			// what about dropping the prices (drop-v3) in a causal sense? 
+
+	
+	//physical scale + falling is the result of releasing. z is a handle
+	*drop-s0-1'(e,x,p0,p1,z): changeFrom'(e,e0) & hold'(e0,z,x) & gen(e,e2) & drop-s0'(e2,x,p0,p1)
+	
+		drop-v2:drop (to fall vertically) "the bombs are dropping on enemy targets"
+		drop-v4:sink, drop, drop down (fall or descend to a lower place or level) "He sank to his knees"
+		
+		//causal
+		*drop-s-0-1-1'(e,x,y,p0,p1,z): cause'(e,x,e1) & drop-s0-1'(e1,y,p0,p1,z)
+			
+			drop-v9:fell, drop, strike down, cut down (cause to fall by or as if by delivering a blow) "strike down a tree"; "Lightning struck down the hikers"
+
+			//z=x
+			*drop-v1'(e,x,y,p0,p1):drop-s-0-1-1'(e,x,y,p0,p1,x)
+			drop (let fall to the ground) "Don't drop the dishes"
+			
+			//drop something into something -> add something to something 
+			drop-v15:dribble, drip, drop (let or cause to fall in drops) "dribble oil into the mixture"
+	
+			<special>
+			drop-v17:drop (take (a drug, especially LSD), by mouth) "She dropped acid when she was a teenager"
+			drop-v23:drop (give birth; used for animals) "The cow dropped her calf this morning"
+			
+			//?????metaphorical drop. Dose this sense involve giving a ride too? or only unloading?
+			//not so much emphasis on falling, more emphasis on releasing
+			drop-v8:drop, drop off, set down, put down, unload, discharge (remove (cargo, people, etc.) from and leave) "unload the cargo"; "drop off the passengers at the hotel"
+			</special>
+
+
+//not change to e1 where e1 is an event in which x is the subject and y is the object 
+*drop-s18-19-10'(e,x,y): not'(e,e1) & changeTo'(e0,e1) & arg*(x,e1) & arg*(y,e1)
+	drop-v18:drop (omit (a letter or syllable) in speaking or writing) "New Englanders drop their post-vocalic r's"
+	drop-v19:neglect, pretermit, omit, drop, miss, leave out, overlook, overleap (leave undone or leave out) "How could I miss that typo?"; "The workers on the conveyor belt miss one out of ten"
+	
+	//??? drop winning
+	drop-v10:drop (lose (a game)) "The Giants dropped 11 of their first 13"
+
+	
+// x drops e0: there is  a change from eventuality e0
+*drop-v7'(e,x,e0):changeFrom'(e,e0) & arg*(x,e0) & eventuality(e0)
+drop, knock off (stop pursuing or acting) "drop a lawsuit"; "knock it off!"
+			
+			
+	//cause change from rel	
+	//x drops y from z
+	*drop-v5'(e,x,y,z):cause'(e,x,e0) & changeFrom'(e0,e1) & rel'(y,z)
+	drop (terminate an association with) "drop him from the Republican ticket"
+	
+		//no mention to z: x drops y -> z=x
+		*drop-v14'(e,x,y): drop-v5'(e,x,y,x)
+		dismiss, send packing, send away, drop (stop associating with) "They dropped her after she had a child out of wedlock"
+		
+		//rel=have
+		drop-v11:spend, expend, drop (pay out) "spend money"
+		drop-v16:shed, cast, cast off, shake off, throw, throw off, throw away, drop (get rid of) "he shed his image as a pushy boss"; "shed your clothes"
+
+<special>
+drop-v6:drop (utter with seeming casualness) "drop a hint"; "drop names"
+
+//hang -> difficult to axiomatize
+drop-v13:dangle, swing, drop (hang freely) "the ornaments dangled from the tree"; "The light dropped from the ceiling"
+</special>
+
+Noun
+
+drop-n1:drop, bead, pearl (a shape that is spherical and small) "he studied the shapes of low-viscosity drops"; "beads of sweat on his forehead"
+drop-n2:drop, drib, driblet (a small indefinite quantity (especially of a liquid)) "he had a drop too much to drink"; "a drop of each sample was analyzed"; "there is not a drop of pity in that man"; "years afterward, they would pay the blood-money, driblet by driblet"--Kipling
+drop-n3:drop, dip, fall, free fall (a sudden sharp decrease in some quantity) "a drop of 57 points on the Dow Jones index"; "there was a drop in pressure in the pulmonary artery"; "a dip in prices"; "when that became known the price of their stock went into free fall"
+drop-n4:cliff, drop, drop-off (a steep high face of rock) "he stood on a high cliff overlooking the town"; "a steep drop"
+drop-n5:drop (a predetermined hiding place for the deposit and distribution of illicit goods (such as drugs or stolen property))
+drop-n6:drop, fall (a free and rapid descent by the force of gravity) "it was a miracle that he survived the drop from that height"
+drop-n7:drop curtain, drop cloth, drop (a curtain that can be lowered and raised onto a stage from the flies; often used as background scenery)
+drop-n8:drop (a central depository where things can be left or picked up)
+drop-n9:drop (the act of dropping something) "they expected the drop would be successful"
+

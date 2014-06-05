@@ -1,0 +1,13 @@
+Verb
+
+vary-v1-3'(e,x):changeIn'(e,x)
+	vary-v1:change, alter, vary (become different in some particular way, without permanently losing one's or its former characteristics or essence) "her mood changes in accordance with the weather"; "The supermarket's selection of vegetables varies according to the season"
+	vary-v3:vary (be subject to change in accordance with a variable) "Prices vary"; "His moods vary depending on the weather"
+
+
+vary-v2'(e,x,y): not'(e,e0) & same'(e0,x,y)
+deviate, vary, diverge, depart (be at variance with; be out of line with)
+	//causal
+	vary-v4'(e,x,y):cause'(e,x,e0) & vary-v2'(e0,y,z)
+	vary, variegate, motley (make something more diverse and varied) "Vary the menu"
+

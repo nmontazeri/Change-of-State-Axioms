@@ -1,0 +1,150 @@
+Noun
+
+fall-n2'(e,e0):fall-v23-24'(e0,x)
+spill, tumble, fall (a sudden drop from an upright position) "he had a nasty spill on the ice"
+
+*fall-n3-5-6'(e,e0):fall-s0-1'(e0,x,p2)
+	//fall-v12
+		fall-n3:Fall (the lapse of mankind into sinfulness because of the sin of Adam and Eve) "women have been blamed ever since the Fall"
+		fall-n5:fall (a lapse into sin; a loss of innocence or of chastity) "a fall from virtue"
+		
+	fall-n6:fall, downfall (a sudden decline in strength or number or importance) "the fall of the House of Hapsburg"
+	fall-n8:capitulation, fall, surrender (the act of surrendering (usually under agreed conditions)) "they were protected until the capitulation of the fort"
+	
+	//both defeat and vertical movement
+	fall-n10:fall, pin (when a wrestler's shoulders are forced to the mat)
+
+*fall-n7-11'(e,e0): fall-v1-5'(e0,x,y,z)	
+	fall-n7:fall (a movement downward) "the rise and fall of the tides"
+	fall-n11:drop, fall (a free and rapid descent by the force of gravity) "it was a miracle that he survived the drop from that height"
+
+fall-n12'(e,e0):fall-v2'(e0,x)
+drop, dip, fall, free fall (a sudden sharp decrease in some quantity) "a drop of 57 points on the Dow Jones index"; "there was a drop in pressure in the pulmonary artery"; "a dip in prices"; "when that became known the price of their stock went into free fall"
+
+<special>
+//surface s0 falls towards p1: There are two alternative axioms: 1) when moving on "some" surface s0 of x, one would experience a fall towards p1. 2) points that are closer to p1 are lower than points that are far from p1
+fall-n4:descent, declivity, fall, decline, declination, declension, downslope (a downward slope or bend)
+
+//as if the sun falls down
+fall-n9:twilight, dusk, gloaming, gloam, nightfall, evenfall, fall, crepuscule, crepuscle (the time of day immediately following sunset) "he loved the twilight"; "they finished before the fall of night"
+</special>
+
+Verb
+//relate to vertical scale
+
+//x falls from y to z consists of three sub-parts: 1) changeFrom (rel(x,y)) 2) changeTo'(rel(x,z)) 3)lts(z,y), different senses use different parts
+//change from an UP state to a DOWN state: p1 and p2 are states. s is a handle
+//alternative axiom: *fall-s0'(e,x,e2,e1,s): change'(e,e2,e1) & lts(e1,e2,s) & arg*(x,e1) & arg*(x,e2)
+*fall-s0'(e,x,p2,p1): change'(e,e2,e1) & at'(e2,x,p2,s) & at'(e2,x,p1,s) & lts(p1,p2) & vertical(s)
+	
+	// binary scale:  p2 and p1 are opposite, there is a change from x being at an UP position (I suppose that "opposite" and "not" are not the same)
+	fall-s0-1'(e,x,p2): fall-s0'(e,x,p2,p1) & opposite(p2,p1,s)
+	
+		//no mention to p2 and p1
+			fall-v6:fall (suffer defeat, failure, or ruin) "We must stand or fall"; "fall by the wayside"
+			fall-v12:fall (yield to temptation or sin) "Adam and Eve fell"
+			fall-v13:fall (lose office or power) "The government fell overnight"; "The Qing Dynasty fell with Sun Yat-sen"
+			fall-v17:fall (lose one's chastity) "a fallen woman"
+				
+			//both abstract (fall from being alive) and physical falling
+			fall (die, as in battle or in a hunt) "Many soldiers fell at Verdun"; "Several deer have fallen to the same gun"; "The shooting victim fell dead"
+			
+		//mentions p2
+			fall-v31:fall (go as if by falling) "Grief fell from our hearts"
+	
+	//continuous scale, p1 is lowER than p2
+		fall-v2:descend, fall, go down, come down (move downward and lower, but not necessarily all the way) "The temperature is going down"; "The barometer is falling"; "The curtain fell on the diva"; "Her hand went up and then fell again"
+		fall-v11:decrease, diminish, lessen, fall (decrease in size, extent, or range) "The amount of homework decreased towards the end of the semester"; "The cabin pressure fell dramatically"; "her weight fell to under a hundred pounds"; "his voice fell to a whisper"
+
+		// physical falling & x falls from an object to another object
+		<question>do we need to worry about differentiating between "fall from point" and "fall from an object"? The reason for me was that "fall from tree" doesn't imply a change from at(tree), rather we may have a change from being at a higher point on the tree to a lower point on the tree.</question> 
+		*fall-v1-5'(e,x,y,z): fall-s0'(e,x,p2,p1) & at(p1,y) & at(p2,z)
+			fall-v1:fall (descend in free fall under the influence of gravity) "The branch fell from the tree"; "The unfortunate hiker fell into a crevasse"
+		
+			//the examples don't match with themselves and with the gloss
+			//x falls from y (snow falls from cloud): y produces x and x falls down.  Here, changeFrom(at) has both the meaning of departing from a location and releasing from something  
+			fall-v5:precipitate, come down, fall (fall from clouds) "rain, snow and sleet were falling"; "Vesuvius precipitated its fiery, destructive rage on Herculaneum"
+	
+
+		//special sense of move; higher parts move downward, not the whole object
+		*fall-v23-24'(e,x,p2,p1):fall-s0'(e,y,p2,p1) & partOf(y,x) 
+			
+			//higher parts fall
+				fall-v23:fall, fall down (lose an upright position suddenly) "The vase fell over and the water spilled onto the table"; "Her hair fell across her forehead"
+				fall-v24:fall (drop oneself to a lower or less erect position) "She fell back in her chair"; "He fell to his knees"
+				fall-v27:fall (be cast down) "his eyes fell"
+				
+			//some specific parts of parts (corners of lip, center of eye, etc) fall
+				fall-v26:fall (assume a disappointed or sad expression) "Her face fell when she heard that she would be laid off"; "his crest fell"
+				
+
+// x falls in/on a container/place: there is a [changeto] relationship between x and the container/place. Emphasis is on the last part of fall:rel(x,z).
+	
+	//there is a change
+
+		//x falls in e0: container=eventuality e0
+		*fall-s1'(e,x,e0): changeTo'(e,e0) & arg*(x,e0)
+		
+			fall-v3:fall (pass suddenly and passively into a state of body or mind) "fall into a trap"; "She fell ill"; "They fell out of favor"; "Fall in love"; "fall asleep"; "fall prey to an imposter"; "fall into a strange way of thinking"; "she fell to pieces after she lost her work"
+			fall-v30:fall (begin vigorously) "The prisoners fell to work right away"
+	
+		// y falls into x: e1=have(x,y)	
+		*fall-s1-0'(e,y,x): changeTo'(e,e1) & have'(e1,x,y)
+			
+			//owner is container, have=possession
+				fall-v9: fall (be captured) "The cities fell to the enemy"
+				fall-v18:fall (to be given by right or inheritance) "The estate fell to the oldest daughter"
+				fall-v19:accrue, fall (come into the possession of) "The house accrued to the oldest son"
+				fall-v21:fall, return, pass, devolve (be inherited by) "The estate fell to my sister"; "The land returned to the family"; "The estate devolved to an heir that everybody had assumed to be dead"
+		
+			//person=container for duty, have=assignment
+				fall-v14:fall (to be given by assignment or distribution) "The most difficult task fell on the youngest member of the team"; "The onus fell on us"; "The pressure to succeed fell on the youngest student"
+				fall-v20:fall, light (fall to somebody by assignment or lot) "The task fell to me"; "It fell to me to notify the parents of the victims"
+
+	//no chan	ge? see questions below
+	//e0 falls on p: the time or place of e0 is p: container=time/place
+	
+	fall-s2'(e,e0,p): at'(e,e0,p)
+		
+		// time/abstract place
+			
+			<question>isn't "Chrismas falls on Monday" a special sense of "the night fell"? It both menas "The time of event Chrismas is Monday" (atTime, a specialization of at) and "on Monday, Chrismas happens" , although  the first interpretation is more natural</question>
+			fall-v10: (occur at a specified time or place) "Christmas falls on a Monday this year"; "The accent falls on the first syllable"
+			
+			fall-v16:fall (be due) "payments fall on the 1st of the month"
+			
+		//x falls into category y (category=container), have=membership
+			*fall-v4'(e,x,y):memberOf'(e,x,y)
+			fall, come (come under, be classified or included) "fall into a category"; "This comes under a new heading"
+		
+
+//Eventuality e0 falls: e0 happens. But I think the reason we use "fall" is that 1) the eventuality falls on (=happens to) some person, etc and 2) the eventuality (falls on=happens at) present time; and for both 1 and 2 we use "fall" according to the above senses. 
+// So I would like to place this sense under v10, but v10 has no "channgeTo". 
+<question>do we need to say "changeTo(e0)" whenever we want to talk about an event? I mean why should we use "changeTo(e0)" for "the night fell", but not for "Chrismas falls on monday"? Is it true that whenever we just talk about the time of an event, we don't use changeTo(e) and whenever we talk about an event's happening, we use changeTo(e)?</question>
+fall-v32'(e,e0):changeTo'(e,e0)
+	fall, descend, settle (come as if by falling) "Night fell"; "Silence fell"		
+
+//x falls from y: emphasis is on the first part:  changeFrom (rel(x,y)) which is specialized to "produce/give birth". Apparently, this is similar to MAKE=GIVE BIRTH metaphor: here FALL=GIVE BIRTH=PRODUCE 
+*fall-v28-29'(e,x,y): changeFrom'(e,e0) & in'(e0,x,y)
+	
+	//words are very metaphorically in one's mouth. It is  better to use "say"
+	*fall-v28'(e,x,y): say'(e,x,y)
+	fall (come out; issue) "silly phrases fell from her mouth"
+
+	//there is also vertical falling
+	fall-v29:fall (be born, used chiefly of lambs) "The lambs fell in the afternoon"
+
+<special>
+//no change of state	
+	//direction and slope
+	
+		// x has a fall-n4 (s0) towards p1  
+		*fall-v22'(e,x,p1): fall'(e,s0,p1) & partOf(s0,x)
+		fall (slope downward) "The hills around here fall towards the ocean"
+	
+	//only slope	
+		fall-v25:hang, fall, flow (fall or flow in a certain way) "This dress hangs well"; "Her long black hair flowed down her back"
+		
+	//only direction
+		fall-v15:fall (move in a specified direction) "The line of men fall forward"
+</special>

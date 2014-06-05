@@ -1,0 +1,44 @@
+Noun
+
+//y is a fill for x: note that we should also mention that x and y are related. for example, soil is not a fill for a car, but it is a fill for a pot.
+*fill-n2'(e,y,x): substance(y) & possible(e0) & fill-v2'(e,x,y)
+filling, fill (any material that fills a space or container) "there was not enough fill for the trench"
+	
+	//substance and container have equal volume
+	*fill-n1'(e,y): fill-n2'(e,y,x) & volumeOf(v1,y) & volumeOf(v2,x) & equal(v1,v2)
+		fill (a quantity sufficient to satisfy) "he ate his fill of potatoes"; "she had heard her fill of gossip"
+	
+
+Verb
+//x fills with y
+*fill-v2'(e,x,y):increase-s?'(e,y) & in(y,x) 
+fill, fill up (become full) "The pool slowly filled with water"; "The theater filled up slowly"
+	
+	//causal: x fills y with z
+	*fill-v1-9-7'(e,x,y,z): cause'(e,x,e0) & fill-v2'(e0,y,z)
+		fill-v1:fill, fill up, make full (make full, also in a metaphorical sense) "fill a container"; "fill the child with pride"
+		fill-v9:fill (plug with a substance) "fill a cavity"
+	
+		// y= stomach
+		fill-v7:fill up, fill (eat until one is sated) "He filled up on turkey"
+
+//y fills x: y and x have equal volume: if in(y,x), then full(x)
+*fill-v3'(e,y,x):volumeOf(v1,y) & volumeOf(v2,x) & equal(v1,v2) & container(x) & substance(y)
+occupy, fill (occupy the whole of) "The liquid fills the container"
+
+//be in a position that can only hold one person. no more intake possible: This comes from definition of full. 
+<rel>position</rel>
+<comment>In definition of position, we should assert that the capacity is one unit and if one unit is in position, the position is full, so that we know if someone has taken a position, it is not possible to appoint another person to that position</comment>
+*fill-v4'(e,x,p): position(p) & at'(e,x,p) 
+fill, take, occupy (assume, as of positions or roles) "She took the job as director of development"; "he occupies the position of manager"; "the young prince will soon occupy the throne"
+
+	//causal: x fills position p with y
+	fill-v6'(e,x,y,p): cause'(e,x,e0) & fill-v4'(e0,y,p)
+	fill (appoint someone to (a position or a job))
+
+//be at an expected level
+*fill-v4-8'(e,x,y): at'(e,x,y,s) & expect(z,e0) & at'(e0,x,y,s)
+	fill-v5:fit, conform to, meet, satisfy, fill, fulfill, fulfil (fill, satisfy or meet a want or need or condtion ro restriction) "does this paper meet the requirements for the degree?"; "This job doesn't match my dreams"; "meet a need"
+	fill-v8:satiate, sate, replete, fill (fill to satisfaction) "I am sated"
+
+

@@ -1,0 +1,97 @@
+<question>what is the difference between at and rel?</question>
+<comment>shift is like move, but move is continuous and shift is discrete</comment>
+
+Noun
+
+shift-n1'(e,e0,x):  shift-v2'(e0,x,p1)
+shift, displacement (an event in which something is displaced without rotation)
+	
+	shift-n5=shift-n1'(e,e0,x) ? 
+	shift, shifting (the act of moving from one place to another) "his constant shifting disrupted the class"
+
+shift-n2'(e,e0):  shift-v6'(e0,x)
+transformation, transmutation, shift (a qualitative change)
+
+shift-n3'(e,t,x,e0):  shift-v1'(e0,x,y,e1,e2) & durationOf(t,e1)
+<exp> there is a shift between x and y in working. t is the duration of x being at work</exp>
+shift, work shift, duty period (the time period during which you are at work)
+
+	shift-n7'(e,x): shift-n3'(e,t,x,e0) & crew(x)  
+	shift (a crew of workers who work for a specific period of time)
+
+causal:
+shift-n4'(e0,e,x,y): shift-s1'(e,x,y,p0,p1,e0) ?	
+switch, switching, shift (the act of changing one thing or position for another) "his switch on abortion cost him the election"
+	
+<special domain="geology">
+shift-n6:fault, faulting, geological fault, shift, fracture, break ((geology) a crack in the earth's crust resulting from the displacement of one side with respect to the other) "they built it right over a geological fault"; "he studied the faulting of the earth's crust"
+</special>
+
+<special domain="computer">
+shift-n8:  shift key, shift (the key on the typewriter keyboard that shifts from lower-case letters to upper-case letters)
+</special>
+
+<special domain="clothing">
+shift-n9:  chemise, shimmy, shift, slip, teddy (a woman's sleeveless undergarment)
+shift-n10:  chemise, sack, shift (a loose-fitting dress hanging straight from the shoulders without a waist)
+</special>
+
+Verb
+
+shift-v13'(e0,x,p1,p2,e1,e2): change'(e0,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) 
+<comment>e1,e2 are handles in the left side proposition</comment>
+<exp>if x shifts from p1 to p2, there is a change from x being at p1 to x being at p2, with "at", I mean relation</exp>
+switch, shift, change (lay aside, abandon, or leave for another) "switch to a different brand of beer"; "She switched psychiatrists"; "The car changed lanes"
+
+	shift-v2'(e0,x,p1): shift-v13'(e0,x,p1,p2,e1,e2) & location(p1) & location(p2)
+	<question>what about direction?</question>
+	shift, dislodge, reposition (change place or direction) "Shift one's position"	
+		
+		shift-v4:  
+		stir, shift, budge, agitate (move very slightly) "He shifted in his seat"
+		<ref>move-v3</ref>
+		<comment> this is similar to move-v3</comment>	 	
+		
+				
+	shift-v6'(e0,x):  shift-v13'(e0,x,p1,p2,e1,e2) & quality(p1) & quality(p2)
+	<exp>changeIn. "at" is specialized to being at a quality</exp>
+	shift (change in quality) "His tone shifted"
+		
+			shift-v11:  shift-v6'(e0,x) & durationOf(e0,t) & relatively-long(t)
+			<exp>change duration is long</exp>
+			shift (change phonetically as part of a systematic historical change) "Grimm showed how the consonants shifted"
+    
+shift-v1'(e0,x,y,e1,e2): change'(e0,e1,e2) & at'(e1,x,p) & at'(e2,y,p)  
+<exp>if x and y shift, there is a change from (x being at p) to (y being at p). In a way, "at" ir reversed and it is like p shifting from being at x to being at y</exp>
+switch, change over, shift (make a shift in or exchange of) "First Joe led; then we switched"
+	 
+	 causal:
+	 
+	 	shift-s1'(e,x,y,p0,p1,e0):cause'(e,x,e0) & shift-v13'(e0,y,p1,p2,e3,e4)
+	 	<exp>e0 is a handle</exp>
+	 
+			shift-v3'(e,x,y,p0,p1):  shift-s1'(e,x,y,p0,p1,e0) & shift-v2'(e0,x,p1)
+			transfer, shift (move around) "transfer the packet from his trouser pockets to a pocket in his jacket"
+			
+			shift-v5'(e,x,y,p0,p1): shift-s1'(e,x,y,p0,p1,e0) & emphasis-attentionOf(y,x)?
+			shift (move from one setting or context to another) "shift the emphasis"; "shift one's attention"
+	
+			shift-v7'(e,x,y,p0,p1): shift-s1'(e,x,y,p0,p1,e0)  & dateOf'(p0,y) & dateOf'(p1,y)
+			<comment>another way to say this is specializing "at" in the shift-v13 (most basic sense) to atDate</comment>
+			shift (move and exchange for another) "shift the date for our class reunion"
+    
+ 	
+
+<special doman="ship">
+shift-v8:  careen, wobble, shift, tilt (move sideways or in an unsteady way) "The ship careened out of control"
+shift-v9:  lurch, pitch, shift (move abruptly) "The ship suddenly lurched to the left" 
+</special>
+
+<special domain="computer">
+shift-v10:  shift (use a shift key on a keyboard) "She could not shift so all her letters are written in lower case"
+</special>
+
+<special domain="driving">   
+shift-v12:  shift (change gears) "you have to shift when you go down a steep hill"
+</special>    
+

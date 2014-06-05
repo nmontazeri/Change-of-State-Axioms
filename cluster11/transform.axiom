@@ -1,0 +1,19 @@
+Verb
+
+//x transforms from z to y: transform'(e,x,z,y) & he(x) & monster(y) -> then from {form'(e1,y,x) & monster(y)} and the definition of form: {form(y,x) & arg(y,e) -> E e2: subst(x,e2,y,e)}, we can infer subst(x,e2,y,e) which by a procedure in Mini-Tacitus, it will be revealed that: monster(y)
+transform-v3'(e,x,z,y):change'(e,e0,e1) & form'(e0,z,x) & form'(e1,y,x) 
+transform, transmute, metamorphose (change in outward structure or looks) "He transformed into a monster"; "The salesman metamorphosed into an ugly beetle"
+	//causal:
+	transform-v2-4-5-6'(e,x,y,f0,f1): cause'(e,x,e1) & transform-v3'(e1,y,f0,f1)
+		
+		transform-v2:transform, transmute, transubstantiate (change or alter in form, appearance, or nature) "This experience transformed her completely"; "She transformed the clay into a beautiful sculpture"; "transubstantiate one element into another"
+		transform-v4:translate, transform (change from one form or medium into another) "Braque translated collage into oil"
+		transform-v5:transform (convert (one form of energy) to another) "transform energy to light"
+		transform-v6:transform (change (a bacterial cell) into a genetically distinct cell by the introduction of DNA from another cell of the same or closely related species)
+		
+		//transform voltage to magnetic field and vise versa, so it is not only increasing or decreasing voltage, but in the core, it is transforming different kinds of energy
+		transform-v7:transform (increase or decrease (an alternating current or voltage))
+
+<special>
+transform-v1:transform (subject to a mathematical transformation)
+</special>

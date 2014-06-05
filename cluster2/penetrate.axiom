@@ -1,0 +1,23 @@
+Verb
+
+//penetrate is closely related to pass (a barrier); but a barrier is a third party object between x and y, while in penetrating, x enters y, still getting into y is hard as passing a barrier 
+//what is the difference between penetrate and enter? the material of the target is different. in "enter", y is an empty space, while in "penetrate", y is not empty
+
+penetrate-s0'(e,x,y): changeTo'(e,e1) & in'(e1,x,y) & dense(y) & resist(y,e1)
+	penetrate-v1:penetrate, perforate (pass into or through, often by overcoming resistance) "The bullet penetrated her chest"
+	penetrate-v5:penetrate (make one's way deeper into or through) "The hikers did not manage to penetrate the dense forest"
+	penetrate-v6:penetrate (insert the penis into the vagina or anus of) "Did the molester penetrate the child?"
+
+	// x penetrates into z's mind (y)
+	penetrate-v2-3'(e,x,y):  penetrate-s0'(e,x,y) & mind(y,z)
+		penetrate-v2:penetrate, fathom, bottom (come to understand)
+		penetrate-v3:click, get through, dawn, come home, get across, sink in, penetrate, fall into place (become clear or enter one's consciousness or emotions) "It dawned on him that she had betrayed him"; "she was penetrated with sorrow"
+
+
+	*penetrate-v4'(e,x,g):penetrate-s0'(e,x,g) & group(g) & not'(e1,e2) & awareOf'(e2,x,e)
+	infiltrate, penetrate (enter a group or organization in order to spy on the members) "The student organization was infiltrated by a traitor"
+	
+	//penetrate and be prevalent throughout y
+		penetrate-v7:permeate, pervade, penetrate, interpenetrate, diffuse, imbue, riddle (spread or diffuse through) "An atmosphere of distrust has permeated this administration"; "music penetrated the entire building"; "His campaign was riddled with accusations and personal attacks"
+
+

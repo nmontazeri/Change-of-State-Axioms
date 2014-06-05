@@ -1,0 +1,13 @@
+Verb
+
+ innovate-v1'(e,x,y): cause'(e,x,e0) & changeTo'(e0,e1) & Rexist'(e1,y) & new(y)
+ introduce, innovate (bring something new to an environment) "A new word processor was introduced"
+
+
+Noun
+
+innovation-n1-2-3'(e,e0):innovate-v1'(e0,x,y)
+	innovation-n1: invention, innovation (a creation (a new device or process) resulting from study and experimentation)
+	innovation-n2: invention, innovation, excogitation, conception, design (the creation of something in the mind)
+	innovation-n3: initiation, founding, foundation, institution, origination, creation, innovation, introduction, instauration (the act of starting something for the first time; introducing something new) "she looked forward to her initiation as an adult"; "the foundation of a new scientific society"
+

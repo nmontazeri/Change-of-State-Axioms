@@ -1,0 +1,49 @@
+<comment> replace either menas "re-filling the place (accent is on the place)" or "re-putting something into a place(accent is on the object)" </comment>
+
+Verb
+
+replace-v2'(e,z,y): changeFrom'(e4,e1) & at'(e1,x,p) &  changeTo'(e,e3) & at'(e3,y,p) & before(e4,e)
+<comment>I won't say "change'(e,e1,e2) & at'(e1,y,p1) & at'(e2,z,p1)"; because that would mean "y's leving the place and z's coming to the place are hapenning at the same time". But this is not always the case.  </comment>
+supplant, replace, supersede, supervene upon, supercede (take the place or move into the position of) "Smith replaced Miller as CEO after Miller left"; "the computer has supplanted the slide rule"; "Mary replaced Susan as the team's captain and the highest-ranked player in the school"
+   	
+	causal:   
+	replace-v1'(e,x,z,y):  cause'(e,x,e0) & replace-v2'(e0,z,y)
+	<exp>x replaces y with z: x causes z to replace-v2 y</exp>
+	<comment> I think it is not necessary that the old item is no longer usable</comment>
+	replace (substitute a person or thing for (another that is broken or inefficient or lost or no longer working or yielding what is expected)) "He replaced the old razor blade"; "We need to replace the secretary that left a month ago"; "the insurance will replace the lost income"; "This antique vase can never be replaced"
+	
+		replace-v4'(e,x,z,y):  replace-v1'(e,x,z,y) & similar(z,y)
+		   substitute, replace, interchange, exchange (put in the place of another; switch seemingly equivalent items) "the con artist replaced the original with a fake Rembrandt"; "substitute regular milk with fat-free milk"; "synonyms can be interchanged without a changing the context's meaning"
+
+   
+replace-v3'(e,x,y,p): cause'(e,x,e0) & changeTo'(e0,e1) & at'(e1,y,p) & at'(e2,y,p) & before(e2,e)  
+<exp>x replaces y to p: x causes y to be backat p (x has been at p before, but no longer is)</exp>
+<comment>if the location (position) is mentioned, as is the case in this sense, then replace means putting back to original place </comment>
+replace, put back (put something back where it belongs) "replace the book on the shelf after you have finished reading it"; "please put the clean dishes back in the cabinet when you have washed them"
+   
+Noun
+
+replacement-n1'(e0,e,x,z,y): replace-v4'(e,x,z,y) 
+replacement, replacing (the act of furnishing an equivalent person or thing in the place of another) "replacing the star will not be easy"
+
+causal:
+	replacement-n5'(e0,e):replace-v1'(e,x,z,y) & ran-out?(y)
+	<exp>This is similar to replacement-n6, since the course of the previous object being at p has ended naturally.</exp>
+	<comment>In this sense, we don't dispose the old item to replace it with a new one. the old item has ran out itself.</comment>
+	refilling, replenishment, replacement, renewal (filling again by supplying what has been used up)
+
+replacement-n4'(e0,z): possible(e) &  replace-v2'(e,z,y)
+substitute, replacement (a person or thing that takes or can take the place of another)
+
+	replacement-n26'(e0,z,y): replace-v2'(e,z,y)  
+	replacement-n2:surrogate, alternate, replacement (someone who takes the place of another person)
+	replacement-n6'(e,z,y): successor, replacement (a person who follows next in order) "he was President Lincoln's successor"
+	<comment>the difference of n6 with n2 is that in n6 the replacement is expected and should happen, because the other person's course has finished</comment>
+
+
+replacement-n3'(e0,e): replace-v2'(e,z,y) 
+substitution, permutation, transposition, replacement, switch (an event in which one thing is substituted for another) "the replacement of lost blood by a transfusion of donor blood"
+
+
+	
+

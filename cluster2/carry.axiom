@@ -1,0 +1,110 @@
+Noun
+
+carry-n1:carry (the act of carrying something) ? very general
+
+Verb
+
+//either x is the cause of movement or x is an enabling medium for movement. in any case, x and y are connected throught the movement path.
+//x carries y means x supports movement of y throught the path. There is no single causation in the beginning. the causation is continuous. 
+//Carry has always the meaning of hold. Whether or not it also implies transfer and move depends on the subject and/or object. For example "message" implies a source and destination or "painting" can be considered a type of message.
+
+
+*carry-s0'(e,x,y,p0,p1): and'(e,e1,e2) & hold-v?'(e1,x,y) & move'(e2,x,p0,p1) & gen(e2,e3) & move'(e3,y,p0,p1)
+
+	carry-v1:transport, carry (move while supporting, either in a vehicle or in one's hands or on one's body) "You must carry your camping gear"; "carry the suitcases to the car"; "This train is carrying nuclear waste"; "These pipes carry waste water into the river"
+	carry-v16:dribble, carry (propel) "Carry the ball"; "dribble the ball"
+	carry-v17:carry (pass on a communication) "The news was carried to every village in the province"
+	carry-v32:carry (propel or give impetus to) "The sudden gust of air propelled the ball to the other side of the fence"
+
+
+*carry-s4'(e,x,p1):at'(e,x,p1) & at(x,p0) & gts(p1,p0,s)
+<ref>extend</ref>
+	
+	//range	
+	carry-v36:carry (cover a certain distance or advance beyond) "The drive carried to the green"
+	carry (have a certain range) "This rifle carries for 3,000 feet"
+	
+	//reach
+	carry-v9-19'(e,x,p1): changeTo'(e,e0) & at'(e0,x,p1) & at(x,p0) & gts(p1,p0,s)
+		carry-v9:carry, extend (continue or extend) "The civil war carried into the neighboring province"; "The disease extended into the remote mountain provinces"
+		carry-v19:carry (be conveyed over a certain distance) "Her voice carries very well in this big opera house"
+	
+		//causal	
+		*carry-v8'(e,x,y,p):cause'(e,x,e1) & carry-v9-19'(e,y,p)
+			carry (extend to a certain degree) "carry too far"; "She carries her ideas to the extreme"
+			carry-v25:carry (take further or advance) "carry a cause"
+	
+	
+//x carries y: x is with y, x is primary and y is auxiliary 
+carry-s2'(e,x,y): ?
+	
+	//because x holds y	
+	carry-v2:carry, pack, take (have with oneself; have on one's person) "She always takes an umbrella"; "I always carry money"; "She packs a gun when she goes into the mountains"
+	carry-v21:carry (have or possess something abstract) "I carry her image in my mind's eye"; "I will carry the secret to my grave"; "I carry these thoughts in the back of my head"; "I carry a lot of life insurance"
+
+	//because y is attached to x
+	carry-v18:carry (have as an inherent or characteristic feature or have as a consequence) "This new washer carries a two year guarantee"; "The loan carries a high interest rate"; "this undertaking carries many dangers"; "She carries her mother's genes"; "These bonds carry warrants"; "The restaurant carries an unusual name"
+	carry-v26:carry (have on the surface or on the skin) "carry scars"
+	carry-v10:carry (be necessarily associated with or result in or involve) "This crime carries a penalty of five years in prison"
+	carry-v22:carry (be equipped with (a mast or sail)) "This boat can only carry a small sail"
+
+	
+	//have????
+	carry-v31:carry (bear (a crop)) "this land does not carry olives"
+	carry-v14:stock, carry, stockpile (have on hand) "Do you carry kerosene heaters?"
+
+
+	//handle/be responsible
+	?carry-v5:carry (bear or be able to bear the weight, pressure,or responsibility of) "His efforts carried the entire project"; "How many credits is this student carrying?"; "We carry a very large mortgage"
+	<question>I wanted to say hold responsibility for something heavy, but the second example does not match</question>
+	
+	//changeto have
+	*carry-v27'(e,x,y): changeTo'(e,e1) & carry-s2'(e1,x,y)
+	carry (capture after a fight) "The troops carried the town after a brief fight"
+	
+	
+	//x holds y inside itself
+	*carry-s2-1'(e,x,y): in'(e,y,x)
+		carry-v7:hold, bear, carry, contain (contain or hold; have within) "The jar carries wine"; "The canteen holds fresh water"; "This can contains water"
+		carry-v12:carry (include, as on a list) "How many people are carried on the payroll?"
+		carry-v40:have a bun in the oven, bear, carry, gestate, expect (be pregnant with) "She is bearing his child"; "The are expecting another child in January"; "I am carrying his child"
+
+
+//x carries y to p0
+*carry-s1'(e,x,y,p0,p1):cause'(e,x,e1) & change'(e1,e2,e3) & at'(e2,y,p0) & at'(e3,y,p1)
+	carry-v28:post, carry (transfer (entries) from one account book to another)
+	carry-v29:carry (transfer (a number, cipher, or remainder) to the next column or unit's place before or after, in addition or multiplication) "put down 5 and carry 2"
+	
+	//by containing it. but x does not move itself
+	carry-s1-1'(e,x,y): carry-s1'(e,x,y,p0,p1): & in(y,x)
+	carry-v4:carry, convey, express (serve as a means for expressing something) "The painting of Mary carries motherly love"; "His voice carried a lot of anger"
+	carry-v15:carry, run (include as the content; broadcast or publicize) "We ran the ad three times"; "This paper carries a restaurant review"; "All major networks carried the press conference"
+	carry-v3:impart, conduct, transmit, convey, carry, channel (transmit or serve as the medium for transmission) "Sound carries well over water"; "The airwaves carry the sound"; "Many metals conduct heat"
+
+
+//x holds y in condition e0
+carry-s3'(e,x,y,e0):cause'(e,x,e1) & not'(e1,e2) & changeFrom'(e2,e0) & arg(y,e0)
+	carry-v6:hold, carry, bear (support or hold in a certain manner) "She holds her head high"; "He carried himself upright"
+
+<special>
+?carry-v30:carry (pursue a line of scent or be a bearer) "the dog was taught to fetch and carry"
+?carry-v37:carry (secure the passage or adoption (of bills and motions)) "The motion carried easily"
+carry-v39:carry (sing or play against other voices or parts) "He cannot carry a tune"
+
+//win in election
+carry-v11:carry (win in an election) "The senator carried his home state"
+carry-v23:carry, persuade, sway (win approval or support for) "Carry all before one"; "His speech did not sway the voters"
+
+//tolerate, handle
+carry-v33:carry, hold (drink alcohol without showing ill effects) "He can hold his liquor"; "he had drunk more than he could carry"
+carry-v38:carry (be successful in) "She lost the game but carried the match"
+
+//responsibility
+carry-v24:carry (compensate for a weaker partner or member by one's own performance) "I resent having to carry her all the time"
+
+//behavior
+carry-v20:carry (keep up with financial support) "The Federal Government carried the province for many years"
+carry-v13:behave, acquit, bear, deport, conduct, comport, carry (behave in a certain manner) "She carried herself well"; "he bore himself with dignity"; "They conducted themselves well during these difficult times"
+
+</special>
+

@@ -1,0 +1,70 @@
+Verb
+
+//changeIn
+*change-s0'(e,x): changeIn'(e,x)
+	change-v2:change (undergo a change; become different in essence; losing one's or its original nature) "She changed completely as she grew older"; "The weather changed last night"
+	change-v3:change, alter, vary (become different in some particular way, without permanently losing one's or its former characteristics or essence) "her mood changes in accordance with the weather"; "The supermarket's selection of vegetables varies according to the season"
+	change-v9:deepen, change (become deeper in tone) "His voice began to change when he was 12 years old"; "Her voice deepened when she whispered the password"
+
+	//causal:
+		*change-v1'(e,x,y):cause'(e,x,e0) & changeIn'(e0,x)
+		change, alter, modify (cause to change; make different; cause a transformation) "The advent of the automobile may have altered the growth pattern of the city"; "The discussion has changed my thinking about the issue"
+
+*change-s1'(e,x,y,y0,y1): change'(e,e0,e1) & rel'(e0,x,y0) & rel'(e1,x,y1) & typeOf(y,y0) & typeOf(y,y1)
+	
+	// sense v4 should be splitted to 2 axioms: 1) x changes Y: Y is a category of objects and there is a change from rel(x,y0) to rel(x,y1) 2) x changes  from y0 to y1
+	change-v4:switch, shift, change (lay aside, abandon, or leave for another) "switch to a different brand of beer"; "She switched psychiatrists"; "The car changed lanes"
+	
+	//change(e,x): no mention to y 
+		//y=vehicle
+		change-v8:transfer, change (change from one vehicle or transportation line to another) "She changed in Chicago on her way to the East coast"
+		
+		//y=cloth
+		change-v5:change (change clothes; put on different clothes) "Change before you go to the opera"
+			
+			//causal: x changes (clothings of) y
+			*change-v10'(e,x,y):cause'(e,x,e0) & change-s1'(e0,y,z) & coveringOf(z,y)
+			change (remove or replace the coverings of) "Father had to learn how to change the baby"; "After each guest we changed the bed linens"
+
+// change from  at(y0,x), at(y1,z) to at(y0,z),at(y1,x)
+change-v7'(e,x,y,z):change'(e,e0,e1) & and'(e0,e2,e3) & and'(e1,e4,e5) & at'(e2,y0,x) & at'(e3,y1,z) & at'(e4,y0,z) & at'(e5,y1,x) & typeOf(y,y0) & typeOf(y,y1)
+exchange, change, interchange (give to, and receive from, one another) "Would you change places with me?"; "We have been exchanging letters for a year"
+
+	<special>
+	//todo: no! this is not exchange. look at "name" example!
+	//"change currency of value" ?(if yes, this is not an exchange and should not be under v7.) or "exchange" money in different currency?
+	//if this is an exchange, then altough typeOf is "money" for both, but the currency is not the same
+	change-v6:change, exchange, commute, convert (exchange or replace with another, usually of the same kind or category) "Could you convert my dollars into pounds?"; "He changed his name"; "convert centimeters into inches"; "convert holdings into shares"
+	</special>
+
+
+
+Noun
+
+*change-n1'(e,e0):change'(e0,e1,e2)
+change, alteration, modification (an event that occurs when something passes from one state or phase to another) "the change was intended to increase sales"; "this storm is certainly a change for the worse"; "the neighborhood had undergone few modifications since his last visit years ago"
+
+*change-n2'(e,d):change'(e0,e1,e2) & difference(d,e2,e1)
+	change (a relational difference between states; especially between states before and after some event) "he attributed the change to their marriage"
+	change-n4:change (the result of alteration or modification) "there were marked changes in the lining of the lungs"; "there had been no change in the mountains"
+
+*change-n3'(e,e0):cause'(e,x,e0) & change'(e0,e1,e2) 
+change (the action of changing something) "the change of government had no impact on the economy"; "his change on abortion cost him the election"
+
+*change-n7'(e,c1): change-s1'(e,x,c,c0,c1) & cloth(c)
+change (a different or fresh set of clothes) "she brought a change in her overnight bag"
+
+*change-n10'(e,e0): change'(e,e0,e1) & arg*(x,e0) & arg*(x,e1)
+variety, change (a difference that is usually pleasant) "he goes to France for variety"; "it is a refreshing change to meet a woman mechanic"
+
+//?? isn't this simply a possible change event?
+?change-n6'(e,e1): change(e,e0,e1)
+change (a thing that is different) "he inspected several changes before selecting one"
+
+<special>
+change-n8:change (coins of small denomination regarded collectively) "he had a pocketful of change"
+change-n5:change (the balance of money received when the amount you tender is greater than the amount due) "I paid with a twenty and pocketed the change"
+change-n9:change (money received in return for its equivalent in a larger denomination or a different currency) "he got change for a twenty and used it to pay the taxi driver"
+</special>
+
+

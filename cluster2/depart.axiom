@@ -1,0 +1,29 @@
+Verb
+
+depart-s0'(e,x,p) : changeFrom'(e,e1) & at'(e1,x,p) & durationOf'(t,e1) & relatively-long(t)
+	depart-v134'(e,x,p) : depart-s0'(e,x,p) & location(p)
+	depart-v1 : go, go away, depart (move away from a place into another direction) "Go away before I start to cry"; "The train departs at noon"
+	depart-v3 : depart, part, start, start out, set forth, set off, set out, take off (leave) "The family took off for Florida"
+	depart-v4 : depart, take leave, quit (go away or leave)
+		
+		depart-v6'(e,x,p) : depart-v134'(e,x,p) & path(p)
+		sidetrack, depart, digress, straggle (wander from a direct or straight course) 
+
+	depart-v5'(e,x,e1) : depart-s0'(e,x,p)  & position(p)
+	leave, depart, pull up stakes (remove oneself from an association with or participation in) "She wants to leave"; "The teenager left home"; "She left her position with the Red Cross"; "He left the Senate after two terms"; "after 20 years with the same company, she pulled up stakes"
+
+depart-v2'(e,x,y) : changeFrom'(e,e1) & similar'(e1,x,y)
+deviate, vary, diverge, depart (be at variance with; be out of line with)
+	
+    
+Noun
+
+depart-n1'(e0,e) : depart-s0'(e,x,p)
+departure, going, going away, leaving (the act of departing)
+
+depart-n2'(e0,e) : depart-v2'(e,x)
+deviation, divergence, departure, difference (a variation that deviates from the standard or norm) "the deviation from the mean"
+
+depart-n3'(e,e0) : depart-s0'(e,x,p) & life(p)
+passing, loss, departure, exit, expiration, going, release (euphemistic expressions for death) "thousands mourned his passing"
+

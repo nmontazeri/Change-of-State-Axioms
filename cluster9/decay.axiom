@@ -1,0 +1,24 @@
+Noun
+
+decay-n1'(e0,e):decay-v2'(e,x)
+decay (the process of gradually becoming inferior)
+
+	decay-n3:decay, decomposition (the organic phenomenon of rotting)
+	decay-n4:decay (an inferior state resulting from the process of decaying) "the corpse was in an advanced state of decay"; "the house had fallen into a serious state of decay and disrepair"
+
+
+<special>
+decay-n2:decay, decline (a gradual decrease; as of stored charge or current)
+decay-n5:decay, radioactive decay, disintegration (the spontaneous disintegration of a radioactive substance along with the emission of ionizing radiation)
+</special>
+
+Verb
+
+decay-v2'(e,x): changeIn'(e,x,e1,e2) &  worse(e2,e1) & gradula(e)
+	decay, crumble, dilapidate (fall into decay or ruin) "The unoccupied house started to decay"
+	decay-v3:decay (undergo decay or decomposition) "The body started to decay and needed to be cremated"
+
+<special>
+decay-v1:disintegrate, decay, decompose (lose a stored charge, magnetic flux, or current) "the particles disintegrated during the nuclear fission process"
+</special>
+

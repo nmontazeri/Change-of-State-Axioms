@@ -1,0 +1,43 @@
+Verb
+
+//x withdraws from y. e0 is a handle for future specialization
+
+*withdraw-s0'(e,x,e0): changeFrom'(e,e0) & arg(x,e0)
+	withdraw-v2:retire, withdraw (withdraw from active participation) "He retired from chess"
+	
+	withdraw-v10'(e,x,y):withdraw-s0'(e,x,e0) & interestedIn(e0,x,y)
+	retire, withdraw (lose interest) "he retired from life when his wife died"
+	
+	withdraw-v8'(e,x):withdraw-s0'(e,x,e0) & responsible(e0,x,e1)
+	bow out, withdraw (retire gracefully) "He bowed out when he realized he could no longer handle the demands of the chairmanship"
+
+	withdraw-v7'(e,x):withdraw-s0'(e,x,e0) & gathering(e0) & temporary(e)
+	adjourn, withdraw, retire (break from a meeting or gathering) "We adjourned for lunch"; "The men retired to the library"
+
+	//x withdraws from an activity or commitmet e
+	*withdraw-v11'(e,x,e0): withdraw-s1'(e,x,e0) 
+	retreat, pull back, back out, back away, crawfish, crawfish out, pull in one's horns, withdraw (make a retreat from an earlier commitment or activity) "We'll have to crawfish out from meeting with him"; "He backed out of his earlier promise"; "The aggressive investment company pulled in its horns"
+	
+	*withdraw-s1'(e,x,y,e0): changeFrom'(e,e0) & rel'(e0,x,y)
+	
+		//withdraw from a location (physical? what about enemy?)
+		withdraw-v1:withdraw, retreat, pull away, draw back, recede, pull back, retire, move back (pull back or move away or backward) "The enemy withdrew"; "The limo pulled away from the curb"
+		
+		//causal
+		*withdraw-s2'(e,x,y,z,e0):cause'(e,x,e1) & withdraw-s1'(e1,y,z,e0)
+			
+			withdraw-v3:disengage, withdraw (release from something that holds fast, connects, or entangles) "I want to disengage myself from his influence"; "disengage the gears"
+
+			withdraw-v6:seclude, sequester, sequestrate, withdraw (keep away from others) "He sequestered himself in his study to write a book"
+			
+			// x withdraws y: x has sold y to some z and then withdraws it (causes a change from z having y)
+			*withdraw-v4'(e,x,y): withdraw-s2'(e,x,y,z,e0) & have'(e0,z,y) & sell'(e1,x,y,z) & before(e1,e)
+			recall, call in, call back, withdraw (cause to be returned) "recall the defective auto tires"; "The manufacturer tried to call back the spoilt yoghurt"
+
+			withdraw-v9:withdraw, draw, take out, draw off (remove (a commodity) from (a supply source)) "She drew $2,000 from the account"; "The doctors drew medical supplies from the hospital's emergency bank"
+			withdraw-v12:remove, take, take away, withdraw (remove something concrete, as by lifting, pushing, or taking off, or remove something abstract) "remove a threat"; "remove a wrapper"; "Remove the dirty dishes from the table"; "take the gun from your pocket"; "This machine withdraws heat from the environment"
+
+			//x withdraws his words: x causes a change from z(some people) believing that x believes in y(the words x said before)
+			*withdraw-v5'(e,x,w): cause'(e,x,e2) & withdraw-s1'(e2,w,z,e0) & believe'(e0,z,e1) & believe'(e1,x,w) & say'(e3,x,w) & before(e3,e)
+			swallow, take back, unsay, withdraw (take back what one has said) "He swallowed his words"
+

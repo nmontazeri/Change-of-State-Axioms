@@ -1,0 +1,55 @@
+Noun
+
+<comment>
+source is closely related to 
+1.causation for "source of an event"
+2. generation for "source of an entity"
+3. scales:  
+
+some senses refer to combinations of these dimensions: 
+It seems that source is closely related to usage and influence. i.e., there should be someone or something in the outside world that is influeneced by the source. 
+If something exists everywhere we don't consider it a source. It should be concentrated at limited points.
+If something exists in one particular place but has no or influence (does not initiate anything) we don't consider it a source.
+</comment>
+
+//x is the beginning of y: there is a scale s associated with y which has a bottom (beginning) b and this b is at x
+<comment>Renaissance, radiation, river and communism all are associated with scales:  Renaissance and communism are associated with time/space scales and river and radiation are associated with space scale</comment>
+<comment>with hasScale(y,s) I mean there is some scale s associated with y</comment>
+source-n1'(e,x,y):hasScale??(y,s) & bottom'(e,b,s) & at'(b,x)
+beginning, origin, root, rootage, source (the place where something begins, where it springs into being) "the Italian beginning of the Renaissance"; "Jupiter was the origin of the radiation"; "Pittsburgh is the source of the Ohio River"; "communism's Russian root"
+
+
+// s is the source for material m: a place where m exists(this is a discrete version of source-n1 )
+<question>I need to say that m is concentrated at s and does not exist outside s
+I also need to say that it should be possiblefor m to come outside of s, however, I cannot use changeFrom(e), because thing like information, can be duplicated so that it both exists at s and outside s. 
+I need to say that m exists exclusively at s and then it is possible to have a change from exclusiveness.
+</question>
+
+//availability
+source-n2-4-5-9'(e,s,m): in'(e,m,s) & possible(e0) & get-s?'(e0,y,m)
+	source-n2:source (a document (or organization) from which information is obtained) "the reporter had two sources for the story"
+	source-n4:source (a facility where something is available)
+	source-n5:informant, source (a person who supplies information)
+	source-n9:reference, source (a publication (or a passage from a publication) that is referred to) "he carried an armful of references back to his desk"; "he spent hours looking for the source of that quotation"
+
+//action
+source-n6-3'(e,x,e0): cause'(e,x,e0)
+	source-n6:generator, source, author (someone who originates or causes or initiates something) "he was the generator of several complaints"
+	source-n3:source, seed, germ (anything that provides inspiration for later work)
+//??
+source-n7:source ((technology) a process by which energy or a substance enters a system) "a heat source"; "a source of carbon dioxide"
+
+//?? source of food and energy?
+source-n8:reservoir, source (anything (a person or animal or plant or substance) in which an infectious agent normally lives and multiplies) "an infectious agent depends on a reservoir for its survival"
+
+
+Verb
+
+//x sources from s: x gets m  from a source s
+source-v1'(e,x,m,s):in'(e,m,s) & changeTo'(e,e1) & get-s?'(e1,x,m,s)
+source (get (a product) from another country or business) "She sourced a supply of carpet"; "They are sourcing from smaller companies"
+
+//mention the source-n2-9
+source-v2'(e,x,s):mention'(e,x,s) & source-n9(s,m)
+source (specify the origin of) "The writer carefully sourced her report"
+

@@ -1,0 +1,73 @@
+Noun
+
+rise-n1:v2-7-8-9-11
+rise (a growth in strength or number or importance)
+	
+	rise-n5:raise, rise, wage hike, hike, wage increase, salary increase (the amount a salary is increased) "he got a 3% raise"; "he got a wage hike"
+	rise-n:rise, boost, hike, cost increase (an increase in cost) "they asked for a 10% rise in rates"
+	rise-n:advance, rise (increase in price or value) "the news caused a general advance on the stock market"
+
+
+rise-n2:rise-v1'
+rise, ascent, ascension, ascending (the act of changing location in an upward direction)
+
+	rise-n4:rise, rising, ascent, ascension (a movement upward) "they cheered the rise of the hot-air balloon"
+
+
+
+
+
+
+<special >
+rise-n6:upgrade, rise, rising slope (the property possessed by a slope or surface that rises)
+	rise-n3:ascent, acclivity, rise, raise, climb, upgrade (an upward slope or grade (as in a road)) "the car couldn't make it up the rise"
+	
+rise-n:emanation, rise, procession ((theology) the origination of the Holy Spirit at Pentecost) "the emanation of the Holy Spirit"; "the rising of the Holy Ghost"; "the doctrine of the procession of the Holy Spirit from the Father and the Son"
+
+rise-n:lift, rise (a wave that lifts the surface of the water or ground)
+
+</special>
+
+Verb
+rise-s0'(e,x): change'(e,e1,e2) & at'(e1,x,p1) & at'(e2,x,p2) & gts(p2,p1,s) & vertical(s)
+	
+	physical(s)
+	rise-v1:rise, lift, arise, move up, go up, come up, uprise (move upward) "The fog lifted"; "The smoke arose from the forest fire"; "The mist uprose from the meadows"
+	rise-v3:arise, rise, uprise, get up, stand up (rise to one's feet) "The audience got up and applauded"
+	rise-v4:rise, lift, rear (rise up) "The building rose before them"
+	rise-v5:surface, come up, rise up, rise (come to the surface)
+	rise-v15:rise, come up, uprise, ascend (come up, of celestial bodies) "The sun also rises"; "The sun uprising sees the dusk night fled..."; "Jupiter ascends"
+	
+		rise-v15'(e,x): rise-s0'(e,b) & top-boundary(b,x)
+		rise, prove (increase in volume) "the dough rose slowly in the warm room"
+	
+	value(s)
+	rise-v2:rise, go up, climb (increase in value or to a higher point) "prices climbed steeply"; "the value of our house rose sharply last year"
+	
+	social-position(s)
+	rise-v7:ascend, move up, rise (move to a better position in life or to a better job) "She ascended from a life of poverty to one of great
+
+	number(s)
+	rise-v8:wax, mount, climb, rise (go up or advance) "Sales were climbing after prices were lowered"
+
+	intensity(s)
+	rise-v9:heighten, rise (become more extreme) "The tension heightened"
+
+	rank(s)
+	rise-v11:rise, jump, climb up (rise in rank or status) "Her new novel jumped high on the bestseller list"
+
+
+
+<special>
+rise-v17:resurrect, rise, uprise (return from the dead) "Christ is risen!"; "The dead are to uprise"
+rise-v10:get up, turn out, arise, uprise, rise (get up and out of bed) "I get up at 7 A.M. every day"; "They rose early"; "He uprose at night"
+
+
+rise-v14:rebel, arise, rise, rise up (take part in a rebellion; renounce a former allegiance)
+
+rise-v13:rise (exert oneself to meet a challenge) "rise to a challenge"; "rise to the occasion"
+
+rise-v6:originate, arise, rise, develop, uprise, spring up, grow (come into existence; take on form or shape) "A new religious movement originated in that country"; "a love that sprang up from friendship"; "the idea for the book grew out of a short story"; "An interesting phenomenon uprose"
+
+rise-v12:rise (become heartened or elated) "Her spirits rose when she heard the good news"
+</special>

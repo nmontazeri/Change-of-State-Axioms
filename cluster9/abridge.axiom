@@ -1,0 +1,6 @@
+Verb
+//removing some members of a set?
+abridge-s0'(e,x,y): cause'(e,x,e0) & changeFrom'(e0,e1) & Rexist'(e1,z) & member'(e1,z,y) 
+	abridge-v1:abridge, foreshorten, abbreviate, shorten, cut, contract, reduce (reduce in scope while retaining essential elements) "The manuscript must be shortened"
+	abridge-v2:abridge (lessen, diminish, or curtail) "the new law might abridge our freedom of expression"
+

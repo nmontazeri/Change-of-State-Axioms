@@ -1,0 +1,241 @@
+                  
+<comment>
+break as these elements:
+1.change from integrity in an object
+	solid object: 
+		a.barrier: something that has integrity and thus can act as a barrier. -> break=cause a change from having such integrity
+		
+			2. when a barrier breaks, then there is a [sudden] change (e.g., change to existence/revelation)
+		
+		b. a non-barrier object: an object is separated into pieces
+		-> for some objects (like a wall) this separation into pieces entails falling down
+			3. so "a change in something that causes it do decline" is also turned into a sense of "break"
+4.sudden change
+
+</comment>
+
+
+Verb
+
+//terminate a process(continuous event) : what is the difference between break and skip? in skip, e2 is only the next step, whereas in break, e2 is all the consequent steps
+<comment>The relation to other senses that imply disconnectivity is clear: Metaphorically, when a process breaks, it is no longer connected to the next stage</comment>
+*break-v47'(e,x): not'(e,e4) & change'(e4,e1,e2) & eventSequence'(e0,e1,e2) &  eventSequence(e2) & agentOf(x,e0)
+pause, intermit, break (cease an action temporarily) "We pause for station identification"; "let's break for lunch"
+	//causal:
+	*break-v1-10-48'(e,x,e0): eventSequence'(e0,e1,e2) & cause'(e,x,e3) & not'(e3,e4) & change'(e4,e1,e2) & eventSequence(e2)
+		break-v1:interrupt, break (terminate) "She interrupted her pregnancy"; "break a lucky streak"; "break the cycle of poverty"
+		break-v10:break, break off, discontinue, stop (prevent completion) "stop the project"; "break off the negotiations"
+		
+		//e0 is implicit(flow of current)
+		break-v48'(e,x,y): break-v1-10-48'(e,x,e0) & flow'(e0,c,y)
+		break (interrupt the flow of current in) "break a circuit"
+
+
+//change in structure of a composite entity by abandoning or modifying the relations, e0 is a handle
+*break-s1'(e,x,e0): compositeEntity(x) & changeFrom'(e,e0) & rel(e0,y,z) & partOf(y,x) & partOf(z,x)
+	
+	//relation:  being  integrated as opposed to a connection in only one point 
+	<question>do we consider a part of something as being connected to it or belonging to it?</question>
+		
+		//deep and complete separation of parts
+		*break-s1-1'(e,x): solid(x) & break-s1'(e,x,e0) & connect?'(e0,y,z)
+			break-v2:break, separate, split up, fall apart, come apart (become separated into pieces or fragments) "The figurine broke"; "The freshly baked loaf fell apart"
+			break-v8:break (scatter or part) "The clouds broke after the heavy downpour"
+			break-v42:break, wear, wear out, bust, fall apart (go to pieces) "The lawn mower finally broke"; "The gears wore out"; "The old chair finally fell apart completely"
+		
+			//causal:
+			*break-v43-5'(e,x,y): cause'(e,x,e0) & break-s1-1'(e,y)
+				break-v43:break, break off, snap off (break a piece from a whole) "break a branch from a tree"
+				break-v5:break (destroy the integrity of; usually by force; cause to separate into pieces or fragments) "He broke the glass plate"; "She broke the match"
+
+		//crack: only in surface,  no complete separation,
+		<q>hard to axiomatize, for now assume the same as break-s1'(e,x,e0):</q>
+		*break-v44-54'(e,x):break-s1'(e,x,e0)
+			break-v44:break (become punctured or penetrated) "The skin broke"
+			break-v54:crack, check, break (become fractured; break or crack on the surface only) "The glass cracked when it was heated"
+			//abstractly
+				//the pitch is no longer continuous and smooth
+				break-v55:break (crack; of the male voice in puberty) "his voice is breaking--he should no longer sing in the choir"
+				
+			//causal:
+			*break-v57-24-45'(e,x,y): cause'(e,x,e0) & break-v44-54'(e0,y)
+				break-v57:fracture, break (fracture a bone of) "I broke my foot while playing hockey"
+				break-v24:break (vary or interrupt a uniformity or continuity) "The flat plain was broken by tall mesas"
+				break-v45:break (pierce or penetrate) "The blade broke her skin"
+	
+	//parts are not connected to each other but are in a specific relation to each other. After breaking, such relation does not exist
+		<question>how should I describe the regularity relation? a line, a serie, etc</question>
+		*break-v19'(e,x):break-s1'(e,x,e0) & group(x)
+		break-v19:break (make a rupture in the ranks of the enemy or one's own by quitting or fleeing) "The ranks broke"
+			
+			//causal:
+			*break-v39-40-41'(e,x,y): cause'(e,x,e0) & break-v19'(e0,y)
+				break-v39:break, break up (destroy the completeness of a set of related items) "The book dealer would not break the set"
+				break-v40:break (make the opening shot that scatters the balls)
+				break-v41:break (separate from a clinch, in boxing) "The referee broke the boxers"
+			
+				//metaphorically: the relations for the parts is being integrated in one unit, after breaking they are no longer
+					break-v38:break (exchange for smaller units of money) "I had to break a $100 bill just to buy the candy"
+					
+	
+
+	//breaking a system: separation in pieces or breaking the relations, so that it no longer works: when a composite entity falls apart (there is a change from the integrity of its physical parts), or some of the relations no longer exist (a change from integrity of its relations) it stops operating, but I think this sense doesn't refer to stopping, it refers to falling apart. 
+	*break-v17'(e,x): system(x) & break-s1'(e,x) & changeFrom'(e,e1) & function'(e1,x)
+	fail, go bad, give way, die, give out, conk out, go, break, break down (stop operating or functioning) "The engine finally went"; "The car died on the road"; "The bus we travelled in broke down on the way to town"; "The coffee maker broke"; "The engine failed on the way to town"; "her eyesight went after the accident"
+	
+		//causal
+		*break-v3-4'(e,x,y):cause'(e,x,e0) & break-v17'(e0,y)
+			break-v3:break (render inoperable or ineffective) "You broke the alarm clock when you took it apart!"
+			break-v4:break, bust (ruin completely) "He busted my radio!"
+		
+	//loose structure and change from being UP to being DOWN (UP and DOWN is physical for the wall and abstract for business)
+	*break-v36'(e,x): break-s1'(e,x) & change'(e,e1,e2) & up'(e1,x) & down'(e2,x)
+	collapse, fall in, cave in, give, give way, break, founder (break down, literally or metaphorically) "The wall collapsed"; "The business collapsed"; "The dam broke"; "The roof collapsed"; "The wall gave in"; "The roof finally gave under the weight of the ice"
+		
+		//causal:
+		*break-v29-50'(e,x,y): cause'(e,x,e0) & break-v36'(e,y)
+			break-v29:break (cause the failure or ruin of) "His peccadilloes finally broke his marriage"; "This play will either make or break the playwright"
+			break-v50:break (find a flaw in) "break an alibi"; "break down a proof"
+
+//break the barrier: the function of a barrier is to not allow passing, so if one passes the barrier, metaphorically it is like the barrier is broken
+//note that there are different types of barriers, some are one directional (record in sport: break: pass to higher degree) and some are two directional	
+	//x breaks barrier y
+	*break-v6-13-30-14'(e,x,y): barrier(y) & pass'(e,x,y)
+		//barrier=law/rule: 
+			break-v6:transgress, offend, infract, violate, go against, breach, break (act in disregard of laws, rules, contracts, or promises) "offend all laws of humanity"; "violate the basic laws or human civilization"; "break a law"; "break a promise"
+			break-v13:violate, go against, break (fail to agree with; be in violation of; as of rules or patterns) "This sentence violates the rules of syntax"
+			break-v30:break (invalidate by judicial action) "The will was broken"
+		 
+		//barrier= record: something tough to pass
+		<comment>It is interesting to see the difference of breaking a record and passing an exam; or the difference between breaking a record and passing someone's expectation?</comment>
+		break-v14:better, break (surpass in excellence) "She bettered her own record"; "break a record"
+	
+	//x breaks: there is a change of state of x, from x not being visible by y to x being visible by y
+	//I used perceive as an abstraction for see(whales) and know(news)
+	*break-v15-35-46'(e,x): change'(e,e0,e1) & at'(e0,x,p0) & at'(e1,x,p1) & not'(e3,e4) & perceive'(e4,y,e0) & perceive'(e5,y,e1)
+		//revelation: metonymy: break something that is behind a barrier: break the barrier, thus the hiding thing will be revealed
+			break-v15:unwrap, disclose, let on, bring out, reveal, discover, expose, divulge, break, give away, let out, uncover (make known to the public information that was previously known only to a few people or that was meant to be kept a secret) "The auction house would not disclose the price at which the van Gogh had sold"; "The actress won't reveal how old she is"; "bring out the truth"; "he broke the news to her"; "unwrap the evidence in the murder case"; "The newspaper uncovered the President's illegal dealings"
+			break-v35:break (emerge from the surface of a body of water) "The whales broke"
+			break-v46:break, get out, get around (be released or become known; of news) "News of her death broke in the morning"
+
+	//x breaks initial state
+	//break from a container: a change from being inside the container
+	*break-v7'(e,x,y): changeFrom'(e,e0) & in'(e0,x,y) & sudden(e)
+	break, break out, break away (move away or escape suddenly) "The horses broke from the stable"; "Three inmates broke jail"; "Nobody can break out--this prison is high security"
+
+	//break into a container: a change to being in the container
+	*break-v11'(e,x,y): changeTo'(e,e0) & in'(e0,x,y) & sudden(e)
+	break in, break (enter someone's (virtual or real) property in an unauthorized manner, usually with the intent to steal or commit a violent act) "Someone broke in while I was on vacation"; "They broke into my car and stole my radio!"; "who broke into my account last night?"
+
+		//sudden & change to state: metaphorically a state is a container
+		*break-v9'(e,x,e2): changeTo'(e,e2) & sudden(e) & agentOf(x,e)
+		break, burst, erupt (force out or release suddenly and often violently something pent up) "break into tears"; "erupt in anger"
+
+	// as if breaking a barrier, then you know what is in there
+	break-v51:break (find the solution or key to) "break the code"
+
+//change from being in relation
+*break'(e,x,y): changeFrom'(e,e0) & rel'(e0,x,y) 
+break-v18:break, break away (interrupt a continued activity) "She had broken with the traditional patterns"
+break-v31:separate, part, split up, split, break, break up (discontinue an association or relation; go different ways) "The business partners broke over a tax question"; "The couple separated after 25 years of marriage"; "My friend and I split up"
+
+	
+	*break-v26'(e,x,e0):changeFrom'(e,e0) & agentOf(x,e0)
+	break (give up) "break cigarette smoking"
+		//causal
+		*break-v25'(e,x,y,e0):cause'(e,x,e0) & break-v26'(e0,y,e1)
+		break (cause to give up a habit) "She finally broke herself of smoking cigarettes"
+
+
+//happen/come into being
+<question>But I think someone's perception of this change into existence is also important. If so, break-v15-35-46 is also in this category</question>
+*break-v16-27-28-53'(e,x): changeTo'(e,e0) & Rexist'(e0,x)
+	break-v28:break (happen or take place) "Things have been breaking pretty well for us in the past few months"
+	break-v27:break (come forth or begin from a state of latency) "The first winter storm broke over New York"
+	break-v53:break, recrudesce, develop (happen) "Report the news as it develops"; "These political movements recrudesce from time to time"
+	break-v16:break (come into being) "light broke over the horizon"; "Voices broke in the air"
+
+
+
+//a decline in strength/amount
+*break-v23'(e,x): decrease'(e,x)
+break (come to an end) "The heat wave finally broke yesterday"
+break-v49:break (undergo breaking) "The simple vowels broke in many Germanic languages"
+
+
+	//causal
+	*break-v21-59'(e,x,y): cause'(e,x,e0) & decrease'(e0,y) 
+	break-v21:dampen, damp, soften, weaken, break (lessen in force or effect) "soften a shock"; "break a fall"
+	
+		//x is position of y
+		*break-v32-59'(e,x,y): cause'(e,x,e0) & decrease'(e0,p) & positionOf(p,y) 
+			break-v59:break (weaken or destroy in spirit or body) "His resistance was broken"; "a man broken by the terrible experience of near-death"
+			break-v22:break (be broken in) "If the new teacher won't break, we'll add some stress"
+
+			break-v32:demote, bump, relegate, break, kick downstairs (assign to a lower position; reduce in rank) "She was demoted because she always speaks up"; "He was broken down to Sergeant"
+			break-v12:break in, break (make submissive, obedient, or useful) "The horse was tough to break"; "I broke in the new intern"
+			break-v33:bankrupt, ruin, break, smash (reduce to bankruptcy) "My daughter's fancy wedding is going to break me!"; "The slump in the financial markets smashed him"
+
+	// sudden
+	*break-v52-56-58'(e,x): decrease'(e,x) & sudden(e)
+	<q>can a voice be broken to a higher volume? see sense 52</q>
+		break-v52:break (change suddenly from one tone quality or register to another) "Her voice broke to a whisper when she started to talk about her children"
+		break-v56:break (fall sharply) "stock prices broke"
+		break-v58:break (diminish or discontinue abruptly) "The patient's fever broke last night"
+
+
+<special>
+//The "b-boys" and "b-girls" were the dancers to DJ Kool Herc's breaks, who were described as "breaking". The obvious connection is to the breakbeat, but Herc has noted that "breaking" was also street slang of the time meaning "getting excited", "acting energetically" or "causing a disturbance"
+break-v37:break dance, break-dance, break (do a break dance) "Kids were break-dancing at the street corner"
+break-v20:break (curl over and fall apart in surf or foam, of waves) "The surf broke"
+
+break-v34:break (change directions suddenly)
+
+</special>
+
+//---------------------------------------------------------
+
+Noun
+
+//interruption
+	*break-n1-13'(e,x):break-v1-10-48'(e1,x,e0) 
+	break-n1:interruption, break (some abrupt occurrence that interrupts an ongoing activity) "the telephone is an annoying interruption"; "there was a break in the action when a player was hurt"
+	break-n13:break, interruption, disruption, gap (an act of delaying or interrupting the continuity) "it was presented without commercial breaks"; "there was a gap in his account"
+
+	*break-n5'(e,e0):break-v47'(e0,x)
+	respite, recess, break, time out (a pause from doing something (as work)) "we took a 10-minute break"; "he took time out to recuperate"
+		
+	
+	*break-n7'(e,t): break-v1-10-48'(e1,x,e0) & durationOf(t,e)
+	pause, intermission, break, interruption, suspension (a time interval during which there is a temporary cessation of something)
+
+//relations
+	*break-n4:break-v29
+	rupture, breach, break, severance, rift, falling out (a personal or social separation (as between opposing factions)) "they hoped to avoid a break in relations"
+
+//physical break
+	*break-n6'(e0,e): break-v43-5'(e,x,y)
+	breakage, break, breaking (the act of breaking something) "the breakage was unavoidable"
+
+
+	*break-n8-9'(e0,e):break-v44-54'(e,x)
+		break-n8: fracture, break (breaking of hard tissue such as bone) "it was a nasty fracture"; "the break seems to have been caused by a fall"
+		break-n9:break (the occurrence of breaking) "the break in the dam threatened the valley"
+
+*break-n10:break-v52
+break (an abrupt change in the tone or register of the voice (as at puberty or due to emotion)) "then there was a break in her voice"
+
+*break-n11:break-v40
+break (the opening shot that scatters the balls in billiards or pool)
+
+break-n16'(e0,e):break-v7'(e,x,y)
+break, breakout, jailbreak, gaolbreak, prisonbreak, prison-breaking (an escape from jail) "the breakout was carefully planned"
+
+<special>
+break-n2:break, good luck, happy chance (an unexpected piece of good luck) "he finally got his big break"
+break-n12:break, break of serve ((tennis) a score consisting of winning a game when your opponent was serving) "he was up two breaks in the second set"
+break-n14:break (a sudden dash) "he made a break for the open door"
+break-n15:open frame, break (any frame in which a bowler fails to make a strike or spare) "the break in the eighth frame cost him the match"
+break-n3:fault, faulting, geological fault, shift, fracture, break ((geology) a crack in the earth's crust resulting from the displacement of one side with respect to the other) "they built it right over a geological fault"; "he studied the faulting of the earth's crust"
+</special>
+

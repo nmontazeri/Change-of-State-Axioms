@@ -1,0 +1,39 @@
+Noun
+
+retreat-n1-7'(e0,e):retreat-s0'(e,x,y)
+	retreat-n1:retreat ((military) withdrawal of troops to a more favorable position to escape the enemy's superior forces or after a defeat) "the disorderly retreat of French troops"
+	retreat-n7:retreat (the act of withdrawing or going backward (especially to escape something hazardous or unpleasant))
+
+*retreat-n6'(e1,e):retreat-s1'(e,x,e0)
+retirement, retreat (withdrawal for prayer and study and meditation) "the religious retreat is a form of vacation activity"
+
+//place 
+*retreat-n2-5'(e0,p1):retreat-v2'(e,x,p1)
+	retreat-n2:retreat (a place of privacy; a place affording peace and quiet)
+	retreat-n5:hideaway, retreat (an area where you can be alone)
+
+</special>
+retreat-n3:retreat ((military) a signal to begin a withdrawal from a dangerous position)
+retreat-n4:retreat ((military) a bugle call signaling the lowering of the flag at sunset)
+</special>
+
+Verb
+
+//x retreats from y: there is a changeFrom x being at y and this change is towards a previous (or inferior?) position (otherwise, it would be a progress or passing)
+retreat-s0'(e,x,y): change'(e,e2,e1) & at'(e2,x,y) & at'(e1,x,z) & change'(e0,e1,e2) & before(e0,e)
+	
+	//y=enemy/curb
+	retreat-v1:withdraw, retreat, pull away, draw back, recede, pull back, retire, move back (pull back or move away or backward) "The enemy withdrew"; "The limo pulled away from the curb"
+	
+	//y= main body of ice?
+	retreat-v3:retrograde, retreat (move back) "The glacier retrogrades"
+	
+//x retreats from work(y) and goes to z. No mention to y
+retreat-s1'(e,x,e0): changeFrom'(e,e1) & arg(x,e1) 
+	
+	//e1 =commitment or activity 
+	retreat-v4:retreat, pull back, back out, back away, crawfish, crawfish out, pull in one's horns, withdraw (make a retreat from an earlier commitment or activity) "We'll have to crawfish out from meeting with him"; "He backed out of his earlier promise"; "The aggressive investment company pulled in its horns"
+
+	// x moves from place p0 to place p2 and this generates x's retreat from e1 =work at place p1
+	retreat-v2'(e,x,p1): change'(e,e1,e2) & at'(e1,x,p0) & at'(e2,x,p1) & gen(e,e3) & retreat-s1'(e3,x,e0)
+	retreat (move away, as for privacy) "The Pope retreats to Castelgondolfo every summer"

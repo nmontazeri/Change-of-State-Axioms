@@ -1,0 +1,23 @@
+<comment> treshold of e is the boundary between not(e) and (e), whereas  a boundary /border is between (x & not(y)) and (y & not(x)) , also, a boundary doesn't belong to x or y, but a treshold belongs e</comment>
+
+//threshold-n5'(e0,t,e1): ? & Rexist(e0,e1)
+threshold-n5'(e0,t,e1):  Rexist(e0,e1)
+brink, threshold, verge (a region marking a boundary) (? location? if yes, this would not be the most general sense. instead, n1 would be the most general)
+	
+	threshold-n3'(e0,t): threshold-n5'(e0,t,e1) & inside'(e1,y) & building(y)
+	doorway, door, room access, threshold (the entrance (the space in a wall) through which you enter or leave a room or building; the space that a door can close) "he stuck his head in the doorway"
+	
+		<special domain="building">
+		threshold-n4:doorsill, doorstep, threshold (the sill of a door; a horizontal piece of wood or stone that forms the bottom of a doorway and offers support when passing through a doorway)
+		<special>
+	
+	threshold-n2'(e0,t,e1): threshold-n5'(e0,t,e1) & sense'(e1,x,y)
+	threshold, limen (the smallest detectable sensation)
+
+	threshold-n1'(e,t,e1): threshold-n5'(e0,t,e1) & new(e1) & time(t)
+	<exp> t is treshold of e1: is the starting time of e1</exp>
+	threshold (the starting point for a new state or experience) "on the threshold of manhood"
+
+	
+
+

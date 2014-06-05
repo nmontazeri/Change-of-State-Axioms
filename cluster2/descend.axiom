@@ -1,0 +1,44 @@
+Verb
+
+*descend-s0'(e,x):change'(e,e1,e2) & at'(e1,x,p1) & at'(e1,x,p2) & lts(p2,p1,s)
+	*descend-v1'(e,x): descend-s0'(e,x) & location(p1) & location(p2) & vertical(e)
+	descend, fall, go down, come down (move downward and lower, but not necessarily all the way) "The temperature is going down"; "The barometer is falling"; "The curtain fell on the diva"; "Her hand went up and then fell again"
+	
+	<special domain="moral">
+	*descend-v3: descend-s0'(e,x) & moralValue(x)
+	condescend, deign, descend (do something that one considers to be below one's dignity)
+	</special>
+
+	*descend-v4'(e,e1): changeTo'(e,e1) 
+	fall, descend, settle (come as if by falling) "Night fell"; "Silence fell"
+
+<special domain=relationship>
+*descend-v2'(e,d,o): ancestorOf'(e,o,d) 
+<exp> x descends from y</exp>
+<comment>probably because the structure of ancestor tree</comment>
+derive, come, descend (come from; be connected by a relationship of blood, for example) "She was descended from an old Italian noble family"; "he comes from humble origins"
+</special>
+
+Noun
+
+*descent-n1'(e0,e,x): descend-v1'(e,x)
+descent (a movement downward)
+	
+	causal: ?
+	*descent-n3'(e,e0,x): cause'(e0,x,e1) & descend-v1'(e1,x)
+	descent (the act of changing your location in a downward direction)
+	
+	<special domain="shape">
+	descent-n5'(e,x):descent, declivity, fall, decline, declination, declension, downslope (a downward slope or bend)
+	</special>
+
+*descent-n4'(e0,e,d,o): descend-v2'(e,d,o)
+descent, line of descent, lineage, filiation (the kinship relation between an individual and the individual's progenitors)
+	
+	*descent-n6'(e0,d): descend-v2'(e,d,o) 
+	lineage, line, line of descent, descent, bloodline, blood line, blood, pedigree, ancestry, origin, parentage, stemma, stock (the descendants of one individual) "his entire lineage has been warriors"	
+
+	*descent-n2'(e,a): descend-v2'(e1,d,o) & propertyOf(a,o)
+	origin, descent, extraction (properties attributable to your ancestry) "he comes from good origins"
+
+
