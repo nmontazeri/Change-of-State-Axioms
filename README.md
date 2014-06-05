@@ -1,11 +1,23 @@
 Change-of-State-Axioms
 ======================
 
-An axiomatization of most common English words (which are listed in Core WordNet) related to change-of-state. Axioms anchor these words to core theories developed by Jerry R. Hobbs which can be found here: http://www.isi.edu/~hobbs/csk.html
+According to our analysis of Core WordNet, there are about 270 word senses that are related to change-of-state. These 270 word senses correspond to 99 distinct words.
+
+In this work I tried to axiomatize the general senses of these 99 words which resulted in about 720 axioms. These axioms anchor these word senses to core theories developed by Jerry R. Hobbs which can be found here:   
+
+     http://www.isi.edu/~hobbs/csk.html
+
+Words are grouped into clusters according to their underlying concepts. There is a separate file for each word. 
+Different senses of a word are organized in hierarchies (using indentation). Some abstract senses are added by grouping commonalities between different senses of a word. 
+
+For more information about the process of axiomatization please refer to the following book chapter:
+
+	http://www.isi.edu/~hobbs/csknowledge-references/duesseldorf.pdf
+	
+	
+============================================
 
 Here is the list of axiomatized words:
-
-
 
 
                                CHANGE: Involves a change of state
